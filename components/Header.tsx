@@ -26,13 +26,9 @@ export default function Header(props: HeaderProps) {
 
       <div class="flex justify-between items-center">
         <a href="/" class="shrink-0">
-          <img
-            height="48"
-            width="48"
-            src="/logo.webp"
-            alt={SITE_NAME + " logo"}
-            class="size-12"
-          />
+          <span class="pt-2 pr-2 pb-2">
+            <Logo />
+          </span>
         </a>
         <div class="flex gap-4 items-center">
           <label
@@ -60,7 +56,8 @@ export default function Header(props: HeaderProps) {
       <nav
         class={"hidden flex-col gap-x-4 divide-y divide-solid sm:flex sm:items-center sm:flex-row sm:divide-y-0"}
       >
-        <a
+        {
+          /* <a
           href="/dashboard"
           class="link-styles data-[ancestor]:!text-black data-[ancestor]:dark:!text-white nav-item"
         >
@@ -68,6 +65,44 @@ export default function Header(props: HeaderProps) {
         </a>
         {isStripeEnabled() &&
           (
+        </a> */
+        }
+        <a
+          href="/docs/advertising"
+          class={cx(
+            props.url.pathname === "/docs/advertising"
+              ? ACTIVE_LINK_STYLES
+              : LINK_STYLES,
+            NAV_ITEM,
+          )}
+        >
+          Docs
+        </a>
+        {
+          /* <a
+          href="/blog"
+          class={cx(
+            props.url.pathname === "/blog" ? ACTIVE_LINK_STYLES : LINK_STYLES,
+            NAV_ITEM,
+          )}
+        >
+          Blog
+        </a> */
+        }
+        <a
+          href="/showcase"
+          class={cx(
+            props.url.pathname === "/showcase"
+              ? ACTIVE_LINK_STYLES
+              : LINK_STYLES,
+            NAV_ITEM,
+          )}
+        >
+          Showcase
+        </a>
+        {
+          /* {stripe
+          ? (
             <a
               href="/pricing"
               class="link-styles data-[current]:!text-black data-[current]:dark:!text-white nav-item"
@@ -76,6 +111,11 @@ export default function Header(props: HeaderProps) {
             </a>
           )}
         {props.sessionUser
+          )
+          : null} */
+        }
+        {
+          /* {props.sessionId
           ? (
             <a
               href="/account"
@@ -90,13 +130,39 @@ export default function Header(props: HeaderProps) {
             </a>
           )}
         <div class="rounded-lg bg-gradient-to-tr from-secondary to-primary p-px">
+          : <a href="/signin" class={cx(LINK_STYLES, NAV_ITEM)}>Sign in</a>} */
+        }
+        {
+          /* <a
+          href="/notifications"
+          class={cx(
+            props.url.pathname === "/notifications"
+              ? ACTIVE_LINK_STYLES
+              : LINK_STYLES,
+            NAV_ITEM,
+            "relative flex gap-2 items-center",
+          )}
+          aria-label="Notifications"
+        >
+          <Bell class="hidden sm:block w-6 h-6" />
+          <div class="sm:hidden">
+            Notifications
+          </div>
+          {props.hasNotifications && (
+            <CircleFilled class="absolute top-0.5 right-0.5 text-primary w-2 h-2" />
+          )}
+        </a> */
+        }
+        {
+          /* <div class="rounded-lg bg-gradient-to-tr from-secondary to-primary p-px">
           <a
             href="/submit"
             class="text-center text-white rounded-[7px] transition duration-300 px-4 py-2 block hover:bg-white hover:text-black hover:dark:bg-gray-900 hover:dark:!text-white"
           >
             Submit
           </a>
-        </div>
+        </div> */
+        }
       </nav>
     </header>
   );

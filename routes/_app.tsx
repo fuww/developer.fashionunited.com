@@ -6,21 +6,19 @@ import { defineApp } from "$fresh/server.ts";
 
 export default defineApp<State>((_, ctx) => {
   return (
-    <html lang="en">
+    <html>
       <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/styles.css" />
       </head>
       <body>
         <div class="dark:bg-gray-900">
           <div class="flex flex-col min-h-screen mx-auto max-w-7xl w-full dark:text-white">
             <Header
-              url={ctx.url}
-              sessionUser={ctx.state?.sessionUser}
+              url={props.url}
+              sessionId={props.data?.sessionId}
+              hasNotifications={props.data?.hasNotifications}
             />
-            <ctx.Component />
-            <Footer />
+            <props.Component />
+            <Footer url={props.url} />
           </div>
         </div>
       </body>

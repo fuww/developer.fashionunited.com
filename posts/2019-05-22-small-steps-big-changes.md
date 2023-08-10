@@ -1,6 +1,7 @@
 ---
 title: "Small steps big changes"
 description: "Taking small steps is key when implementing changes, like a new design."
+summary: "Taking small steps is key when implementing changes, like a new design."
 author: "Joost van der Laan"
 authors:
   - "Joost van der Laan"
@@ -47,8 +48,7 @@ like; code quality, functionality, user interface tests, security and code style
 look the way they should. Finally, everything gets deployed to production (the
 live sites) multiple times per day. Fully automated._
 
-<figure>{{% amp-image src="./gitlab_workflow_example_11_9.png" width="3420"
-    height="1894" layout="responsive" alt="Continuous Integration & Continuous Deployment Workflow. CI/CD" %}}</figure>
+![Continuous Integration & Continuous Deployment Workflow](https://imagedelivery.net/7czaBv4WuiSsJFxi583jUw/462046bf-eb62-4402-5a20-11f2bf61f200/public "Continuous Integration & Continuous Deployment Workflow. CI/CD, courtesy of GitLab")
 
 When was the last time you've seen Facebook or Google do a big makeover of their
 sites? That's right, you didn't. Because they make tiny changes all the time.
@@ -61,8 +61,7 @@ example, the navigation bar changed colors, fonts where adjusted in some places,
 then more. Menu items got changed (noticed the network link changed to
 lookbook?) And so on.
 
-<figure>{{% amp-image src="./newsarticle-card.png" width="375"
-    height="385" layout="fixed" alt="NewsArticle Card" attribution="CC courtesy of Joost van der Laan" %}}</figure>
+![NewsArticle Card](https://imagedelivery.net/7czaBv4WuiSsJFxi583jUw/159e96a4-929a-47cd-f8fe-6352e529fa00/public "NewsArticle Card, CC courtesy of Joost van der Laan")
 
 We created a lot of small pieces related to the new design. For example, the
 [Job of the Week Card](https://fashionunited.com/storybook/?path=/story/card--job-of-the-week),
@@ -77,8 +76,7 @@ When you put some of these together, you can start seeing the bigger picture.
 Check out the [lookbook](https://fashionunited.com/lookbook/) for example, it is
 fully in the new design.
 
-<figure>{{% amp-image src="./lookbook.png" width="1980"
-    height="1346" layout="responsive" alt="Lookbook" attribution="CC courtesy of Joost van der Laan" %}}</figure>
+![Lookbook](https://imagedelivery.net/7czaBv4WuiSsJFxi583jUw/fed234e6-4e32-4822-2815-269eb6885000/public "Lookbook, CC courtesy of Joost van der Laan")
 
 Back to the news sites, we've also started to make the first changes there. Just
 the last 2 weeks we started putting live the

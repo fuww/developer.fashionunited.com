@@ -61,9 +61,59 @@ To get started:
    ```bash
    GITHUB_CLIENT_SECRET=<GitHub OAuth application client secret>
    ```
-1. Start the server:
-   ```bash
-   deno task start
+
+### Vector search / OpenAI embeddings
+
+```sh
+supabase init
+supabase start
+deno task start
+```
+
+To install supabase cli:
+
+```sh
+brew install supabase/tap/supabase
+```
+
+## Reset database
+
+Resets the local database to a clean state.
+
+Requires the local development stack to be started by running `supabase start`.
+
+```sh
+supabase db reset
+supabase start
+```
+
+### Auth (OAuth)
+
+1. [Register a new GitHub OAuth application](https://github.com/settings/applications/new)
+   with the following values:
+
+   - `Application name` = a name of your own choosing
+   - `Homepage URL` = `http://localhost:8000`
+   - `Authorization callback URL` = `http://localhost:8000/callback`
+
+2. Once registered, copy the `Client ID` value to the `GITHUB_CLIENT_ID` value
+   in your `.env` file.
+3. Click `Generate a new client secret` and copy the resulting client secret to
+   the `GITHUB_CLIENT_SECRET` environment variable in your `.env` file.
+
+### Payments and Subscriptions using Stripe (optional)
+
+> Note: Stripe is only enabled if the `STRIPE_SECRET_KEY` environment variable
+> is set.
+
+1. Copy your Stripe secret key as `STRIPE_SECRET_KEY` into your `.env` file. We
+   recommend using the test key for your development environment.
+2. Run `deno task init:stripe` and follow the instructions. This automatically
+   creates your "Premium tier" product and configures the Stripe customer
+   portal.
+   > Note: go to [tools/init_stripe.ts](tools/init_stripe.ts) if you'd like to
+   > learn more about how the `init:stripe` task works.
+3. Listen locally to Stripe events:
    ```
 1. Navigate to `http://localhost:8000` to start playing with your new SaaS app.
 

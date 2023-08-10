@@ -3,6 +3,16 @@ import { SITE_NAME } from "@/utils/constants.ts";
 import IconBrandDiscord from "tabler_icons_tsx/brand-discord.tsx";
 import IconBrandGithub from "tabler_icons_tsx/brand-github.tsx";
 import IconRss from "tabler_icons_tsx/rss.tsx";
+// Copyright 2023 the Deno authors. All rights reserved. MIT license.
+// import {
+//   ACTIVE_LINK_STYLES,
+//   LINK_STYLES,
+//   NAV_STYLES,
+//   SITE_BAR_STYLES,
+//   SITE_NAME,
+// } from "@/utils/constants.ts";
+// import { GitHub, Rss } from "./Icons.tsx";
+// import { getToggledStyles } from "@/utils/display.ts";
 
 function MadeWithFreshBadge() {
   return (
@@ -64,18 +74,11 @@ export default function Footer() {
           <IconRss class="size-6" />
         </a>
         <a
-          href="https://discord.gg/deno"
-          target="_blank"
-          aria-label="Deno SaaSKit on Discord"
-          class="link-styles"
-        >
-          <IconBrandDiscord class="size-6" />
-        </a>
-        <a
-          href="https://github.com/denoland/saaskit"
+          href="https://github.com/fuww/developer.fashionunited.com"
           target="_blank"
           aria-label="Deno SaaSKit repo on GitHub"
           class="link-styles"
+          aria-label="developer.fashionunited.com repo on GitHub"
         >
           <IconBrandGithub class="size-6" />
         </a>

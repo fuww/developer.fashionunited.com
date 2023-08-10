@@ -1,6 +1,7 @@
 ---
 title: "Improved job scheduling!"
 description: "Getting jobs online faster, while not looking like a 'BrandX-only' jobboard"
+summary: "Getting jobs online faster, while not looking like a 'BrandX-only' jobboard"
 author: "Joost van der Laan"
 date: 2018-11-22 13:07:01+00:00
 published_at: 2018-11-22
@@ -30,7 +31,7 @@ But then along came Nike. Over a 1000 jobs and they needed to go online ASAP.
 Peter managed to put everything online at once, but it took just 2 weeks before
 we ran into trouble again.
 
-![Job list Nike, the new situation][joblist]
+![job-list-nike](https://imagedelivery.net/7czaBv4WuiSsJFxi583jUw/18ab3959-3919-4482-2533-a9633738c200/public "Job list Nike, the new situation, CC courtesy of Joost van der Laan")
 
 Apparently, Nike "updates" all of it's jobs every few weeks with new ID's. No,
 not new content, no new title, not extra details in the description. They
@@ -57,4 +58,4 @@ minutes) Therefore, as long as there is diversity in companies, we can post
 orders of magnitude more jobs and the queue won't fill up until months into the
 future.
 
-[joblist]: ./job-list-nike.png "Job list Nike, the new situation"
+![job-list-nike](https://imagedelivery.net/7czaBv4WuiSsJFxi583jUw/18ab3959-3919-4482-2533-a9633738c200/public "Job list Nike, the new situation, CC courtesy of Joost van der Laan")
