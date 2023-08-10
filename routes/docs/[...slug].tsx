@@ -5,18 +5,15 @@ import * as gfm from "$gfm";
 import DocumentationTitle from "@/components/DocumentationTitle.tsx";
 import DocumentationHeader from "@/components/DocumentationHeader.tsx";
 import DocumenationSidebar from "@/components/DocumentationSidebar.tsx";
-import DocumentationNavigationBar from "@/components/DocumentationNavigationBar.tsx";
 import { DocumentationToc } from "@/components/DocumentationToc.tsx";
 
-import {
-  SLUGS,
-  TABLE_OF_CONTENTS,
-  TableOfContentsEntry,
-} from "../../data/docs.ts";
+import { SLUGS, TABLE_OF_CONTENTS, TableOfContentsEntry } from "@/data/docs.ts";
 import { getGitEditUrl, getGitIdeUrl } from "@/utils/get-git-edit-url.ts";
 import { EditPage } from "@/components/EditPage.tsx";
 import { generateImageSrcSet, resizeImage } from "@/utils/image.ts";
-import SearchDialog from "../../islands/SearchDialog.tsx";
+import SearchDialog from "@/islands/SearchDialog.tsx";
+
+import * as mod from "https://deno.land/std@0.198.0/fmt/printf.ts";
 
 interface Data {
   page: Page;
@@ -82,7 +79,7 @@ export default function DocsPage(props: PageProps<Data>) {
         {description && <meta name="description" content={description} />}
       </Head>
       <div class="ltr">
-        <DocumentationHeader title="Company docs" active="/docs" />
+        <DocumentationHeader title="Documentation" active="/docs" />
         <div class="mx-auto flex max-w-[90rem] min-h-screen">
           <div class="motion-reduce:transition-none [transition:background-color_1.5s_ease] bg-transparent">
           </div>
