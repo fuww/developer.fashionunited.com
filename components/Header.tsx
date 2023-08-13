@@ -156,7 +156,7 @@ export default function Header(
         <div class="rounded-lg bg-gradient-to-tr from-secondary to-primary p-px">
           <a
             href="/submit"
-            class="text-center text-white rounded-[7px] transition duration-300 px-4 py-2 block hover:(bg-white text-black dark:(bg-gray-900 !text-white))"
+            class="text-center text-white rounded-[7px] transition duration-300 px-4 py-2 block hover:(bg-white text-black dark:(bg-dark !text-white))"
           >
             Submit
           </a>

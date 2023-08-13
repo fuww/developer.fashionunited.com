@@ -161,11 +161,14 @@ function Content(props: { page: Page }) {
           <SearchDialog />
         </div> */
         }
-        <h1 class="text(4xl black) tracking-tight font-extrabold mt-4 dark:text-white">
+        <h1 class="text(4xl black) tracking-tight font-extrabold mt-4 text-gray-900 dark:text-white">
           {props.page.title}
         </h1>
         <div
-          class="mt-6 markdown-body prose dark:bg-dark dark:text-gray-50"
+          class="mt-6 markdown-body prose bg-white text-gray-900 dark:bg-dark dark:text-gray-50"
+          data-color-mode="auto"
+          data-light-theme="light"
+          data-dark-theme="dark"
           dangerouslySetInnerHTML={{
             __html: gfm.render(props.page.markdown, {
               allowedTags: ["progressive-img"],

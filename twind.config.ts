@@ -8,6 +8,10 @@ import ext from "twind-preset-ext";
 
 /** @todo Remove the need for type-assertions */
 export default {
+  /**
+   * needed to get enable / disable dark mode in page.
+   */
+  darkMode: "class",
   selfURL: import.meta.url,
   // <BaseTheme, Preset<any>[]>
   ...defineConfig({
@@ -29,5 +33,12 @@ export default {
       }) as Preset<any>,
       ext() as Preset,
     ],
+    theme: {
+      extend: {
+        colors: {
+          dark: "rgb(17 24 39)", // "#111",
+        },
+      },
+    },
   }),
 } as Options;

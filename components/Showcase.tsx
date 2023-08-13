@@ -7,7 +7,7 @@ const projects = [
     href: "https://fashionunited.com/lookbook",
     imageSrc:
       "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100",
-    imageAlt: "Lookbook"
+    imageAlt: "Lookbook",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const projects = [
     href: "https://fashionunited.com",
     imageSrc:
       "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100",
-    imageAlt: "News"
+    imageAlt: "News",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const projects = [
     href: "https://fashionunited.com/fashion-jobs",
     imageSrc:
       "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100",
-    imageAlt: "Jobboard"
+    imageAlt: "Jobboard",
   },
   {
     id: 4,
@@ -37,9 +37,8 @@ const projects = [
     href: "https:/dashboard.fashionunited.com",
     imageSrc:
       "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100",
-    imageAlt: "Dashboard"
+    imageAlt: "Dashboard",
   },
-
 ];
 
 // https://tailwindui.com/components/ecommerce/components/product-lists
@@ -54,7 +53,7 @@ export default function Showcase() {
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {projects.map((project) => (
             <div key={project.id} className="group relative">
-              <div className="aspect-h-3 aspect-w-4 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-900">
+              <div className="aspect-h-3 aspect-w-4 overflow-hidden rounded-lg bg-gray-100 dark:bg-dark">
                 <img
                   src={project.imageSrc}
                   alt={project.imageAlt}
@@ -77,11 +76,13 @@ export default function Showcase() {
                   </a>
                 </h3>
               </div>
-              <p className="mt-1 text-sm text-gray-500">{project.description}</p>
+              <p className="mt-1 text-sm text-gray-500">
+                {project.description}
+              </p>
             </div>
           ))}
         </div>
       </div>
     </div>
-  )
+  );
 }

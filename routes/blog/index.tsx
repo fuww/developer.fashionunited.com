@@ -25,7 +25,7 @@ function PostCard(props: Post) {
   return (
     <div class="py-8">
       <a class="sm:col-span-2" href={`/blog/${props.slug}`}>
-        <h2 class="text-2xl font-bold">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
           {props.title}
         </h2>
         {props.publishedAt.toString() !== "Invalid Date" && (

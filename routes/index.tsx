@@ -83,7 +83,7 @@ function TimeSelector(props: { url: URL }) {
 
 function SetupInstruction() {
   return (
-    <div class="bg-green-50 dark:(bg-gray-900 border border-green-800) rounded-xl max-w-screen-sm mx-auto my-8 px-6 py-5 space-y-3">
+    <div class="text-gray-900 bg-green-50 dark:(bg-dark border border-green-800) rounded-xl max-w-screen-sm mx-auto my-8 px-6 py-5 space-y-3">
       <h1 class="text-2xl font-medium">Welcome to SaaSKit!</h1>
 
       <p class="text-gray-600 dark:text-gray-400">

@@ -35,11 +35,12 @@ import * as $29 from "./routes/signout.ts";
 import * as $30 from "./routes/submit.tsx";
 import * as $31 from "./routes/user/[login].tsx";
 import * as $$0 from "./islands/Chart.tsx";
-import * as $$1 from "./islands/PageInput.tsx";
-import * as $$2 from "./islands/SearchDialog.tsx";
-import * as $$3 from "./islands/Video.tsx";
-import * as $$4 from "./islands/VideoClick.tsx";
-import * as $$5 from "./islands/VoteButton.tsx";
+import * as $$1 from "./islands/DarkMode.tsx";
+import * as $$2 from "./islands/PageInput.tsx";
+import * as $$3 from "./islands/SearchDialog.tsx";
+import * as $$4 from "./islands/Video.tsx";
+import * as $$5 from "./islands/VideoClick.tsx";
+import * as $$6 from "./islands/VoteButton.tsx";
 
 const manifest = {
   routes: {
@@ -78,11 +79,12 @@ const manifest = {
   },
   islands: {
     "./islands/Chart.tsx": $$0,
-    "./islands/PageInput.tsx": $$1,
-    "./islands/SearchDialog.tsx": $$2,
-    "./islands/Video.tsx": $$3,
-    "./islands/VideoClick.tsx": $$4,
-    "./islands/VoteButton.tsx": $$5,
+    "./islands/DarkMode.tsx": $$1,
+    "./islands/PageInput.tsx": $$2,
+    "./islands/SearchDialog.tsx": $$3,
+    "./islands/Video.tsx": $$4,
+    "./islands/VideoClick.tsx": $$5,
+    "./islands/VoteButton.tsx": $$6,
   },
   baseUrl: import.meta.url,
 };
