@@ -6,6 +6,7 @@ import { ComponentChild } from "preact";
 import { stripe } from "@/utils/payments.ts";
 import Head from "@/components/Head.tsx";
 import GitHubAvatarImg from "@/components/GitHubAvatarImg.tsx";
+import SearchDialog from "@/islands/SearchDialog.tsx";
 
 export const handler: Handlers<SignedInState, SignedInState> = {
   GET(_request, ctx) {
@@ -42,32 +43,12 @@ export default function AccountPage(props: PageProps<SignedInState>) {
     <>
       <Head title="Account" href={props.url.href} />
       <main class="max-w-lg m-auto w-full flex-1 p-4 flex flex-col justify-center">
-        <GitHubAvatarImg
-          login={props.data.user.login}
-          size={240}
-          class="m-auto"
-        />
-        <ul>
-          <Row
-            title="Username"
-            text={props.data.user.login}
-          />
-          <Row
-            title="Subscription"
-            text={props.data.user.isSubscribed ? "Premium 🦕" : "Free"}
-          >
-            {
-              /* {stripe && (
-              <a
-                class="underline"
-                href={`/account/${action.toLowerCase()}`}
-              >
-                {action}
-              </a>
-            )} */
-            }
-          </Row>
-        </ul>
+        <h1 class="text-3xl font-bold">AI Assistant</h1>
+        <p class="text-gray-500">
+          Get answers using generative AI based on content from FashionUnited
+          Developer Documentation.
+        </p>
+        <SearchDialog withPadding />
         <a
           href="/signout"
           class={`${BUTTON_STYLES} block text-center mt-8`}
