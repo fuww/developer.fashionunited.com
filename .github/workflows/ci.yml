@@ -33,12 +33,12 @@ jobs:
         run: deno task ok
       
       - name: Create embeddings
-      env:
-        DB_DATABASE: ${{ secrets.DB_DATABASE }}
-        DB_HOSTNAME: ${{ secrets.DB_HOSTNAME }}
-        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-        DB_PORT: ${{ secrets.DB_PORT }}
-        DB_USER: ${{ secrets.DB_USER }}
+        env:
+          DB_DATABASE: ${{ secrets.DB_DATABASE }}
+          DB_HOSTNAME: ${{ secrets.DB_HOSTNAME }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+          DB_USER: ${{ secrets.DB_USER }}
         run: deno task create-embeddings
           # |
           # '[ main = "$GITHUB_REF" ] && export PROD="--prod"' \
