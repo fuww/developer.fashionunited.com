@@ -39,6 +39,7 @@ jobs:
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
           DB_PORT: ${{ secrets.DB_PORT }}
           DB_USER: ${{ secrets.DB_USER }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: deno task create-embeddings
           # |
           # '[ main = "$GITHUB_REF" ] && export PROD="--prod"' \
