@@ -33,11 +33,11 @@ jobs:
         run: deno task ok
       
       - name: Create embeddings
-        run: |
-          '[ main = "$GITHUB_REF" ] && export PROD="--prod"' \
-          export LOG_FILE="$(mktemp)" \
-          deno task create-embeddings 
-        # | tee "${LOG_FILE}"
+        run: deno task create-embeddings
+          # |
+          # '[ main = "$GITHUB_REF" ] && export PROD="--prod"' \
+          # export LOG_FILE="$(mktemp)" \
+          # deno task create-embeddings | tee "${LOG_FILE}"
 
       - name: Create lcov file
         run: deno task cov
