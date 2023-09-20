@@ -74,8 +74,7 @@ In principle, the logo will only be used in black or in white. The background
 color or the image the logo is placed upon may vary in color, so obviously it
 depends on that whether the white or black logo is to be used.
 
-{{< amp-image src="icon-logo-613x357.jpg" width="613" height="357"
-layout="responsive" >}}
+![](https://developer-cdn.fashionunited.com/icon-logo-613x357.jpg)
 <br>
 
 The FashionUnited circle, when used in this combination, should always have a
@@ -84,29 +83,25 @@ height of 400% of the FashionUnited letters.
 The Full logo should always have a whitespace around it of the same height of
 the FashionUnited letters.
 
-{{< amp-image src="icon-270x269.jpg" width="270" height="269"
-layout="responsive" >}}
+![](https://developer-cdn.fashionunited.com/icon-270x269.jpg)
 <br>
 
 The whitespace arount the circle logo should always be 25% of the size of the
 logo.
 
-{{< amp-image src="logo-572x87.jpg" width="572" height="87" layout="responsive"
->}}
+![](https://developer-cdn.fashionunited.com/logo-572x87.jpg)
 <br>
 
 If the text-only logo is used there aways is a minimum whitespace around the
 logo of 50% of the height of the logo.
 
-{{< amp-image src="22-66-22-807x914.jpg" width="807" height="914"
-layout="responsive" >}}
+![](https://developer-cdn.fashionunited.com/22-66-22-807x914.jpg)
 <br>
 
 The logo can never be wider than 66% of the maximum width of the area it is
 placed in.
 
-{{< amp-image src="onderbalk-802x914.jpg" width="802" height="914"
-layout="responsive" >}}
+![](https://developer-cdn.fashionunited.com/onderbalk-802x914.jpg)
 <br>
 
 If we make a screen or ad with a background image or background color, we always
@@ -117,10 +112,10 @@ image.)
 
 Here you can download the logo in various formats and packages:
 
-- [all FashionUnited logos in .ai format](/docs/logo/FashionUnited-ai-logos.zip)
-- [all FashionUnited logos in .eps format](/docs/logo/FashionUnited-eps-logos.zip)
-- [all FashionUnited logos in .svg format](/docs/logo/FashionUnited-svg-logos.zip)
-- [all FashionUnited logos in all vector oriented formats](/docs/logo/FashionUnited-vector-oriented-logos.zip)
+- [all FashionUnited logos in .ai format](https://developer-cdn.fashionunited.com/FashionUnited-ai-logos.zip)
+- [all FashionUnited logos in .eps format](https://developer-cdn.fashionunited.com/FashionUnited-eps-logos.zip)
+- [all FashionUnited logos in .svg format](https://developer-cdn.fashionunited.com/FashionUnited-svg-logos.zip)
+- [all FashionUnited logos in all vector oriented formats](https://developer-cdn.fashionunited.com/FashionUnited-vector-oriented-logos.zip)
 
 Additionally, you can download the
-[complete logo stylesheet in .pdf format](/docs/logo/styleguide_FU_logo_2021.pdf).
+[complete logo stylesheet in .pdf format](https://developer-cdn.fashionunited.com/styleguide_FU_logo_2021.pdf).
