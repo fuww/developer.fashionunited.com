@@ -8,6 +8,7 @@
   packages = [
       pkgs.git
       pkgs.deno
+      pkgs.supabase-cli
   ];
 
   # https://devenv.sh/scripts/
