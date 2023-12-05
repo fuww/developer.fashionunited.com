@@ -108,7 +108,7 @@ export async function handler(req: Request): Promise<Response> {
       `;
 
       const completionOptions: CreateCompletionRequest = {
-        model: "text-davinci-003",
+        model: "gpt-3.5-turbo-instruct",
         prompt,
         max_tokens: 512,
         temperature: 0,
