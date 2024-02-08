@@ -4,9 +4,13 @@ import {
   LINK_STYLES,
   SITE_BAR_STYLES,
 } from "@/utils/constants.ts";
-import { stripe } from "@/utils/payments.ts";
+import { isStripeEnabled } from "@/utils/stripe.ts";
 import { Bars, Bell, CircleFilled, Cross } from "./Icons.tsx";
 import Logo from "@/components/Logo.tsx";
+
+// import IconX from "tabler_icons_tsx/x.tsx";
+// import IconMenu from "tabler_icons_tsx/menu-2.tsx";
+// import { User } from "@/utils/db.ts";
 
 export default function Header(
   props: { sessionId?: string; hasNotifications: boolean; url: URL },

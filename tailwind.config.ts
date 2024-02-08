@@ -22,6 +22,7 @@ theme: {
     black: '#000',
     white: '#fff',
     primary: '#3b82f6',
+    secondary: "#4338ca",
     indigo: '#3b82f6',
     rose: '#f43f5e',
     neutral: '#6b7280',

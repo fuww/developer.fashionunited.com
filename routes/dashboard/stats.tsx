@@ -1,87 +1,52 @@
-// Copyright 2023 the Deno authors. All rights reserved. MIT license.
-import type { Handlers, PageProps } from "$fresh/server.ts";
-import { DAY } from "std/datetime/constants.ts";
+// Copyright 2023-2024 the Deno authors. All rights reserved. MIT license.
 import Chart from "@/islands/Chart.tsx";
-import { getDatesSince, getManyMetrics } from "@/utils/db.ts";
 import Head from "@/components/Head.tsx";
-import type { SignedInState } from "@/utils/middleware.ts";
 import TabsBar from "@/components/TabsBar.tsx";
-import { HEADING_WITH_MARGIN_STYLES } from "@/utils/constants.ts";
+import { defineRoute } from "$fresh/server.ts";
+import { Partial } from "$fresh/runtime.ts";
 
-interface DashboardPageData extends SignedInState {
-  dates: Date[];
-  visitsCounts: number[];
-  usersCounts: number[];
-  itemsCounts: number[];
-  votesCounts: number[];
+function randomNumbers(length: number) {
+  return Array.from({ length }, () => Math.floor(Math.random() * 1000));
 }
 
-export const handler: Handlers<DashboardPageData, SignedInState> = {
-  async GET(_req, ctx) {
-    const msAgo = 30 * DAY;
-    const dates = getDatesSince(msAgo).map((date) => new Date(date));
-
-    const [
-      visitsCounts,
-      usersCounts,
-      itemsCounts,
-      votesCounts,
-    ] = await Promise.all([
-      getManyMetrics("visits_count", dates),
-      getManyMetrics("users_count", dates),
-      getManyMetrics("items_count", dates),
-      getManyMetrics("votes_count", dates),
-    ]);
-
-    return ctx.render({
-      ...ctx.state,
-      dates,
-      visitsCounts: visitsCounts.map(Number),
-      usersCounts: usersCounts.map(Number),
-      itemsCounts: itemsCounts.map(Number),
-      votesCounts: votesCounts.map(Number),
-    });
-  },
-};
-
-export default function DashboardPage(props: PageProps<DashboardPageData>) {
+export default defineRoute((_req, ctx) => {
+  const labels = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
   const datasets = [
     {
       label: "Site visits",
-      data: props.data.visitsCounts,
+      data: randomNumbers(labels.length),
       borderColor: "#be185d",
     },
     {
       label: "Users created",
-      data: props.data.usersCounts,
+      data: randomNumbers(labels.length),
       borderColor: "#e85d04",
     },
     {
       label: "Items created",
-      data: props.data.itemsCounts,
+      data: randomNumbers(labels.length),
       borderColor: "#219ebc",
     },
     {
       label: "Votes",
-      data: props.data.votesCounts,
+      data: randomNumbers(labels.length),
       borderColor: "#4338ca",
     },
   ];
 
-  const max = Math.max(...datasets[0].data);
-
-  const labels = props.data.dates.map((date) =>
-    new Date(date).toLocaleDateString("en-us", {
-      month: "short",
-      day: "numeric",
-    })
-  );
-
   return (
     <>
-      <Head title="Dashboard" href={props.url.href} />
-      <main class="flex-1 p-4 flex flex-col">
-        <h1 class={HEADING_WITH_MARGIN_STYLES}>Dashboard</h1>
+      <Head title="Dashboard" href={ctx.url.href} />
+      <main class="flex-1 p-4 flex flex-col f-client-nav">
+        <h1 class="heading-with-margin-styles">Dashboard</h1>
         <TabsBar
           links={[{
             path: "/dashboard/stats",
@@ -90,40 +55,41 @@ export default function DashboardPage(props: PageProps<DashboardPageData>) {
             path: "/dashboard/users",
             innerText: "Users",
           }]}
-          currentPath={props.url.pathname}
+          currentPath={ctx.url.pathname}
         />
-        <div class="flex-1 relative">
-          <Chart
-            type="line"
-            options={{
-              maintainAspectRatio: false,
-              interaction: {
-                intersect: false,
-                mode: "index",
-              },
-              scales: {
-                x: {
-                  max,
-                  grid: { display: false },
+        <Partial name="stats">
+          <div class="flex-1 relative">
+            <Chart
+              type="line"
+              options={{
+                maintainAspectRatio: false,
+                interaction: {
+                  intersect: false,
+                  mode: "index",
                 },
-                y: {
-                  beginAtZero: true,
-                  grid: { display: false },
-                  ticks: { precision: 0 },
+                scales: {
+                  x: {
+                    grid: { display: false },
+                  },
+                  y: {
+                    beginAtZero: true,
+                    grid: { display: false },
+                    ticks: { precision: 0 },
+                  },
                 },
-              },
-            }}
-            data={{
-              labels,
-              datasets: datasets.map((dataset) => ({
-                ...dataset,
-                pointRadius: 0,
-                cubicInterpolationMode: "monotone",
-              })),
-            }}
-          />
-        </div>
+              }}
+              data={{
+                labels,
+                datasets: datasets.map((dataset) => ({
+                  ...dataset,
+                  pointRadius: 0,
+                  cubicInterpolationMode: "monotone",
+                })),
+              }}
+            />
+          </div>
+        </Partial>
       </main>
     </>
   );
-}
+});

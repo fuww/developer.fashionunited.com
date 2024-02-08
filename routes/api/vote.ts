@@ -1,70 +1,22 @@
-// Copyright 2023 the Deno authors. All rights reserved. MIT license.
-import type { HandlerContext, Handlers, PageProps } from "$fresh/server.ts";
-import type { State } from "@/routes/_middleware.ts";
-import { createVote, deleteVote, getItem, newVoteProps } from "@/utils/db.ts";
-import {
-  createNotification,
-  getUserBySession,
-  newNotificationProps,
-  Notification,
-} from "@/utils/db.ts";
+// Copyright 2023-2024 the Deno authors. All rights reserved. MIT license.
+import { type Handlers } from "$fresh/server.ts";
+import { Status } from "https://deno.land/std@0.188.0/http/http_status.ts";
+import type { SignedInState } from "@/plugins/session.ts";
+import { createVote } from "@/utils/db.ts";
+import { BadRequestError } from "@/utils/http.ts";
 
-async function sharedHandler(
-  req: Request,
-  ctx: HandlerContext<PageProps<undefined>, State>,
-) {
-  if (!ctx.state.sessionId) {
-    return new Response(null, { status: 401 });
-  }
-
-  const itemId = new URL(req.url).searchParams.get("item_id");
-  if (!itemId) {
-    return new Response(null, { status: 400 });
-  }
-
-  const [item, user] = await Promise.all([
-    getItem(itemId),
-    getUserBySession(ctx.state.sessionId),
-  ]);
-  if (item === null || user === null) {
-    return new Response(null, { status: 404 });
-  }
-
-  const vote = {
-    item,
-    userLogin: user.login,
-    ...newVoteProps(),
-  };
-  let status;
-  switch (req.method) {
-    case "DELETE":
-      status = 204;
-      await deleteVote(vote);
-      break;
-    case "POST": {
-      status = 201;
-      await createVote(vote);
-
-      if (item.userLogin !== user.login) {
-        const notification: Notification = {
-          userLogin: item.userLogin,
-          type: "vote",
-          text: `${user.login} upvoted your post: ${item.title}`,
-          originUrl: `/item/${itemId}`,
-          ...newNotificationProps(),
-        };
-        await createNotification(notification);
-      }
-      break;
+export const handler: Handlers<undefined, SignedInState> = {
+  async POST(req, ctx) {
+    const itemId = new URL(req.url).searchParams.get("item_id");
+    if (itemId === null) {
+      throw new BadRequestError("`item_id` URL parameter missing");
     }
-    default:
-      return new Response(null, { status: 400 });
-  }
 
-  return new Response(null, { status });
-}
+    await createVote({
+      itemId,
+      userLogin: ctx.state.sessionUser.login,
+    });
 
-export const handler: Handlers<PageProps, State> = {
-  POST: sharedHandler,
-  DELETE: sharedHandler,
+    return new Response(null, { status: STATUS_CODE.Created });
+  },
 };
