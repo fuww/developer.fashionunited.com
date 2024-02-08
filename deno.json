@@ -21,6 +21,7 @@
     "preview": "deno run -A --unstable-kv main.ts"
   },
   "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
+  "nodeModulesDir": true,
   "imports": {
     "@/": "./",
     "$fresh/": "https://deno.land/x/fresh@1.6.3/",

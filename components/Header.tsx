@@ -4,6 +4,15 @@ import { isStripeEnabled } from "@/utils/stripe.ts";
 import IconX from "tabler_icons_tsx/x.tsx";
 import IconMenu from "tabler_icons_tsx/menu-2.tsx";
 import { User } from "@/utils/db.ts";
+// Copyright 2023 the Deno authors. All rights reserved. MIT license.
+import {
+  ACTIVE_LINK_STYLES,
+  LINK_STYLES,
+  SITE_BAR_STYLES,
+} from "@/utils/constants.ts";
+import { stripe } from "@/utils/payments.ts";
+import { Bars, Bell, CircleFilled, Cross } from "./Icons.tsx";
+import Logo from "@/components/Logo.tsx";
 
 export interface HeaderProps {
   /** Currently signed-in user */
@@ -56,113 +65,18 @@ export default function Header(props: HeaderProps) {
       <nav
         class={"hidden flex-col gap-x-4 divide-y divide-solid sm:flex sm:items-center sm:flex-row sm:divide-y-0"}
       >
-        {
-          /* <a
-          href="/dashboard"
-          class="link-styles data-[ancestor]:!text-black data-[ancestor]:dark:!text-white nav-item"
-        >
-          Dashboard
-        </a>
-        {isStripeEnabled() &&
-          (
-        </a> */
-        }
         <a
           href="/docs/advertising"
-          class={cx(
-            props.url.pathname === "/docs/advertising"
-              ? ACTIVE_LINK_STYLES
-              : LINK_STYLES,
-            NAV_ITEM,
-          )}
+          class="link-styles data-[ancestor]:!text-black data-[ancestor]:dark:!text-white nav-item"
         >
           Docs
         </a>
-        {
-          /* <a
-          href="/blog"
-          class={cx(
-            props.url.pathname === "/blog" ? ACTIVE_LINK_STYLES : LINK_STYLES,
-            NAV_ITEM,
-          )}
-        >
-          Blog
-        </a> */
-        }
         <a
           href="/showcase"
-          class={cx(
-            props.url.pathname === "/showcase"
-              ? ACTIVE_LINK_STYLES
-              : LINK_STYLES,
-            NAV_ITEM,
-          )}
+          class="link-styles data-[ancestor]:!text-black data-[ancestor]:dark:!text-white nav-item"
         >
           Showcase
         </a>
-        {
-          /* {stripe
-          ? (
-            <a
-              href="/pricing"
-              class="link-styles data-[current]:!text-black data-[current]:dark:!text-white nav-item"
-            >
-              Pricing
-            </a>
-          )}
-        {props.sessionUser
-          )
-          : null} */
-        }
-        {
-          /* {props.sessionId
-          ? (
-            <a
-              href="/account"
-              class="link-styles data-[current]:!text-black data-[current]:dark:!text-white nav-item"
-            >
-              Account
-            </a>
-          )
-          : (
-            <a href="/signin" class="link-styles nav-item">
-              Sign in
-            </a>
-          )}
-        <div class="rounded-lg bg-gradient-to-tr from-secondary to-primary p-px">
-          : <a href="/signin" class={cx(LINK_STYLES, NAV_ITEM)}>Sign in</a>} */
-        }
-        {
-          /* <a
-          href="/notifications"
-          class={cx(
-            props.url.pathname === "/notifications"
-              ? ACTIVE_LINK_STYLES
-              : LINK_STYLES,
-            NAV_ITEM,
-            "relative flex gap-2 items-center",
-          )}
-          aria-label="Notifications"
-        >
-          <Bell class="hidden sm:block w-6 h-6" />
-          <div class="sm:hidden">
-            Notifications
-          </div>
-          {props.hasNotifications && (
-            <CircleFilled class="absolute top-0.5 right-0.5 text-primary w-2 h-2" />
-          )}
-        </a> */
-        }
-        {
-          /* <div class="rounded-lg bg-gradient-to-tr from-secondary to-primary p-px">
-          <a
-            href="/submit"
-            class="text-center text-white rounded-[7px] transition duration-300 px-4 py-2 block hover:bg-white hover:text-black hover:dark:bg-gray-900 hover:dark:!text-white"
-          >
-            Submit
-          </a>
-        </div> */
-        }
       </nav>
     </header>
   );
