@@ -15,21 +15,30 @@ import * as $api_stripe_webhooks from "./routes/api/stripe-webhooks.ts";
 import * as $api_users_login_index from "./routes/api/users/[login]/index.ts";
 import * as $api_users_login_items from "./routes/api/users/[login]/items.ts";
 import * as $api_users_index from "./routes/api/users/index.ts";
+import * as $api_vector_search from "./routes/api/vector-search.ts";
 import * as $api_vote from "./routes/api/vote.ts";
 import * as $blog_slug_ from "./routes/blog/[slug].tsx";
 import * as $blog_index from "./routes/blog/index.tsx";
 import * as $dashboard_index from "./routes/dashboard/index.tsx";
 import * as $dashboard_stats from "./routes/dashboard/stats.tsx";
 import * as $dashboard_users from "./routes/dashboard/users.tsx";
+import * as $docs_slug_ from "./routes/docs/[...slug].tsx";
+import * as $docs_index from "./routes/docs/index.tsx";
+import * as $docs_video from "./routes/docs/video.tsx";
 import * as $feed from "./routes/feed.ts";
+import * as $gfm_css from "./routes/gfm.css.ts";
 import * as $index from "./routes/index.tsx";
 import * as $pricing from "./routes/pricing.tsx";
+import * as $showcase from "./routes/showcase.tsx";
 import * as $submit from "./routes/submit.tsx";
 import * as $users_login_ from "./routes/users/[login].tsx";
 import * as $welcome from "./routes/welcome.tsx";
 import * as $Chart from "./islands/Chart.tsx";
 import * as $ItemsList from "./islands/ItemsList.tsx";
+import * as $SearchDialog from "./islands/SearchDialog.tsx";
 import * as $UsersTable from "./islands/UsersTable.tsx";
+import * as $Video from "./islands/Video.tsx";
+import * as $VideoClick from "./islands/VideoClick.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -47,15 +56,21 @@ const manifest = {
     "./routes/api/users/[login]/index.ts": $api_users_login_index,
     "./routes/api/users/[login]/items.ts": $api_users_login_items,
     "./routes/api/users/index.ts": $api_users_index,
+    "./routes/api/vector-search.ts": $api_vector_search,
     "./routes/api/vote.ts": $api_vote,
     "./routes/blog/[slug].tsx": $blog_slug_,
     "./routes/blog/index.tsx": $blog_index,
     "./routes/dashboard/index.tsx": $dashboard_index,
     "./routes/dashboard/stats.tsx": $dashboard_stats,
     "./routes/dashboard/users.tsx": $dashboard_users,
+    "./routes/docs/[...slug].tsx": $docs_slug_,
+    "./routes/docs/index.tsx": $docs_index,
+    "./routes/docs/video.tsx": $docs_video,
     "./routes/feed.ts": $feed,
+    "./routes/gfm.css.ts": $gfm_css,
     "./routes/index.tsx": $index,
     "./routes/pricing.tsx": $pricing,
+    "./routes/showcase.tsx": $showcase,
     "./routes/submit.tsx": $submit,
     "./routes/users/[login].tsx": $users_login_,
     "./routes/welcome.tsx": $welcome,
@@ -63,7 +78,10 @@ const manifest = {
   islands: {
     "./islands/Chart.tsx": $Chart,
     "./islands/ItemsList.tsx": $ItemsList,
+    "./islands/SearchDialog.tsx": $SearchDialog,
     "./islands/UsersTable.tsx": $UsersTable,
+    "./islands/Video.tsx": $Video,
+    "./islands/VideoClick.tsx": $VideoClick,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

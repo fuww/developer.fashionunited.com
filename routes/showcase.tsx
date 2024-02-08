@@ -2,7 +2,7 @@ import { RouteContext } from "$fresh/server.ts";
 import Container from "@/components/Container.tsx";
 import Showcase from "@/components/Showcase.tsx";
 import type { State } from "./_middleware.ts";
-import SearchDialog from "@/islands/SearchDialog.tsx";
+// import SearchDialog from "@/islands/SearchDialog.tsx";
 
 export default function ShowcasePage(
   _req: Request,
@@ -12,7 +12,7 @@ export default function ShowcasePage(
     <>
       <main>
         <Container>
-          <SearchDialog withPadding />
+          {/* <SearchDialog withPadding /> */}
           <Showcase />
         </Container>
       </main>

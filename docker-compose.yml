@@ -14,7 +14,6 @@ services:
       - STRIPE_PREMIUM_PLAN_PRICE_ID=${STRIPE_PREMIUM_PLAN_PRICE_ID}
     ports:
       - "8000:8000"
-services:
   postgres:
     image: ankane/pgvector:latest
     environment:

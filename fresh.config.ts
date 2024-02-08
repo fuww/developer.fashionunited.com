@@ -18,5 +18,4 @@ export default {
     errorHandling,
     securityHeaders,
   ],
-  port: 8080,
 } satisfies FreshConfig;

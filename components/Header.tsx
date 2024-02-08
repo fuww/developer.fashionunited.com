@@ -10,8 +10,8 @@ import {
   LINK_STYLES,
   SITE_BAR_STYLES,
 } from "@/utils/constants.ts";
-import { stripe } from "@/utils/payments.ts";
-import { Bars, Bell, CircleFilled, Cross } from "./Icons.tsx";
+// import { stripe } from "@/utils/payments.ts";
+// import { Bars, Bell, CircleFilled, Cross } from "./Icons.tsx";
 import Logo from "@/components/Logo.tsx";
 
 export interface HeaderProps {

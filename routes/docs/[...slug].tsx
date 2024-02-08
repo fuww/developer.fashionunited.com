@@ -11,7 +11,7 @@ import { SLUGS, TABLE_OF_CONTENTS, TableOfContentsEntry } from "@/data/docs.ts";
 import { getGitEditUrl, getGitIdeUrl } from "@/utils/get-git-edit-url.ts";
 import { EditPage } from "@/components/EditPage.tsx";
 import { generateImageSrcSet, resizeImage } from "@/utils/image.ts";
-import SearchDialog from "@/islands/SearchDialog.tsx";
+// import SearchDialog from "@/islands/SearchDialog.tsx";
 
 interface DocsPageData extends State {
   page: Page;
