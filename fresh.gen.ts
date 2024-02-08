@@ -2,93 +2,94 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import * as $0 from "./routes/_404.tsx";
-import * as $1 from "./routes/_500.tsx";
-import * as $2 from "./routes/_app.tsx";
-import * as $3 from "./routes/_middleware.ts";
-import * as $4 from "./routes/account/_middleware.ts";
-import * as $5 from "./routes/account/index.tsx";
-import * as $6 from "./routes/account/manage.ts";
-import * as $7 from "./routes/account/upgrade.ts";
-import * as $8 from "./routes/api/stripe-webhooks.ts";
-import * as $9 from "./routes/api/vector-search.ts";
-import * as $10 from "./routes/api/vote.ts";
-import * as $11 from "./routes/blog/[slug].tsx";
-import * as $12 from "./routes/blog/index.tsx";
-import * as $13 from "./routes/callback.ts";
-import * as $14 from "./routes/dashboard/_middleware.ts";
-import * as $15 from "./routes/dashboard/index.tsx";
-import * as $16 from "./routes/dashboard/stats.tsx";
-import * as $17 from "./routes/dashboard/users.tsx";
-import * as $18 from "./routes/docs/[...slug].tsx";
-import * as $19 from "./routes/docs/index.tsx";
-import * as $20 from "./routes/docs/video.tsx";
-import * as $21 from "./routes/feed.ts";
-import * as $22 from "./routes/gfm.css.ts";
-import * as $23 from "./routes/index.tsx";
-import * as $24 from "./routes/item/[id].tsx";
-import * as $25 from "./routes/notifications/[id].ts";
-import * as $26 from "./routes/notifications/_middleware.ts";
-import * as $27 from "./routes/notifications/index.tsx";
-import * as $28 from "./routes/pricing.tsx";
-import * as $29 from "./routes/showcase.tsx";
-import * as $30 from "./routes/signin.ts";
-import * as $31 from "./routes/signout.ts";
-import * as $32 from "./routes/submit.tsx";
-import * as $33 from "./routes/user/[login].tsx";
-import * as $$0 from "./islands/Chart.tsx";
-import * as $$1 from "./islands/PageInput.tsx";
-import * as $$2 from "./islands/SearchDialog.tsx";
-import * as $$3 from "./islands/Video.tsx";
-import * as $$4 from "./islands/VideoClick.tsx";
-import * as $$5 from "./islands/VoteButton.tsx";
+import * as $_404 from "./routes/_404.tsx";
+import * as $_500 from "./routes/_500.tsx";
+import * as $_app from "./routes/_app.tsx";
+import * as $_middleware from "./routes/_middleware.ts";
+import * as $account_middleware from "./routes/account/_middleware.ts";
+import * as $account_index from "./routes/account/index.tsx";
+import * as $account_manage from "./routes/account/manage.ts";
+import * as $account_upgrade from "./routes/account/upgrade.ts";
+import * as $api_stripe_webhooks from "./routes/api/stripe-webhooks.ts";
+import * as $api_vector_search from "./routes/api/vector-search.ts";
+import * as $api_vote from "./routes/api/vote.ts";
+import * as $blog_slug_ from "./routes/blog/[slug].tsx";
+import * as $blog_index from "./routes/blog/index.tsx";
+import * as $callback from "./routes/callback.ts";
+import * as $dashboard_middleware from "./routes/dashboard/_middleware.ts";
+import * as $dashboard_index from "./routes/dashboard/index.tsx";
+import * as $dashboard_stats from "./routes/dashboard/stats.tsx";
+import * as $dashboard_users from "./routes/dashboard/users.tsx";
+import * as $docs_slug_ from "./routes/docs/[...slug].tsx";
+import * as $docs_index from "./routes/docs/index.tsx";
+import * as $docs_video from "./routes/docs/video.tsx";
+import * as $feed from "./routes/feed.ts";
+import * as $gfm_css from "./routes/gfm.css.ts";
+import * as $index from "./routes/index.tsx";
+import * as $item_id_ from "./routes/item/[id].tsx";
+import * as $notifications_id_ from "./routes/notifications/[id].ts";
+import * as $notifications_middleware from "./routes/notifications/_middleware.ts";
+import * as $notifications_index from "./routes/notifications/index.tsx";
+import * as $pricing from "./routes/pricing.tsx";
+import * as $showcase from "./routes/showcase.tsx";
+import * as $signin from "./routes/signin.ts";
+import * as $signout from "./routes/signout.ts";
+import * as $submit from "./routes/submit.tsx";
+import * as $user_login_ from "./routes/user/[login].tsx";
+import * as $Chart from "./islands/Chart.tsx";
+import * as $PageInput from "./islands/PageInput.tsx";
+import * as $SearchDialog from "./islands/SearchDialog.tsx";
+import * as $Video from "./islands/Video.tsx";
+import * as $VideoClick from "./islands/VideoClick.tsx";
+import * as $VoteButton from "./islands/VoteButton.tsx";
+import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
-    "./routes/_404.tsx": $0,
-    "./routes/_500.tsx": $1,
-    "./routes/_app.tsx": $2,
-    "./routes/_middleware.ts": $3,
-    "./routes/account/_middleware.ts": $4,
-    "./routes/account/index.tsx": $5,
-    "./routes/account/manage.ts": $6,
-    "./routes/account/upgrade.ts": $7,
-    "./routes/api/stripe-webhooks.ts": $8,
-    "./routes/api/vector-search.ts": $9,
-    "./routes/api/vote.ts": $10,
-    "./routes/blog/[slug].tsx": $11,
-    "./routes/blog/index.tsx": $12,
-    "./routes/callback.ts": $13,
-    "./routes/dashboard/_middleware.ts": $14,
-    "./routes/dashboard/index.tsx": $15,
-    "./routes/dashboard/stats.tsx": $16,
-    "./routes/dashboard/users.tsx": $17,
-    "./routes/docs/[...slug].tsx": $18,
-    "./routes/docs/index.tsx": $19,
-    "./routes/docs/video.tsx": $20,
-    "./routes/feed.ts": $21,
-    "./routes/gfm.css.ts": $22,
-    "./routes/index.tsx": $23,
-    "./routes/item/[id].tsx": $24,
-    "./routes/notifications/[id].ts": $25,
-    "./routes/notifications/_middleware.ts": $26,
-    "./routes/notifications/index.tsx": $27,
-    "./routes/pricing.tsx": $28,
-    "./routes/showcase.tsx": $29,
-    "./routes/signin.ts": $30,
-    "./routes/signout.ts": $31,
-    "./routes/submit.tsx": $32,
-    "./routes/user/[login].tsx": $33,
+    "./routes/_404.tsx": $_404,
+    "./routes/_500.tsx": $_500,
+    "./routes/_app.tsx": $_app,
+    "./routes/_middleware.ts": $_middleware,
+    "./routes/account/_middleware.ts": $account_middleware,
+    "./routes/account/index.tsx": $account_index,
+    "./routes/account/manage.ts": $account_manage,
+    "./routes/account/upgrade.ts": $account_upgrade,
+    "./routes/api/stripe-webhooks.ts": $api_stripe_webhooks,
+    "./routes/api/vector-search.ts": $api_vector_search,
+    "./routes/api/vote.ts": $api_vote,
+    "./routes/blog/[slug].tsx": $blog_slug_,
+    "./routes/blog/index.tsx": $blog_index,
+    "./routes/callback.ts": $callback,
+    "./routes/dashboard/_middleware.ts": $dashboard_middleware,
+    "./routes/dashboard/index.tsx": $dashboard_index,
+    "./routes/dashboard/stats.tsx": $dashboard_stats,
+    "./routes/dashboard/users.tsx": $dashboard_users,
+    "./routes/docs/[...slug].tsx": $docs_slug_,
+    "./routes/docs/index.tsx": $docs_index,
+    "./routes/docs/video.tsx": $docs_video,
+    "./routes/feed.ts": $feed,
+    "./routes/gfm.css.ts": $gfm_css,
+    "./routes/index.tsx": $index,
+    "./routes/item/[id].tsx": $item_id_,
+    "./routes/notifications/[id].ts": $notifications_id_,
+    "./routes/notifications/_middleware.ts": $notifications_middleware,
+    "./routes/notifications/index.tsx": $notifications_index,
+    "./routes/pricing.tsx": $pricing,
+    "./routes/showcase.tsx": $showcase,
+    "./routes/signin.ts": $signin,
+    "./routes/signout.ts": $signout,
+    "./routes/submit.tsx": $submit,
+    "./routes/user/[login].tsx": $user_login_,
   },
   islands: {
-    "./islands/Chart.tsx": $$0,
-    "./islands/PageInput.tsx": $$1,
-    "./islands/SearchDialog.tsx": $$2,
-    "./islands/Video.tsx": $$3,
-    "./islands/VideoClick.tsx": $$4,
-    "./islands/VoteButton.tsx": $$5,
+    "./islands/Chart.tsx": $Chart,
+    "./islands/PageInput.tsx": $PageInput,
+    "./islands/SearchDialog.tsx": $SearchDialog,
+    "./islands/Video.tsx": $Video,
+    "./islands/VideoClick.tsx": $VideoClick,
+    "./islands/VoteButton.tsx": $VoteButton,
   },
   baseUrl: import.meta.url,
-};
+} satisfies Manifest;
 
 export default manifest;

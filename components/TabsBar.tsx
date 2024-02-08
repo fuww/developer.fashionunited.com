@@ -1,6 +1,5 @@
 // Copyright 2023 the Deno authors. All rights reserved. MIT license.
 import { LINK_STYLES } from "@/utils/constants.ts";
-import { cx } from "@twind/core";
 
 export function TabItem(
   props: { path: string; innerText: string; active: boolean },
@@ -8,13 +7,11 @@ export function TabItem(
   return (
     <a
       href={props.path}
-      class={cx(
-        "px-4 py-2 rounded-lg",
+      class={`px-4 py-2 rounded-lg ${
         props.active
-          ? "bg-gray-100 text-black dark:(bg-gray-800 text-white)"
-          : "",
-        LINK_STYLES,
-      )}
+          ? "bg-gray-100 text-black dark:bg-gray-800 dark:text-white"
+          : ""
+      } link-styles`}
     >
       {props.innerText}
     </a>

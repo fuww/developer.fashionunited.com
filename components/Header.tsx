@@ -6,7 +6,6 @@ import {
 } from "@/utils/constants.ts";
 import { stripe } from "@/utils/payments.ts";
 import { Bars, Bell, CircleFilled, Cross } from "./Icons.tsx";
-import { cx } from "@twind/core";
 import Logo from "@/components/Logo.tsx";
 
 export default function Header(
@@ -14,11 +13,7 @@ export default function Header(
 ) {
   const NAV_ITEM = "text-gray-500 px-3 py-4 sm:py-2";
   return (
-    <header
-      class={cx(
-        SITE_BAR_STYLES,
-        "flex-col sm:flex-row",
-      )}
+    <header class="site-bar-styles flex-col sm:flex-row">
     >
       <input
         type="checkbox"
@@ -58,117 +53,18 @@ export default function Header(
       <nav
         class={"hidden flex-col gap-x-4 divide-y divide-solid sm:(flex items-center flex-row divide-y-0)"}
       >
-        {
-          /* <a
-          href="/dashboard"
-          class={cx(
-            props.url.pathname === "/dashboard"
-              ? ACTIVE_LINK_STYLES
-              : LINK_STYLES,
-            NAV_ITEM,
-          )}
-        >
-          Dashboard
-        </a> */
-        }
         <a
           href="/docs/advertising"
-          class={cx(
-            props.url.pathname === "/docs/advertising"
-              ? ACTIVE_LINK_STYLES
-              : LINK_STYLES,
-            NAV_ITEM,
-          )}
+          class="link-styles data-[ancestor]:!text-black data-[ancestor]:dark:!text-white nav-item"
         >
           Docs
         </a>
-        {
-          /* <a
-          href="/blog"
-          class={cx(
-            props.url.pathname === "/blog" ? ACTIVE_LINK_STYLES : LINK_STYLES,
-            NAV_ITEM,
-          )}
-        >
-          Blog
-        </a> */
-        }
         <a
           href="/showcase"
-          class={cx(
-            props.url.pathname === "/showcase"
-              ? ACTIVE_LINK_STYLES
-              : LINK_STYLES,
-            NAV_ITEM,
-          )}
+          class="link-styles data-[ancestor]:!text-black data-[ancestor]:dark:!text-white nav-item"
         >
           Showcase
         </a>
-        {
-          /* {stripe
-          ? (
-            <a
-              href="/pricing"
-              class={cx(
-                props.url.pathname === "/pricing"
-                  ? ACTIVE_LINK_STYLES
-                  : LINK_STYLES,
-                NAV_ITEM,
-              )}
-            >
-              Pricing
-            </a>
-          )
-          : null} */
-        }
-        {
-          /* {props.sessionId
-          ? (
-            <a
-              href="/account"
-              class={cx(
-                props.url.pathname === "/account"
-                  ? ACTIVE_LINK_STYLES
-                  : LINK_STYLES,
-                NAV_ITEM,
-              )}
-            >
-              Account
-            </a>
-          )
-          : <a href="/signin" class={cx(LINK_STYLES, NAV_ITEM)}>Sign in</a>} */
-        }
-        {
-          /* <a
-          href="/notifications"
-          class={cx(
-            props.url.pathname === "/notifications"
-              ? ACTIVE_LINK_STYLES
-              : LINK_STYLES,
-            NAV_ITEM,
-            "relative flex gap-2 items-center",
-          )}
-          aria-label="Notifications"
-        >
-          <Bell class="hidden sm:block w-6 h-6" />
-          <div class="sm:hidden">
-            Notifications
-          </div>
-          {props.hasNotifications && (
-            <CircleFilled class="absolute top-0.5 right-0.5 text-primary w-2 h-2" />
-          )}
-        </a> */
-        }
-        {
-          /* <div class="rounded-lg bg-gradient-to-tr from-secondary to-primary p-px">
-          <a
-            href="/submit"
-            class="text-center text-white rounded-[7px] transition duration-300 px-4 py-2 block hover:(bg-white text-black dark:(bg-gray-900 !text-white))"
-          >
-            Submit
-          </a>
-        </div> */
-        }
       </nav>
     </header>
   );
