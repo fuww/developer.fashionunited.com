@@ -1,0 +1,78 @@
+name: Deploy
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    container: denoland/deno:alpine-1.37.1
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run lint
+        run: deno lint
+
+  type-check:
+    runs-on: ubuntu-latest
+    container: denoland/deno:alpine-1.37.1
+    needs: lint
+    steps:
+      - uses: actions/checkout@v2
+      - name: Type Check TSX
+        run: deno check **/*.tsx
+      - name: Type Check TS
+        run: deno check **/*.ts
+
+  create-embeddings:
+      runs-on: ubuntu-latest
+      container: denoland/deno:alpine-1.37.1
+      if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
+      steps:
+        - uses: actions/checkout@v2
+        - name: Create Embeddings
+          run: |
+            if [ "${{ github.ref }}" == "refs/heads/main" ]; then
+              export PROD="--prod"
+            fi
+            LOG_FILE=$(mktemp)
+            deno task create-embeddings | tee "${LOG_FILE}"
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write # Needed for auth with Deno Deploy
+      contents: read # Needed to clone the repository
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - name: Build step
+        run: "deno task build" # 📝 Update the build command(s) if necessary
+
+      - name: Upload to Deno Deploy
+        uses: denoland/deployctl@v1
+        with:
+          project: "about-fuww" # 📝 Update the deploy project name if necessary
+          entrypoint: "./main.ts" # 📝 Update the entrypoint if necessary
+
+  smoke-test:
+    runs-on: ubuntu-latest
+    container: registry.gitlab.com/gitlab-ci-utils/curl-jq:latest
+    needs: deploy
+    steps:
+      - uses: actions/checkout@v2
+      - name: Prepare
+        run: echo "CI_ENVIRONMENT_URL=$(cat CI_ENVIRONMENT_URL.txt)" >> $GITHUB_ENV
+      - name: Run Smoke Test
+        run: ./smoke_test.sh
+        
