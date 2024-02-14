@@ -1,3 +1,4 @@
+const { fontFamily } = require('tailwindcss/defaultTheme')
 import starlightPlugin from '@astrojs/starlight-tailwind';
 import colors from '@tailwindcss/colors';
 
