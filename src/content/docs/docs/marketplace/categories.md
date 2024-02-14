@@ -53,4 +53,4 @@ long as it's used consistently.
 
 These are the main product categories we started out with. This will be expanded
 in the future. Please also check our
-[color overview](https://fashionunited.com/developers/marketplace/colors/).
+[color overview](https://developer.fashionunited.com/docs/marketplace/colors/).
