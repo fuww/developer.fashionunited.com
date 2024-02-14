@@ -63,6 +63,7 @@ jobs:
       with:
         path: 'dist'
         destination: 'developer.fashionunited.com'
+        parent: false # upload to root
     
     #     # Example of using the output
     # - id: 'uploaded-files'
