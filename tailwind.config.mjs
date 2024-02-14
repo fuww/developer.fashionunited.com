@@ -4,7 +4,7 @@ import colors from '@tailwindcss/colors';
 // Generated color palettes
 // https://starlight.astro.build/guides/css-and-tailwind/#color-theme-editor
 const accent = { 200: '#f8b4b9', 600: '#c80044', 900: '#60071f', 950: '#420e18' };
-const gray = { 100: '#f3f7f9', 200: '#e7eff2', 300: '#bac4c8', 400: '#7b8f96', 500: '#495c62', 700: '#2a3b41', 800: '#182a2f', 900: '#121a1c' };
+const gray = { 100: '#f5f6f8', 200: '#eceef2', 300: '#c0c2c7', 400: '#888b96', 500: '#545861', 700: '#353841', 800: '#24272f', 900: '#17181c' };
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -47,9 +47,9 @@ export default {
 		},
 		fontFamily: {
 			// Your preferred text font. Starlight uses a system font stack by default.
-			sans: ['"Inter var"'],
+			sans: ['Inter var', ...fontFamily.sans],
 			// Your preferred code font. Starlight uses system monospace fonts by default.
-			mono: ['"IBM Plex Mono"'],
+			mono: ['IBM Plex Mono', ...fontFamily.mono],
 		//   sans: "'Inter var', sans-serif",
 		//   // sans: "'Helvetica', sans-serif",
 		//   serif: "'Lora', serif",
