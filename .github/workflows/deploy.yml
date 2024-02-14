@@ -61,7 +61,7 @@ jobs:
     - id: 'upload-folder'
       uses: 'google-github-actions/upload-cloud-storage@v2'
       with:
-        path: 'dist'
+        path: 'dist/'
         destination: 'developer.fashionunited.com'
     
     #     # Example of using the output
