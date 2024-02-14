@@ -63,7 +63,7 @@ Please provide a logo in a vector oriented format such as .svg, .eps or .ai.
 
 Preferably send us an .svg file. But we can also create one from the other
 mentioned formats. For more information see our
-[Logo Requirements](https://fashionunited.com/developers/logo/).
+[Logo Requirements](https://developer.fashionunited.com/docs/logo/).
 
 ### Example
 

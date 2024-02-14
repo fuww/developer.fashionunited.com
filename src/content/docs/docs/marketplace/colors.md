@@ -41,4 +41,4 @@ it's used consistently. But using this will reduce any error sensitivity.
 - multi-colored
 
 Please also check our
-[categories overview](https://fashionunited.com/developers/marketplace/categories).
+[categories overview](https://developer.fashionunited.com/docs/marketplace/categories).
