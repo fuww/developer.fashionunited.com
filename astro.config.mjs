@@ -8,6 +8,10 @@ export default defineConfig({
   site: 'https://developer.fashionunited.com',
   integrations: [starlight({
     title: 'FashionUnited Docs',
+	customCss: [
+        // Path to your Tailwind base styles:
+        './src/tailwind.css',
+      ],
     social: {
       github: 'https://github.com/fuww/developer.fashionunited.com'
     },
@@ -18,12 +22,6 @@ export default defineConfig({
       {
         label: 'Advertising',
         link: '/docs/advertising/'
-      }, {
-        label: 'Editorial Cheat Sheet',
-        link: '/docs/editorial-cheat-sheet/'
-      }, {
-        label: 'Editorial Style Guide',
-        link: '/docs/editorial-style-guide/'
       }, {
         label: 'FashionUnited for Websites - Embedding Jobs and News',
         link: '/docs/fashionunited-for-websites/'
@@ -36,18 +34,6 @@ export default defineConfig({
       }, {
         label: 'Logo',
         link: '/docs/logo/'
-      },
-      // { label: 'Marketplace', link: '/docs/marketplace/' },
-      // { label: 'Getting started - Marketplace', link: '/docs/marketplace/getting-started/' },
-      // { label: 'Brand Pages - Marketplace', link: '/docs/marketplace/brand-pages/' },
-      // { label: 'Categories - Marketplace', link: '/docs/marketplace/categories/' },
-      // { label: 'Colors - Marketplace', link: '/docs/marketplace/colors/' },
-      // { label: 'GraphQL API - Marketplace', link: '/docs/marketplace/graphql-api/' },
-      // { label: 'How to register - Marketplace', link: '/docs/marketplace/how-to-register/' },
-      // { label: 'Platforms - Marketplace', link: '/docs/marketplace/platforms/' },
-      {
-        label: 'Style Guide',
-        link: '/docs/style-guide/'
       }, {
         label: 'System Requirements and Browsers',
         link: '/docs/system-requirements-and-browsers/'
@@ -60,7 +46,27 @@ export default defineConfig({
       autogenerate: {
         directory: 'docs/marketplace'
       }
-    }
+    },
+	{
+		label: 'Editorial',
+		items: [
+		{
+			label: 'Editorial Cheat Sheet',
+			link: '/docs/editorial-cheat-sheet/'
+		  }, {
+			label: 'Editorial Style Guide',
+			link: '/docs/editorial-style-guide/'
+		  },	],
+	  },
+	  {
+		label: 'This site',
+		items: [
+			{
+				label: 'Style Guide',
+				link: '/docs/style-guide/'
+			  },
+			],
+	  },
     // {
     // 	label: 'Posts',
     // 	autogenerate: { directory: 'posts' },
