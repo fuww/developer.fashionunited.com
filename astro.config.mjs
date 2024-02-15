@@ -9,8 +9,12 @@ export default defineConfig({
   integrations: [starlight({
     title: 'FashionUnited Docs',
 	customCss: [
-        // Path to your Tailwind base styles:
         './src/tailwind.css',
+        './src/styles/custom.css',
+        '@fontsource/ibm-plex-mono/400.css',
+        '@fontsource/ibm-plex-mono/600.css',
+        '@fontsource-variable/inter',
+        '@fontsource-variable/lora',        
       ],
     social: {
       github: 'https://github.com/fuww/developer.fashionunited.com'
