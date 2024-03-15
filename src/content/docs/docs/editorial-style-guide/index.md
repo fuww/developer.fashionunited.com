@@ -40,25 +40,7 @@ Because of the way FashionUnited was set up, uploading EXEC news is a little
 more tricky than regular news, but once you get the hang of it it can be done
 just as quickly.
 
-Here is a reminder of how we do it with the new upload form:
-
-To publish stories to our EXEC page: Select executive as the category - either
-**report(executive)** if you want it as a feature 0 on the EXEC page, or
-**management (executive)** if you want it as a feature 1. Then add all the
-countries as you normally would.
-
-What happens: As soon as you click submit on the upload form, the story will
-automatically be split into two: The first story will be uploaded to the EXEC
-page (an extension of our COM page). The other article will be sent to all the
-other countries you selected, under the business category.
-
-The only exception is if we publish EXEC news about people, which should then be
-under the category people and not business. For this, we need to publish two
-identical articles using the form. This is how we do it:
-
-The first story should be either **report(executive)** or **management
-(executive)** and country **only** COM. The second story should be category
-**people** and all the other countries you’d normally choose.
+[Here is a reminder](/docs/editorial-cheat-sheet/#executive-education-spotlight) of how we do it with the new upload form.
 
 ### Quotations
 
