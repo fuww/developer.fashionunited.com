@@ -133,6 +133,22 @@ was negative 9.8 percent versus operating income of 222 million dollars and an
 operating margin of 14.7 percent in the prior year.
 ```
 
+## Executive, Education, Spotlight
+
+To publish to `.com/education` and `.com/executive` via [dashboard.fashionunited.com](https://dashboard.fashionunited.com), you need to add the tag corresponding to the category you want to publish to. 
+These tags will only change the category you are posting to on `fashionunited.com` and leave the other newsboards/platforms/domains you are posting to intact.  
+The tags to use are as follows:
+
+- "executive management" => will post to `.com/executive/management` category
+- "executive report" => will post to `.com/executive/management` category
+- "education news" => will post to `.com/education/news` category
+- "education schools" => will post to `.com/education/schools` category
+
+### Example
+
+Posting an article, you select the `news/fashion` category and post to multiple newsboards, including `US` and `UK`. To post the article to executive on .com, you would then add the **tag** `education-schools`.  
+Result: The article will be posted in **UK** `news/fashion` and **US** `education/schools`
+
 ## Embed Video
 
 ### YouTube
