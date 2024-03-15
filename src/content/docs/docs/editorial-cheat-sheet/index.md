@@ -133,7 +133,7 @@ was negative 9.8 percent versus operating income of 222 million dollars and an
 operating margin of 14.7 percent in the prior year.
 ```
 
-## Executive, Education, Spotlight
+## Executive, Education
 
 To publish to `.com/education` and `.com/executive` via [dashboard.fashionunited.com](https://dashboard.fashionunited.com), you need to add the tag corresponding to the category you want to publish to. 
 These tags will only change the category you are posting to on `fashionunited.com` and leave the other newsboards/platforms/domains you are posting to intact.  
