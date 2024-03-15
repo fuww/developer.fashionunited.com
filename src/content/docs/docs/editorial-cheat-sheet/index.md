@@ -139,14 +139,14 @@ To publish to `.com/education` and `.com/executive` via [dashboard.fashionunited
 These tags will only change the category you are posting to on `fashionunited.com` and leave the other newsboards/platforms/domains you are posting to intact.  
 The tags to use are as follows:
 
-- "executive management" => will post to `.com/executive/management` category
-- "executive report" => will post to `.com/executive/management` category
-- "education news" => will post to `.com/education/news` category
-- "education schools" => will post to `.com/education/schools` category
+- `executive management` => will post to `.com/executive/management` category
+- `executive report` => will post to `.com/executive/management` category
+- `education news` => will post to `.com/education/news` category
+- `education schools` => will post to `.com/education/schools` category
 
 ### Example
 
-Posting an article, you select the `news/fashion` category and post to multiple newsboards, including `US` and `UK`. To post the article to executive on .com, you would then add the **tag** `education-schools`.  
+Posting an article, you select the `news/fashion` category and post to multiple newsboards, including `US` and `UK`. To post the article to executive on .com, you would then add the **tag** `Education Schools`.  
 Result: The article will be posted in **UK** `news/fashion` and **US** `education/schools`
 
 ## Embed Video
