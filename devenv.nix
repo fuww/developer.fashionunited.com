@@ -5,9 +5,11 @@
   env.GREET = "devenv";
 
   # https://devenv.sh/packages/
-  packages = [ 
+  packages = [
     pkgs.git
-    pkgs.nodejs
+    pkgs.nodejs_20
+    pkgs.nodePackages.pnpm
+    #pkgs.corepack_20
      ];
 
   # https://devenv.sh/scripts/

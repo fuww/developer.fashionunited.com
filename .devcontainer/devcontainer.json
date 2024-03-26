@@ -1,0 +1,38 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+{
+	"name": "Node.js & TypeScript",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {},
+		"ghcr.io/joshuanianji/devcontainer-features/mount-pnpm-store:1": {}
+	},
+
+	"portsAttributes": {
+		"4321": {
+		"label": "Application",
+		"onAutoForward": "openPreview"
+		}
+	},
+
+	"forwardPorts": [4321],
+
+	"postCreateCommand": "pnpm install && pnpm run build",
+
+	"waitFor": "postCreateCommand",
+
+	"postAttachCommand": {
+		"Server": "pnpm start --host"
+	},
+
+	"customizations": {
+		"codespaces": {
+		"openFiles": ["src/content/docs/index.mdx"]
+		},
+		"vscode": {
+		"extensions": ["astro-build.astro-vscode", "esbenp.prettier-vscode"]
+		}
+	}
+
+}
