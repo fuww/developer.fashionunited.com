@@ -2,6 +2,7 @@
   "name": "helpless-houston",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "astro dev --host",
