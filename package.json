@@ -25,6 +25,6 @@
     "typescript": "^5.4.3"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "github:tailwindcss/typography"
+    "@tailwindcss/typography": "^0.5.11"
   }
 }

@@ -43,8 +43,8 @@ importers:
         version: 5.4.3
     devDependencies:
       '@tailwindcss/typography':
-        specifier: github:tailwindcss/typography
-        version: git@github.com+tailwindcss/typography/8055516ce923458416f0047d555ac4a80a036bcd(tailwindcss@3.4.1)
+        specifier: ^0.5.11
+        version: 0.5.11(tailwindcss@3.4.1)
 
 packages:
 
@@ -1199,6 +1199,18 @@ packages:
   /@shikijs/core@1.2.1:
     resolution: {integrity: sha512-KaIS0H4EQ3KI2d++TjYqRNgwp8E3M/68e9veR4QtInzA7kKFgcjeiJqb80fuXW+blDy5fmd11PN9g9soz/3ANQ==}
     dev: false
+
+  /@tailwindcss/typography@0.5.11(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-ahOULqBQGCdSqL3vMNjH1R5cU2gxTh059fJIKF2enHXE8c/s3yKGDSKZ1+4poCr7BZRREJS8n5cCFmwsW4Ok3A==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || insiders'
+    dependencies:
+      lodash.castarray: 4.4.0
+      lodash.isplainobject: 4.0.6
+      lodash.merge: 4.6.2
+      postcss-selector-parser: 6.0.10
+      tailwindcss: 3.4.1
+    dev: true
 
   /@types/acorn@4.0.6:
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
@@ -5076,18 +5088,3 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
-
-  git@github.com+tailwindcss/typography/8055516ce923458416f0047d555ac4a80a036bcd(tailwindcss@3.4.1):
-    resolution: {commit: 8055516ce923458416f0047d555ac4a80a036bcd, repo: git@github.com:tailwindcss/typography.git, type: git}
-    id: git@github.com+tailwindcss/typography/8055516ce923458416f0047d555ac4a80a036bcd
-    name: '@tailwindcss/typography'
-    version: 0.5.11
-    peerDependencies:
-      tailwindcss: '>=3.0.0 || insiders'
-    dependencies:
-      lodash.castarray: 4.4.0
-      lodash.isplainobject: 4.0.6
-      lodash.merge: 4.6.2
-      postcss-selector-parser: 6.0.10
-      tailwindcss: 3.4.1
-    dev: true
