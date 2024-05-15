@@ -2,13 +2,13 @@
   "name": "helpless-houston",
   "type": "module",
   "version": "0.0.1",
-  "packageManager": "pnpm@8.15.4",
+  "packageManager": "pnpm@9.1.1",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "dev": "astro dev --host",
-    "start": "astro dev --host",
+    "dev": "astro dev",
+    "start": "astro dev",
     "build": "astro check && astro build",
-    "preview": "astro preview --host",
+    "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
