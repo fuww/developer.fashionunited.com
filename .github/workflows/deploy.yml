@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
       - name: Install, build, and upload your site output
         uses: withastro/action@v2
         with:
@@ -47,6 +49,8 @@ jobs:
     steps:
     - id: 'checkout'
       uses: 'actions/checkout@v4'
+      with:
+        ref: ${{ github.event.pull_request.head.ref }}
     
     - id: 'auth'
       uses: 'google-github-actions/auth@v2'
