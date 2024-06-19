@@ -3,20 +3,14 @@ on:
   push:
     branches: [main]
   pull_request:
-    branches: main
+  schedule:
+    - cron: '0 0 * * 0'
 
 env:
   PROJECT_ID: 'developer-fashionunited-com'
   
-permissions: # Inserted permissions section
-  # Allows the EndBug/add-and-commit step to commit the package manager changes,
-  # adding the AppMap language library and configuration file appmap.yml.
-  # Once the EndBug/add-and-commit is removed, this permission can be removed, 
-  # unless you need it for other reasons.
+permissions: 
   contents: write
-
-  # Allows the getappmap/archive-action to write a PR comment with the 
-  # AppMap configuration status.
   pull-requests: write
   
 jobs:
@@ -30,10 +24,8 @@ jobs:
       - name: Install, build, and upload your site output
         uses: withastro/action@v2
         with:
-            # path: . # The root location of your Astro project inside the repository. (optional)
-            node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 18. (optional)
+            node-version: 20 
 
-      # Begin AppMap CI language agent installation
       - name: Install AppMap tools
         id: install-appmap
         uses: getappmap/install-action@v1
@@ -43,24 +35,12 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           message: "ci: Add AppMap language agent and appmap.yml"
-      # End AppMap CI language agent installation
 
       - name: upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: astro-dist
           path: dist
-
-  # deploy:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   steps:
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v3
 
   deploy-folder-to-gcs-bucket:
     needs: build
@@ -92,10 +72,4 @@ jobs:
       with:
         path: 'dist'
         destination: 'developer.fashionunited.com'
-        parent: false # upload to root
-    
-    #     # Example of using the output
-    # - id: 'uploaded-files'
-    #   uses: 'foo/bar@v1'
-    #   env:
-    #     files: '${{ steps.upload-folder.outputs.uploaded }}'
+        parent: false 
