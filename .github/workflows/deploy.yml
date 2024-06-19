@@ -32,6 +32,19 @@ jobs:
         with:
             # path: . # The root location of your Astro project inside the repository. (optional)
             node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 18. (optional)
+
+      # Begin AppMap CI language agent installation
+      - name: Install AppMap tools
+        id: install-appmap
+        uses: getappmap/install-action@v1
+        with:
+          project-type: npm
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "ci: Add AppMap language agent and appmap.yml"
+      # End AppMap CI language agent installation
+
       - name: upload artifact
         uses: actions/upload-artifact@v2
         with:
