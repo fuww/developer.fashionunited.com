@@ -9,40 +9,16 @@ on:
 env:
   PROJECT_ID: 'developer-fashionunited-com'
   
-permissions: 
-  contents: write
-  pull-requests: write
-  
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
       - name: Install, build, and upload your site output
         uses: withastro/action@v2
         with:
             node-version: 20 
-
-      - name: Install AppMap tools
-        id: install-appmap
-        uses: getappmap/install-action@v1
-        with:
-          project-type: npm
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          message: "ci: Add AppMap language agent and appmap.yml"
-      
-      # Begin AppMap bootstrap archive step
-      - name: Archive AppMaps
-        id: appmap-bootstrap-archive-appmaps
-        uses: getappmap/archive-action@v1
-        with:
-          revision: ${{ github.event.pull_request.base.sha }}
-      # End AppMap bootstrap archive step
 
       - name: upload artifact
         uses: actions/upload-artifact@v2
@@ -60,8 +36,6 @@ jobs:
     steps:
     - id: 'checkout'
       uses: 'actions/checkout@v4'
-      with:
-        ref: ${{ github.event.pull_request.head.ref }}
     
     - id: 'auth'
       uses: 'google-github-actions/auth@v2'
