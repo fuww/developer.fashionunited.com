@@ -8,6 +8,17 @@ on:
 env:
   PROJECT_ID: 'developer-fashionunited-com'
   
+permissions: # Inserted permissions section
+  # Allows the EndBug/add-and-commit step to commit the package manager changes,
+  # adding the AppMap language library and configuration file appmap.yml.
+  # Once the EndBug/add-and-commit is removed, this permission can be removed, 
+  # unless you need it for other reasons.
+  contents: write
+
+  # Allows the getappmap/archive-action to write a PR comment with the 
+  # AppMap configuration status.
+  pull-requests: write
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -38,12 +49,11 @@ jobs:
   #       id: deployment
   #       uses: actions/deploy-pages@v3
 
-
   deploy-folder-to-gcs-bucket:
     needs: build
     runs-on: ubuntu-latest
     permissions:
-      contents: 'read'
+      contents: 'write'
       id-token: 'write'
     
     steps:
