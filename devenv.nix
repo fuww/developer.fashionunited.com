@@ -1,18 +1,18 @@
 { pkgs, ... }:
 
 {
-  # https://devenv.sh/basics/
   env.GREET = "devenv";
 
-  # https://devenv.sh/packages/
   packages = [
     pkgs.git
+    pkgs.which
+    pkgs.htop
+    pkgs.nixpkgs-fmt
+    pkgs.zlib
     pkgs.nodejs_20
-    pkgs.nodePackages.pnpm
-    #pkgs.corepack_20
+    pkgs.corepack_20
      ];
 
-  # https://devenv.sh/scripts/
   scripts.hello.exec = "echo hello from $GREET";
 
   enterShell = ''
@@ -22,14 +22,11 @@
 
   dotenv.enable = true;
 
-  # https://devenv.sh/languages/
+  languages.nix.enable = true;
   languages.javascript.enable = true;
+  languages.typescript.enable = true;
 
-  # https://devenv.sh/pre-commit-hooks/
-  # pre-commit.hooks.shellcheck.enable = true;
-
-  # https://devenv.sh/processes/
-  # processes.ping.exec = "ping example.com";
-
-  # See full reference at https://devenv.sh/reference/options/
+  pre-commit.hooks = {
+    nixpkgs-fmt.enable = true;
+  };
 }
