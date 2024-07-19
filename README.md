@@ -1,3 +1,5 @@
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ffuww%2Fdeveloper.fashionunited.com.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Ffuww%2Fdeveloper.fashionunited.com?ref=badge_shield&issueType=license)
+
 # developer.fashionunited.com
 
 FashionUnited Developer Portal, built with [Astro](https://astro.build/) and the excellent [Astro Starlight template](https://astro.build/themes/details/starlight/)
