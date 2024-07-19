@@ -1,10 +1,9 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import tailwind from "@astrojs/tailwind";
-
 import preact from "@astrojs/preact";
 import starlightLinksValidator from "starlight-links-validator";
-
+import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
@@ -96,8 +95,12 @@ export default defineConfig({
     // 	autogenerate: { directory: 'posts' },
     // },
     ]
-  }), tailwind({
+  }), 
+  tailwind({
     // Disable the default base styles:
     applyBaseStyles: false
-  }), preact()]
+  }), 
+  preact(),
+  partytown(),
+]
 });
