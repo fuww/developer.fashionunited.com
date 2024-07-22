@@ -11,12 +11,17 @@
     pkgs.zlib
     pkgs.nodejs_20
     pkgs.corepack_20
-     ];
+    pkgs.playwright-driver.browsers
+  ];
+
+  env.PLAYWRIGHT_BROWSERS_PATH = pkgs.playwright-driver.browsers;
+  env.PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS = true;
 
   scripts.hello.exec = "echo hello from $GREET";
 
   enterShell = ''
-    hello
+    echo PLAYWRIGHT_BROWSERS_PATH is $PLAYWRIGHT_BROWSERS_PATH
+    echo PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS is $PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS
     git --version
   '';
 
