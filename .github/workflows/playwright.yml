@@ -5,24 +5,12 @@ on:
   pull_request:
   schedule:
     - cron: '0 0 * * 0'
-permissions:
-  # Allows the EndBug/add-and-commit step to commit the package manager changes,
-  # adding the AppMap language library and configuration file appmap.yml.
-  # Once the EndBug/add-and-commit is removed, this permission can be removed, 
-  # unless you need it for other reasons.
-  contents: write
-
-  # Allows the getappmap/archive-action to write a PR comment with the 
-  # AppMap configuration status.
-  pull-requests: write
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
@@ -32,28 +20,8 @@ jobs:
         run: pnpm build
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps
-      # Begin AppMap CI language agent installation
-      # This snippet can be safely removed once the AppMap language agent has been
-      # added to the project dependencies, and appmap.yml has been created.
-      - name: Install AppMap tools
-        id: install-appmap
-        uses: getappmap/install-action@v1
-        with:
-          project-type: npm
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          message: "ci: Add AppMap language agent and appmap.yml"
-      # End AppMap CI language agent installation
       - name: Run Playwright tests
         run: pnpm exec playwright test
-      # Begin AppMap bootstrap archive step
-      - name: Archive AppMaps
-        id: appmap-bootstrap-archive-appmaps
-        uses: getappmap/archive-action@v1
-        with:
-          revision: ${{ github.event.pull_request.base.sha }}
-      # End AppMap bootstrap archive step
       - uses: actions/upload-artifact@v4
         if: always()
         with:
