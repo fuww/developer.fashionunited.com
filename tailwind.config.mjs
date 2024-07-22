@@ -1,6 +1,6 @@
 const { fontFamily } = require('tailwindcss/defaultTheme')
 import starlightPlugin from '@astrojs/starlight-tailwind';
-import colors from '@tailwindcss/colors';
+const colors = require('tailwindcss/colors')
 
 // Generated color palettes
 // https://starlight.astro.build/guides/css-and-tailwind/#color-theme-editor
@@ -21,6 +21,7 @@ export default {
 	colors: {
 		accent,
 		gray,
+		white: colors.white,
 	  },
 	  extend: {
 		colors: {
