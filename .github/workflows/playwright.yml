@@ -31,6 +31,19 @@ jobs:
         run: pnpm build
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps
+      # Begin AppMap CI language agent installation
+      # This snippet can be safely removed once the AppMap language agent has been
+      # added to the project dependencies, and appmap.yml has been created.
+      - name: Install AppMap tools
+        id: install-appmap
+        uses: getappmap/install-action@v1
+        with:
+          project-type: npm
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "ci: Add AppMap language agent and appmap.yml"
+      # End AppMap CI language agent installation
       - name: Run Playwright tests
         run: pnpm exec playwright test
       - uses: actions/upload-artifact@v4
