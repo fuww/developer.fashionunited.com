@@ -1,5 +1,3 @@
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ffuww%2Fdeveloper.fashionunited.com.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Ffuww%2Fdeveloper.fashionunited.com?ref=badge_shield&issueType=license)
-
 # developer.fashionunited.com
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ffuww%2Fdeveloper.fashionunited.com.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ffuww%2Fdeveloper.fashionunited.com?ref=badge_shield)
 
