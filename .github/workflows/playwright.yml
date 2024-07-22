@@ -1,9 +1,10 @@
 name: Playwright Tests
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   pull_request:
-    branches: [main, master]
+  schedule:
+    - cron: '0 0 * * 0'
 permissions:
   # Allows the EndBug/add-and-commit step to commit the package manager changes,
   # adding the AppMap language library and configuration file appmap.yml.
