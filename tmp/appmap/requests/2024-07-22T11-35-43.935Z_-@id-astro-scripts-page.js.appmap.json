@@ -1,0 +1,84 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/@id/astro:scripts/page.js",
+        "request_method": "GET",
+        "headers": {
+          "Host": "localhost:4321",
+          "Connection": "keep-alive",
+          "Sec-Ch-Ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+          "Origin": "http://localhost:4321",
+          "Dnt": "1",
+          "Sec-Ch-Ua-Mobile": "?0",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+          "Sec-Ch-Ua-Platform": "\"macOS\"",
+          "Accept": "*/*",
+          "Sec-Fetch-Site": "same-origin",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Dest": "script",
+          "Referer": "http://localhost:4321/",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Accept-Language": "nl,en;q=0.9,en-US;q=0.8,en-GB;q=0.7",
+          "Sec-Gpc": "1",
+          "If-None-Match": "W/\"a3-08l5nk3e5ED/CbMmXYn0g1OsEIs\""
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "text/javascript",
+          "Cache-Control": "no-cache",
+          "Etag": "W/\"a3-klf/L3Qx2dgmAG0JMviU3AW8b4Q\""
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "import { init } from \"/node_modules/.pnpm/astro@4.12.2_@types+node@20.14.11_typescript@5.5.3/node_modules/astro/dist/virtual-modules/prefetch.js?v=6fff9a3d\";init()\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2UuanMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgaW5pdCB9IGZyb20gXCIvbm9kZV9tb2R1bGVzLy5wbnBtL2FzdHJvQDQuMTIuMl9AdHlwZXMrbm9kZUAyMC4xNC4xMV90eXBlc2NyaXB0QDUuNS4zL25vZGVfbW9kdWxlcy9hc3Ryby9kaXN0L3ZpcnR1YWwtbW9kdWxlcy9wcmVmZXRjaC5qcz92PTZmZmY5YTNkXCI7aW5pdCgpIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE1BQU0sQ0FBQyxDQUFDLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDLFlBQVksQ0FBQyxDQUFDLElBQUksQ0FBQyxLQUFLLENBQUMsQ0FBQyxDQUFDLEVBQUUsQ0FBQyxFQUFFLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxFQUFFLENBQUMsRUFBRSxDQUFDLGFBQWEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxZQUFZLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsT0FBTyxDQUFDLFFBQVEsQ0FBQyxFQUFFLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLElBQUksQ0FBQyJ9"
+        }
+      },
+      "id": 2,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.0016751250000197615
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.23.0",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v20.11.1"
+    },
+    "app": "developer-fashionunited-com",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET /@id/astro:scripts/page.js (200) — 2024-07-22T11:35:43.935Z"
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /@id/astro:scripts/page.js"
+        }
+      ]
+    }
+  ]
+}

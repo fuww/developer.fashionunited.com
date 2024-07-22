@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /docs/marketplace/",
+    "parameters": "()",
+    "status": 200
+  }
+]

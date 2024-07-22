@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /docs/logo/",
+    "parameters": "()",
+    "status": 200
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /@id/__x00__astro:toolbar:internal",
+    "parameters": "()",
+    "status": 304
+  }
+]

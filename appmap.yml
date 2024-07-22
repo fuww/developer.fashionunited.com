@@ -6,4 +6,4 @@ packages:
     exclude:
       - node_modules
       - .yarn
-      - .pnpm-lock.yaml
+      - .npm-lock.yaml
