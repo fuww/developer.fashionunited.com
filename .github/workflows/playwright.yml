@@ -5,44 +5,23 @@ on:
   pull_request:
   schedule:
     - cron: '0 0 * * 0'
-permissions:
-  contents: write
-  pull-requests: write
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
       - name: Install dependencies
         run: npm install -g pnpm && pnpm install
-      - name: Install AppMap tools
-        id: install-appmap
-        uses: getappmap/install-action@v1
-        with:
-          project-type: npm
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          message: "ci: Add AppMap language agent and appmap.yml"
       - name: Build
         run: pnpm build
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps
       - name: Run Playwright tests
         run: pnpm exec playwright test
-      # Begin AppMap bootstrap archive step
-      - name: Archive AppMaps
-        id: appmap-bootstrap-archive-appmaps
-        uses: getappmap/archive-action@v1
-        with:
-          revision: ${{ github.event.pull_request.base.sha }}
-      # End AppMap bootstrap archive step
       - uses: actions/upload-artifact@v4
         if: always()
         with:
