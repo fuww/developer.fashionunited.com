@@ -3,7 +3,8 @@ on:
   push:
     branches: [main]
   pull_request:
-    branches: main
+  schedule:
+    - cron: '0 0 * * 0'
 
 env:
   PROJECT_ID: 'developer-fashionunited-com'
@@ -17,31 +18,26 @@ jobs:
       - name: Install, build, and upload your site output
         uses: withastro/action@v2
         with:
-            # path: . # The root location of your Astro project inside the repository. (optional)
-            node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 18. (optional)
+            node-version: 20 
+
       - name: upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: astro-dist
           path: dist
 
-  # deploy:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   steps:
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v3
-
+      - name: Save AppMaps
+        uses: actions/cache/save@v3
+        if: always()
+        with:
+          path: ./tmp/appmap
+          key: appmaps-${{ github.sha }}-${{ github.run_attempt }}
 
   deploy-folder-to-gcs-bucket:
     needs: build
     runs-on: ubuntu-latest
     permissions:
-      contents: 'read'
+      contents: 'write'
       id-token: 'write'
     
     steps:
@@ -65,10 +61,14 @@ jobs:
       with:
         path: 'dist'
         destination: 'developer.fashionunited.com'
-        parent: false # upload to root
-    
-    #     # Example of using the output
-    # - id: 'uploaded-files'
-    #   uses: 'foo/bar@v1'
-    #   env:
-    #     files: '${{ steps.upload-folder.outputs.uploaded }}'
+        parent: false
+      
+  appmap-analysis:
+    if: always()
+    needs: [ deploy-folder-to-gcs-bucket ]
+    uses: getappmap/analyze-action/.github/workflows/appmap-analysis.yml@v1
+    permissions:
+      actions: read
+      contents: read
+      checks: write
+      pull-requests: write
