@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /src/tailwind.css",
+    "parameters": "()",
+    "status": 304
+  }
+]

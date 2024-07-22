@@ -1,0 +1,81 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "path_info": "/",
+        "request_method": "GET",
+        "headers": {
+          "Host": "localhost:4321",
+          "Connection": "keep-alive",
+          "Sec-Ch-Ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+          "Dnt": "1",
+          "Sec-Ch-Ua-Mobile": "?0",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+          "Sec-Ch-Ua-Platform": "\"macOS\"",
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "Purpose": "prefetch",
+          "Sec-Fetch-Site": "same-origin",
+          "Sec-Fetch-Mode": "no-cors",
+          "Sec-Fetch-Dest": "empty",
+          "Referer": "http://localhost:4321/docs/marketplace/brand-pages/",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Accept-Language": "nl,en;q=0.9,en-US;q=0.8,en-GB;q=0.7",
+          "Sec-Gpc": "1"
+        },
+        "protocol": "HTTP/1.1"
+      },
+      "id": 1,
+      "thread_id": 0
+    },
+    {
+      "event": "return",
+      "http_server_response": {
+        "status_code": 200,
+        "headers": {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "text/html"
+        },
+        "return_value": {
+          "class": "[ResponseBody]",
+          "value": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-has-hero data-theme=\"dark\" class=\"astro-pjwmagra\"> <head><meta charset=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><title>Welcome to FashionUnited's Docs | FashionUnited Docs</title><link rel=\"canonical\" href=\"https://developer.fashionunited.com/\"/><link rel=\"sitemap\" href=\"/sitemap-index.xml\"/><link rel=\"shortcut icon\" href=\"/favicon.svg\" type=\"image/svg+xml\"/><meta name=\"generator\" content=\"Astro v4.12.2\"/><meta name=\"generator\" content=\"Starlight v0.17.4\"/><meta property=\"og:title\" content=\"Welcome to FashionUnited's Docs\"/><meta property=\"og:type\" content=\"article\"/><meta property=\"og:url\" content=\"https://developer.fashionunited.com/\"/><meta property=\"og:locale\" content=\"en\"/><meta property=\"og:description\" content=\"Use cases, tutorials &#38; documentation.\"/><meta property=\"og:site_name\" content=\"FashionUnited Docs\"/><meta name=\"twitter:card\" content=\"summary_large_image\"/><meta name=\"twitter:title\" content=\"Welcome to FashionUnited's Docs\"/><meta name=\"twitter:description\" content=\"Use cases, tutorials &#38; documentation.\"/><meta name=\"description\" content=\"Use cases, tutorials &#38; documentation.\"/><script>\n\twindow.StarlightThemeProvider = (() => {\n\t\tconst storedTheme =\n\t\t\ttypeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');\n\t\tconst theme =\n\t\t\tstoredTheme ||\n\t\t\t(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');\n\t\tdocument.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';\n\t\treturn {\n\t\t\tupdatePickers(theme = storedTheme || 'auto') {\n\t\t\t\tdocument.querySelectorAll('starlight-theme-select').forEach((picker) => {\n\t\t\t\t\tconst select = picker.querySelector('select');\n\t\t\t\t\tif (select) select.value = theme;\n\t\t\t\t\t/** @type {HTMLTemplateElement | null} */\n\t\t\t\t\tconst tmpl = document.querySelector(`#theme-icons`);\n\t\t\t\t\tconst newIcon = tmpl && tmpl.content.querySelector('.' + theme);\n\t\t\t\t\tif (newIcon) {\n\t\t\t\t\t\tconst oldIcon = picker.querySelector('svg.label-icon');\n\t\t\t\t\t\tif (oldIcon) {\n\t\t\t\t\t\t\toldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t});\n\t\t\t},\n\t\t};\n\t})();\n</script><template id=\"theme-icons\" data-astro-source-file=\"/Users/joost/git/developer.fashionunited.com/node_modules/.pnpm/@astrojs+starlight@0.17.4_astro@4.12.2_@types+node@20.14.11_typescript@5.5.3_/node_modules/@astrojs/starlight/components/ThemeProvider.astro\" data-astro-source-loc=\"35:28\"><svg aria-hidden=\"true\" class=\"light astro-lsavsyw5\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" style=\"--sl-icon-size: 1em;\" data-astro-source-file=\"/Users/joost/git/developer.fashionunited.com/node_modules/.pnpm/@astrojs+starlight@0.17.4_astro@4.12.2_@types+node@20.14.11_typescript@5.5.3_/node_modules/@astrojs/starlight/user-components/Icon.astro\" data-astro-source-loc=\"16:2\"><path d=\"M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z\"/></svg> <svg aria-hidden=\"true\" class=\"dark astro-lsavsyw5\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" style=\"--sl-icon-size: 1em;\" data-astro-source-file=\"/Users/joost/git/developer.fashionunited.com/node_modules/.pnpm/@astrojs+starlight@0.17.4_astro@4.12.2_@types+node@20.14.11_typescript@5.5.3_/node_modules/@astrojs/starlight/user-components/Icon.astro\" data-astro-source-loc=\"16:2\"><path d=\"M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z\"/></svg> <svg aria-hidden=\"true\" class=\"auto astro-lsavsyw5\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"currentColor\" style=\"--sl-icon-size: 1em;\" data-astro-source-file=\"/Users/joost/git/developer.fashionunited.com/node_modules/.pnpm/@astrojs+starlight@0.17.4_astro@4.12.2_@types+node@20.14.11_typescript@5.5.3_/node_modules/@astrojs/starlight/user-components/Icon.astro\" data-astro-source-loc=\"16:2\"><path d=\"M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z\"/></svg> </template><style data-vite-dev-id=\"/Users/joost/git/developer.fashionunited.com/node_modules/.pnpm/@astrojs+starlight@0.17.4_astro@4.12.2_@types+node@20.14.11_typescript@5.5.3_/node_modules/@astrojs/starlight/style/props.css\">:root,\n::backdrop {\n\t/* Colors (dark mode) */\n\t--sl-color-white: hsl(0, 0%, 100%); /* “white” */\n\t--sl-color-gray-1: hsl(224, 20%, 94%);\n\t--sl-color-gray-2: hsl(224, 6%, 77%);\n\t--sl-color-gray-3: hsl(224, 6%, 56%);\n\t--sl-color-gray-4: hsl(224, 7%, 36%);\n\t--sl-color-gray-5: hsl(224, 10%, 23%);\n\t--sl-color-gray-6: hsl(224, 14%, 16%);\n\t--sl-color-black: hsl(224, 10%, 10%);\n\n\t--sl-hue-orange: 41;\n\t--sl-color-orange-low: hsl(var(--sl-hue-orange), 39%, 22%);\n\t--sl-color-orange: hsl(var(--sl-hue-orange), 82%, 63%);\n\t--sl-color-orange-high: hsl(var(--sl-hue-orange), 82%, 87%);\n\t--sl-hue-green: 101;\n\t--sl-color-green-low: hsl(var(--sl-hue-green), 39%, 22%);\n\t--sl-color-green: hsl(var(--sl-hue-green), 82%, 63%);\n\t--sl-color-green-high: hsl(var(--sl-hue-green), 82%, 80%);\n\t--sl-hue-blue: 234;\n\t--sl-color-blue-low: hsl(var(--sl-hue-blue), 54%, 20%);\n\t--sl-color-blue: hsl(var(--sl-hue-blue), 100%, 60%);\n\t--sl-color-blue-high: hsl(var(--sl-hue-blue), 100%, 87%);\n\t--sl-hue-purple: 281;\n\t--sl-color-purple-low: hsl(var(--sl-hue-purple), 39%, 22%);\n\t--sl-color-purple: hsl(var(--sl-hue-purple), 82%, 63%);\n\t--sl-color-purple-high: hsl(var(--sl-hue-purple), 82%, 89%);\n\t--sl-hue-red: 339;\n\t--sl-color-red-low: hsl(var(--sl-hue-red), 39%, 22%);\n\t--sl-color-red: hsl(var(--sl-hue-red), 82%, 63%);\n\t--sl-color-red-high: hsl(var(--sl-hue-red), 82%, 87%);\n\n\t--sl-color-accent-low: hsl(224, 54%, 20%);\n\t--sl-color-accent: hsl(224, 100%, 60%);\n\t--sl-color-accent-high: hsl(224, 100%, 85%);\n\n\t--sl-color-text: var(--sl-color-gray-2);\n\t--sl-color-text-accent: var(--sl-color-accent-high);\n\t--sl-color-text-invert: var(--sl-color-accent-low);\n\t--sl-color-bg: var(--sl-color-black);\n\t--sl-color-bg-nav: var(--sl-color-gray-6);\n\t--sl-color-bg-sidebar: var(--sl-color-gray-6);\n\t--sl-color-bg-inline-code: var(--sl-color-gray-5);\n\t--sl-color-bg-accent: var(--sl-color-accent-high);\n\t--sl-color-hairline-light: var(--sl-color-gray-5);\n\t--sl-color-hairline: var(--sl-color-gray-6);\n\t--sl-color-hairline-shade: var(--sl-color-black);\n\n\t--sl-color-backdrop-overlay: hsla(223, 13%, 10%, 0.66);\n\n\t/* Shadows (dark mode) */\n\t--sl-shadow-sm: 0px 1px 1px hsla(0, 0%, 0%, 0.12), 0px 2px 1px hsla(0, 0%, 0%, 0.24);\n\t--sl-shadow-md: 0px 8px 4px hsla(0, 0%, 0%, 0.08), 0px 5px 2px hsla(0, 0%, 0%, 0.08),\n\t\t0px 3px 2px hsla(0, 0%, 0%, 0.12), 0px 1px 1px hsla(0, 0%, 0%, 0.15);\n\t--sl-shadow-lg: 0px 25px 7px hsla(0, 0%, 0%, 0.03), 0px 16px 6px hsla(0, 0%, 0%, 0.1),\n\t\t0px 9px 5px hsla(223, 13%, 10%, 0.33), 0px 4px 4px hsla(0, 0%, 0%, 0.75),\n\t\t0px 4px 2px hsla(0, 0%, 0%, 0.25);\n\n\t/* Text size and line height */\n\t--sl-text-xs: 0.8125rem; /* 13px */\n\t--sl-text-sm: 0.875rem; /* 14px */\n\t--sl-text-base: 1rem; /* 16px */\n\t--sl-text-lg: 1.125rem; /* 18px */\n\t--sl-text-xl: 1.25rem; /* 20px */\n\t--sl-text-2xl: 1.5rem; /* 24px */\n\t--sl-text-3xl: 1.8125rem; /* 29px */\n\t--sl-text-4xl: 2.1875rem; /* 35px */\n\t--sl-text-5xl: 2.625rem; /* 42px */\n\t--sl-text-6xl: 4rem; /* 64px */\n\n\t--sl-text-body: var(--sl-text-base);\n\t--sl-text-body-sm: var(--sl-text-xs);\n\t--sl-text-code: var(--sl-text-sm);\n\t--sl-text-code-sm: var(--sl-text-xs);\n\t--sl-text-h1: var(--sl-text-4xl);\n\t--sl-text-h2: var(--sl-text-3xl);\n\t--sl-text-h3: var(--sl-text-2xl);\n\t--sl-text-h4: var(--sl-text-xl);\n\t--sl-text-h5: var(--sl-text-lg);\n\n\t--sl-line-height: 1.8;\n\t--sl-line-height-headings: 1.2;\n\n\t--sl-font-system: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,\n\t\t'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',\n\t\t'Segoe UI Symbol', 'Noto Color Emoji';\n\t--sl-font-system-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',\n\t\t'Courier New', monospace;\n\t--__sl-font: var(--sl-font, var(--sl-font-system)), var(--sl-font-system);\n\t--__sl-font-mono: var(--sl-font-mono, var(--sl-font-system-mono)), var(--sl-font-system-mono);\n\n\t/** Key layout values */\n\t--sl-nav-height: 3.5rem;\n\t--sl-nav-pad-x: 1rem;\n\t--sl-nav-pad-y: 0.75rem;\n\t--sl-mobile-toc-height: 3rem;\n\t--sl-sidebar-width: 18.75rem;\n\t--sl-sidebar-pad-x: 1rem;\n\t--sl-content-width: 45rem;\n\t--sl-content-pad-x: 1rem;\n\t--sl-menu-button-size: 2rem;\n\t--sl-nav-gap: var(--sl-content-pad-x);\n\t/* Offset required to show outline inside an element instead of round the outside */\n\t--sl-outline-offset-inside: -0.1875rem;\n\n\t/* Global z-index values */\n\t--sl-z-index-toc: 4;\n\t--sl-z-index-menu: 5;\n\t--sl-z-index-navbar: 10;\n\t--sl-z-index-skiplink: 20;\n}\n\n:root[data-theme='light'],\n[data-theme='light'] ::backdrop {\n\t/* Colours (light mode) */\n\t--sl-color-white: hsl(224, 10%, 10%);\n\t--sl-color-gray-1: hsl(224, 14%, 16%);\n\t--sl-color-gray-2: hsl(224, 10%, 23%);\n\t--sl-color-gray-3: hsl(224, 7%, 36%);\n\t--sl-color-gray-4: hsl(224, 6%, 56%);\n\t--sl-color-gray-5: hsl(224, 6%, 77%);\n\t--sl-color-gray-6: hsl(224, 20%, 94%);\n\t--sl-color-gray-7: hsl(224, 19%, 97%);\n\t--sl-color-black: hsl(0, 0%, 100%);\n\n\t--sl-color-orange-high: hsl(var(--sl-hue-orange)... (120415 more characters)"
+        }
+      },
+      "id": 2,
+      "thread_id": 0,
+      "parent_id": 1,
+      "elapsed": 0.06940549999990253
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.23.0",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v20.11.1"
+    },
+    "app": "developer-fashionunited-com",
+    "recorder": {
+      "type": "requests",
+      "name": "requests"
+    },
+    "name": "GET / (200) — 2024-07-22T11:36:11.547Z"
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /"
+        }
+      ]
+    }
+  ]
+}

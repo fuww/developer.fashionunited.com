@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /@id/astro:scripts/page.js",
+    "parameters": "()",
+    "status": 304
+  }
+]

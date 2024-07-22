@@ -1,20 +1,20 @@
 name: Playwright Tests
 on:
   push:
-    branches: 
+    branches:
       - main
       - master
   pull_request:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: "0 0 * * 0"
 permissions:
   # Allows the EndBug/add-and-commit step to commit the package manager changes,
   # adding the AppMap language library and configuration file appmap.yml.
-  # Once the EndBug/add-and-commit is removed, this permission can be removed, 
+  # Once the EndBug/add-and-commit is removed, this permission can be removed,
   # unless you need it for other reasons.
   contents: write
 
-  # Allows the getappmap/archive-action to write a PR comment with the 
+  # Allows the getappmap/archive-action to write a PR comment with the
   # AppMap configuration status.
   pull-requests: write
 jobs:
@@ -29,26 +29,28 @@ jobs:
         with:
           node-version: lts/*
       - name: Install dependencies
-        run: npm install -g pnpm && pnpm install
+        run: npm install
       - name: Build
-        run: pnpm build
+        run: npm run build
       - name: Install Playwright Browsers
-        run: pnpm exec playwright install --with-deps
+        run: npx playwright install --with-deps
       # Begin AppMap CI language agent installation.
       # This snippet can be safely removed once the AppMap language agent has been
       # added to the project dependencies, and appmap.yml has been created.
+      # Begin install-action snippet
+      #
       - name: Install AppMap tools
         id: install-appmap
         uses: getappmap/install-action@v1
         with:
           project-type: npm
+          build-patch-file: false
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
-        with:
-          message: "ci: Add AppMap language agent and appmap.yml"
-      # End AppMap CI language agent installation
+      #
+      # End install-action snippet
       - name: Run Playwright tests
-        run: pnpm exec playwright test
+        run: npx playwright test
       # Begin AppMap bootstrap archive step
       - name: Archive AppMaps
         id: appmap-bootstrap-archive-appmaps
