@@ -23,8 +23,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
@@ -34,33 +32,29 @@ jobs:
         run: npm run build
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-      # Begin AppMap CI language agent installation.
-      # This snippet can be safely removed once the AppMap language agent has been
-      # added to the project dependencies, and appmap.yml has been created.
-      # Begin install-action snippet
-      #
-      - name: Install AppMap tools
-        id: install-appmap
-        uses: getappmap/install-action@v1
-        with:
-          project-type: npm
-          build-patch-file: false
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v9
-      #
-      # End install-action snippet
       - name: Run Playwright tests
         run: npx playwright test
-      # Begin AppMap bootstrap archive step
-      - name: Archive AppMaps
-        id: appmap-bootstrap-archive-appmaps
-        uses: getappmap/archive-action@v1
+      - name: Save AppMaps
+        uses: actions/cache/save@v3
+        if: always()
         with:
-          revision: ${{ github.event.pull_request.base.sha }}
-      # End AppMap bootstrap archive step
+          path: ./tmp/appmap
+          key: appmaps-${{ github.sha }}-${{ github.run_attempt }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
+
+  appmap-analysis:
+    if: always()
+    needs:
+      [test] # You may need to change this to match
+      # the name of the step that runs your tests.
+    uses: getappmap/analyze-action/.github/workflows/appmap-analysis.yml@v1
+    permissions:
+      actions: read
+      contents: read
+      checks: write
+      pull-requests: write
