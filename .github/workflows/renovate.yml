@@ -12,6 +12,18 @@ on:
         required: false
         default: "false"
         type: string
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: "Override default log level"
+        required: false
+        default: "info"
+        type: string
+      overrideSchedule:
+        description: "Override all schedules"
+        required: false
+        default: "false"
+        type: string
 concurrency: renovate
 jobs:
   renovate:
