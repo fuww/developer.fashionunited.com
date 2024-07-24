@@ -6,6 +6,10 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
+  image: {
+    domains: ["fashionunited.com", "storage.cloud.google.com"],
+    remotePatterns: [{ protocol: "https" }],
+  },
   site: 'https://developer.fashionunited.com',
   integrations: [starlight({
     title: 'FashionUnited Docs',
