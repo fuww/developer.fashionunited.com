@@ -89,7 +89,7 @@ export default defineConfig({
     // Disable the default base styles:
     applyBaseStyles: false
   }), partytown(), vtbot()],
-  output: "server",
+  output: "hybrid",
   adapter: node({
     mode: "standalone"
   })

@@ -12,6 +12,8 @@ if (Astro.cookies.has("__session")) {
     return Astro.redirect("/dashboard");
   }
 }
+
+export const prerender = false;
 ---
 
 <Layout title="Sign in">

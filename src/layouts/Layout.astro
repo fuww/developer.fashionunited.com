@@ -1,16 +1,29 @@
 ---
+import "@fontsource-variable/inter/index.css";
+
+export interface Props {
+  title: string;
+}
 
 ---
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>developer.fashionunited.com</title>
-    </head>
-    <body>
-        <main>
-            <slot />
-        </main>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <!-- <Navbar /> -->
+    <slot />
+    <!-- <Footer /> -->
+    <style is:global>
+      /* Improve Page speed */
+      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+      img {
+        content-visibility: auto;
+      }
+    </style>
+  </body>
 </html>
