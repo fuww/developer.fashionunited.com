@@ -1,0 +1,195 @@
+[debug] [2024-09-17T20:13:36.189Z] ----------------------------------------------------------------------
+[debug] [2024-09-17T20:13:36.190Z] Command:       /nix/store/cw7i04amwn3dnav43prvcyd1kn2c53ww-nodejs-20.15.1/bin/node /Users/joost/git/developer.fashionunited.com/node_modules/.bin/firebase deploy --only hosting
+[debug] [2024-09-17T20:13:36.191Z] CLI Version:   13.17.0
+[debug] [2024-09-17T20:13:36.191Z] Platform:      darwin
+[debug] [2024-09-17T20:13:36.191Z] Node Version:  v20.15.1
+[debug] [2024-09-17T20:13:36.191Z] Time:          Tue Sep 17 2024 22:13:36 GMT+0200 (Central European Summer Time)
+[debug] [2024-09-17T20:13:36.191Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-09-17T20:13:36.226Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-09-17T20:13:36.227Z] > authorizing via signed-in user (joost@fashionunited.com)
+[debug] [2024-09-17T20:13:36.227Z] [iam] checking project developers-fashionunited-com for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-09-17T20:13:36.228Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/developers-fashionunited-com:testIamPermissions [none]
+[debug] [2024-09-17T20:13:36.228Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/developers-fashionunited-com:testIamPermissions x-goog-quota-user=projects/developers-fashionunited-com
+[debug] [2024-09-17T20:13:36.228Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/developers-fashionunited-com:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-09-17T20:13:37.011Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/developers-fashionunited-com:testIamPermissions 200
+[debug] [2024-09-17T20:13:37.011Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/developers-fashionunited-com:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-09-17T20:13:37.012Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/developers-fashionunited-com [none]
+[debug] [2024-09-17T20:13:37.239Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/developers-fashionunited-com 200
+[debug] [2024-09-17T20:13:37.239Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/developers-fashionunited-com {"projectId":"developers-fashionunited-com","projectNumber":"187698730207","displayName":"developers-fashionunited-com","name":"projects/developers-fashionunited-com","resources":{"hostingSite":"developers-fashionunited-com","realtimeDatabaseInstance":"developers-fashionunited-com","storageBucket":"developers-fashionunited-com.appspot.com","locationId":"europe-west3"},"state":"ACTIVE","etag":"1_7bd105f2-7417-4ea3-a4ca-ce7c18276542"}
+[debug] [2024-09-17T20:13:38.536Z] defaultcredentials: writing to file /Users/joost/.config/firebase/joost_fashionunited_com_application_default_credentials.json
+[debug] [2024-09-17T20:13:38.537Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/developers-fashionunited-com/sites pageToken=&pageSize=10
+[debug] [2024-09-17T20:13:39.841Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/developers-fashionunited-com/sites 200
+[debug] [2024-09-17T20:13:39.841Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/developers-fashionunited-com/sites {"sites":[{"name":"projects/developers-fashionunited-com/sites/developers-fashionunited-com","defaultUrl":"https://developers-fashionunited-com.web.app","appId":"1:187698730207:web:d4bf2613c478b2c9fac56a","type":"DEFAULT_SITE"}]}
+[debug] [2024-09-17T20:13:39.842Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:187698730207:web:d4bf2613c478b2c9fac56a/config [none]
+[debug] [2024-09-17T20:13:40.641Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:187698730207:web:d4bf2613c478b2c9fac56a/config 200
+[debug] [2024-09-17T20:13:40.641Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:187698730207:web:d4bf2613c478b2c9fac56a/config {"projectId":"developers-fashionunited-com","appId":"1:187698730207:web:d4bf2613c478b2c9fac56a","databaseURL":"https://developers-fashionunited-com.firebaseio.com","storageBucket":"developers-fashionunited-com.appspot.com","locationId":"europe-west3","apiKey":"AIzaSyC9xUmJjIJtpsgxZDZIQV8bItI3eW7fNmQ","authDomain":"developers-fashionunited-com.firebaseapp.com","messagingSenderId":"187698730207"}
+[info] 
+   Thank you for trying our experimental support for Astro on Firebase Hosting.
+   While this integration is maintained by Googlers it is not a supported Firebase product.
+   Issues filed on GitHub will be addressed on a best-effort basis by maintainers and other community members.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/frameworks-overview
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-09-17T20:14:05.245Z] [web frameworks] effective firebase.json:  {
+  "hosting": [
+    {
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "europe-west1"
+      },
+      "site": "developers-fashionunited-com",
+      "rewrites": [
+        {
+          "source": "**",
+          "function": {
+            "functionId": "ssrdevelopersfashionuni",
+            "region": "europe-west1",
+            "pinTag": true
+          }
+        }
+      ],
+      "redirects": [],
+      "headers": [
+        {
+          "source": "**/*.[jt]s",
+          "headers": [
+            {
+              "key": "Set-Cookie",
+              "value": "__FIREBASE_DEFAULTS__=eyJjb25maWciOnsicHJvamVjdElkIjoiZGV2ZWxvcGVycy1mYXNoaW9udW5pdGVkLWNvbSIsImFwcElkIjoiMToxODc2OTg3MzAyMDc6d2ViOmQ0YmYyNjEzYzQ3OGIyYzlmYWM1NmEiLCJkYXRhYmFzZVVSTCI6Imh0dHBzOi8vZGV2ZWxvcGVycy1mYXNoaW9udW5pdGVkLWNvbS5maXJlYmFzZWlvLmNvbSIsInN0b3JhZ2VCdWNrZXQiOiJkZXZlbG9wZXJzLWZhc2hpb251bml0ZWQtY29tLmFwcHNwb3QuY29tIiwibG9jYXRpb25JZCI6ImV1cm9wZS13ZXN0MyIsImFwaUtleSI6IkFJemFTeUM5eFVtSmpJSnRwc2d4WkRaSVFWOGJJdEkzZVc3Zk5tUSIsImF1dGhEb21haW4iOiJkZXZlbG9wZXJzLWZhc2hpb251bml0ZWQtY29tLmZpcmViYXNlYXBwLmNvbSIsIm1lc3NhZ2luZ1NlbmRlcklkIjoiMTg3Njk4NzMwMjA3In0sIl9hdXRoVG9rZW5TeW5jVVJMIjoiL19fc2Vzc2lvbiJ9; SameSite=Strict; Expires=2026-08-13T06:54:05.244Z; Path=/;"
+            }
+          ]
+        }
+      ],
+      "cleanUrls": true,
+      "public": ".firebase/developers-fashionunited-com/hosting",
+      "webFramework": "astro_ssr"
+    }
+  ],
+  "functions": [
+    {
+      "source": ".firebase/developers-fashionunited-com/functions",
+      "codebase": "firebase-frameworks-developers-fashionunited-com"
+    }
+  ]
+}
+[debug] [2024-09-17T20:14:05.245Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-09-17T20:14:05.245Z] > authorizing via signed-in user (joost@fashionunited.com)
+[debug] [2024-09-17T20:14:05.245Z] [iam] checking project developers-fashionunited-com for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-09-17T20:14:05.245Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/developers-fashionunited-com:testIamPermissions [none]
+[debug] [2024-09-17T20:14:05.245Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/developers-fashionunited-com:testIamPermissions x-goog-quota-user=projects/developers-fashionunited-com
+[debug] [2024-09-17T20:14:05.245Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/developers-fashionunited-com:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-09-17T20:14:05.899Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/developers-fashionunited-com:testIamPermissions 200
+[debug] [2024-09-17T20:14:05.899Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/developers-fashionunited-com:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-09-17T20:14:05.900Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/developers-fashionunited-com/locations/-/functions [none]
+[debug] [2024-09-17T20:14:06.604Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/developers-fashionunited-com/locations/-/functions 200
+[debug] [2024-09-17T20:14:06.604Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/developers-fashionunited-com/locations/-/functions {"functions":[{"name":"projects/developers-fashionunited-com/locations/europe-west1/functions/ext-storage-resize-images-backfillResizedImages","description":"Handles tasks from startBackfill to resize existing images.","sourceArchiveUrl":"gs://firebase-mod-sources-prod/f273cbeec2a756bdc5ab96d8ac04c847059dc1f744b2cd186e3a26d0cab9d381","httpsTrigger":{"url":"https://europe-west1-developers-fashionunited-com.cloudfunctions.net/ext-storage-resize-images-backfillResizedImages","securityLevel":"SECURE_OPTIONAL"},"status":"ACTIVE","entryPoint":"backfillResizedImages","timeout":"540s","availableMemoryMb":1024,"serviceAccountEmail":"ext-storage-resize-images@developers-fashionunited-com.iam.gserviceaccount.com","updateTime":"2024-09-06T11:36:53.720Z","versionId":"2","labels":{"firebase-extensions-ar":"enabled","goog-dm":"firebase-ext-storage-resize-images","goog-firebase-ext":"storage-resize-images","deployment-tool":"firebase-extensions","goog-firebase-ext-iid":"storage-resize-images"},"environmentVariables":{"DATABASE_INSTANCE":"developers-fashionunited-com","DATABASE_URL":"https://developers-fashionunited-com.firebaseio.com","DELETE_ORIGINAL_FILE":"false","DO_BACKFILL":"false","EVENTARC_CHANNEL":"projects/developers-fashionunited-com/locations/europe-west4/channels/firebase","EVENTARC_CLOUD_EVENT_SOURCE":"//firebaseextensions.googleapis.com/extensions/projects/developers-fashionunited-com/instances/storage-resize-images","EXT_INSTANCE_ID":"storage-resize-images","EXT_SELECTED_EVENTS":"firebase.extensions.storage-resize-images.v1.onCompletion,firebase.extensions.storage-resize-images.v1.onError,firebase.extensions.storage-resize-images.v1.onStart,firebase.extensions.storage-resize-images.v1.onSuccess","FIREBASE_CONFIG":"{\"projectId\":\"developers-fashionunited-com\",\"databaseURL\":\"https://developers-fashionunited-com.firebaseio.com\",\"storageBucket\":\"developers-fashionunited-com.appspot.com\"}","FUNCTION_MEMORY":"1024","GCLOUD_PROJECT":"developers-fashionunited-com","IMAGE_TYPE":"false","IMG_BUCKET":"developers-fashionunited-com-imageresize","IMG_SIZES":"200x200","IS_ANIMATED":"true","LOCATION":"europe-west1","MAKE_PUBLIC":"false","PROJECT_ID":"developers-fashionunited-com","REGENERATE_TOKEN":"true","STORAGE_BUCKET":"developers-fashionunited-com.appspot.com"},"runtime":"nodejs18","ingressSettings":"ALLOW_ALL","buildId":"5348f59c-ef9b-4dc8-9036-ddd218d84806","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/187698730207/locations/europe-west1/builds/5348f59c-ef9b-4dc8-9036-ddd218d84806","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{}},{"name":"projects/developers-fashionunited-com/locations/europe-west1/functions/ext-firestore-shorten-urls-bitly-fsurlshortener","description":"Listens for writes of new URLs to your specified Cloud Firestore collection, shortens the URLs, then writes the shortened form back to the same document.","sourceArchiveUrl":"gs://firebase-mod-sources-prod/90ed327998129ba402bce27ea5efa05d43e0696773f07b7ffb198668cfbaed74","eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.write","resource":"projects/developers-fashionunited-com/databases/(default)/documents/urls/{documentId}","service":"firestore.googleapis.com","failurePolicy":{}},"status":"ACTIVE","entryPoint":"fsurlshortener","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"ext-firestore-shorten-url-nvx4@developers-fashionunited-com.iam.gserviceaccount.com","updateTime":"2024-09-06T11:47:40.589Z","versionId":"2","labels":{"goog-dm":"firebase-ext-firestore-shorten-urls-bitly","goog-firebase-ext":"firestore-shorten-urls-bitly","deployment-tool":"firebase-extensions","goog-firebase-ext-iid":"firestore-shorten-urls-bitly","firebase-extensions-ar":"enabled"},"environmentVariables":{"COLLECTION_PATH":"urls","DATABASE_INSTANCE":"developers-fashionunited-com","DATABASE_URL":"https://developers-fashionunited-com.firebaseio.com","EVENTARC_CHANNEL":"projects/developers-fashionunited-com/locations/europe-west4/channels/firebase","EVENTARC_CLOUD_EVENT_SOURCE":"//firebaseextensions.googleapis.com/extensions/projects/developers-fashionunited-com/instances/firestore-shorten-urls-bitly","EXT_INSTANCE_ID":"firestore-shorten-urls-bitly","EXT_SELECTED_EVENTS":"firebase.extensions.firestore-shorten-urls-bitly.v1.onCompletion,firebase.extensions.firestore-shorten-urls-bitly.v1.onError,firebase.extensions.firestore-shorten-urls-bitly.v1.onStart,firebase.extensions.firestore-shorten-urls-bitly.v1.onSuccess","FIREBASE_CONFIG":"{\"projectId\":\"developers-fashionunited-com\",\"databaseURL\":\"https://developers-fashionunited-com.firebaseio.com\",\"storageBucket\":\"developers-fashionunited-com.appspot.com\"}","GCLOUD_PROJECT":"developers-fashionunited-com","LOCATION":"europe-west1","PROJECT_ID":"developers-fashionunited-com","SHORT_URL_FIELD_NAME":"shortUrl","STORAGE_BUCKET":"developers-fashionunited-com.appspot.com","URL_FIELD_NAME":"url"},"runtime":"nodejs18","maxInstances":3000,"ingressSettings":"ALLOW_INTERNAL_ONLY","buildId":"652574ba-4c27-41f8-b097-8f878ff0382a","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"secretEnvironmentVariables":[{"key":"BITLY_ACCESS_TOKEN","projectId":"187698730207","secret":"firestore-shorten-urls-bitly-BITLY_ACCESS_TOKEN","version":"1"}],"buildName":"projects/187698730207/locations/europe-west1/builds/652574ba-4c27-41f8-b097-8f878ff0382a","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{}},{"name":"projects/developers-fashionunited-com/locations/europe-west1/functions/ext-storage-resize-images-generateResizedImage","description":"Listens for new images uploaded to your specified Cloud Storage bucket, resizes the images, then stores the resized images in the same bucket. Optionally keeps or deletes the original images.","sourceArchiveUrl":"gs://firebase-mod-sources-prod/f273cbeec2a756bdc5ab96d8ac04c847059dc1f744b2cd186e3a26d0cab9d381","eventTrigger":{"eventType":"google.storage.object.finalize","resource":"projects/_/buckets/developers-fashionunited-com-imageresize","service":"storage.googleapis.com","failurePolicy":{}},"status":"ACTIVE","entryPoint":"generateResizedImage","timeout":"60s","availableMemoryMb":1024,"serviceAccountEmail":"ext-storage-resize-images@developers-fashionunited-com.iam.gserviceaccount.com","updateTime":"2024-09-06T11:37:23.574Z","versionId":"2","labels":{"firebase-extensions-ar":"enabled","goog-dm":"firebase-ext-storage-resize-images","goog-firebase-ext":"storage-resize-images","deployment-tool":"firebase-extensions","goog-firebase-ext-iid":"storage-resize-images"},"environmentVariables":{"DATABASE_INSTANCE":"developers-fashionunited-com","DATABASE_URL":"https://developers-fashionunited-com.firebaseio.com","DELETE_ORIGINAL_FILE":"false","DO_BACKFILL":"false","EVENTARC_CHANNEL":"projects/developers-fashionunited-com/locations/europe-west4/channels/firebase","EVENTARC_CLOUD_EVENT_SOURCE":"//firebaseextensions.googleapis.com/extensions/projects/developers-fashionunited-com/instances/storage-resize-images","EXT_INSTANCE_ID":"storage-resize-images","EXT_SELECTED_EVENTS":"firebase.extensions.storage-resize-images.v1.onCompletion,firebase.extensions.storage-resize-images.v1.onError,firebase.extensions.storage-resize-images.v1.onStart,firebase.extensions.storage-resize-images.v1.onSuccess","FIREBASE_CONFIG":"{\"projectId\":\"developers-fashionunited-com\",\"databaseURL\":\"https://developers-fashionunited-com.firebaseio.com\",\"storageBucket\":\"developers-fashionunited-com.appspot.com\"}","FUNCTION_MEMORY":"1024","GCLOUD_PROJECT":"developers-fashionunited-com","IMAGE_TYPE":"false","IMG_BUCKET":"developers-fashionunited-com-imageresize","IMG_SIZES":"200x200","IS_ANIMATED":"true","LOCATION":"europe-west1","MAKE_PUBLIC":"false","PROJECT_ID":"developers-fashionunited-com","REGENERATE_TOKEN":"true","STORAGE_BUCKET":"developers-fashionunited-com.appspot.com"},"runtime":"nodejs18","maxInstances":3000,"ingressSettings":"ALLOW_INTERNAL_ONLY","buildId":"61fa5b62-ba04-4921-b369-88f4ecfe67df","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/187698730207/locations/europe-west1/builds/61fa5b62-ba04-4921-b369-88f4ecfe67df","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{}},{"name":"projects/developers-fashionunited-com/locations/europe-west1/functions/ext-firestore-genai-chatbot-generateMessage","description":"Listens to Firestore data writes to generate conversations.","sourceArchiveUrl":"gs://firebase-mod-sources-prod/b5d3589b8e8e4976e80e776a5137b9c4988ca2add40b592c8d69c0fbaca01cef","eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.write","resource":"projects/developers-fashionunited-com/databases/(default)/documents/generate/{messageId}","service":"firestore.googleapis.com","failurePolicy":{}},"status":"UNKNOWN","entryPoint":"generateMessage","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"ext-firestore-genai-chatbot@developers-fashionunited-com.iam.gserviceaccount.com","updateTime":"2024-09-06T09:51:45.258Z","versionId":"1","labels":{"goog-firebase-ext-iid":"firestore-genai-chatbot","deployment-tool":"firebase-extensions","firebase-extensions-ar":"enabled","goog-firebase-ext":"firestore-genai-chatbot"},"environmentVariables":{"CANDIDATE_COUNT":"1","CANDIDATES_FIELD":"candidates","COLLECTION_NAME":"generate","DATABASE_INSTANCE":"developers-fashionunited-com","DATABASE_URL":"https://developers-fashionunited-com.firebaseio.com","ENABLE_DISCUSSION_OPTION_OVERRIDES":"no","EXT_INSTANCE_ID":"firestore-genai-chatbot","FIREBASE_CONFIG":"{\"projectId\":\"developers-fashionunited-com\",\"databaseURL\":\"https://developers-fashionunited-com.firebaseio.com\",\"storageBucket\":\"developers-fashionunited-com.appspot.com\"}","GCLOUD_PROJECT":"developers-fashionunited-com","GENERATIVE_AI_PROVIDER":"vertex-ai","HARM_CATEGORY_DANGEROUS_CONTENT":"HARM_BLOCK_THRESHOLD_UNSPECIFIED","HARM_CATEGORY_HARASSMENT":"HARM_BLOCK_THRESHOLD_UNSPECIFIED","HARM_CATEGORY_HATE_SPEECH":"HARM_BLOCK_THRESHOLD_UNSPECIFIED","HARM_CATEGORY_SEXUALLY_EXPLICIT":"HARM_BLOCK_THRESHOLD_UNSPECIFIED","LOCATION":"europe-west1","MODEL":"gemini-pro","ORDER_FIELD":"createTime","PROJECT_ID":"developers-fashionunited-com","PROMPT_FIELD":"prompt","RESPONSE_FIELD":"response","STORAGE_BUCKET":"developers-fashionunited-com.appspot.com"},"runtime":"nodejs18","maxInstances":3000,"ingressSettings":"ALLOW_INTERNAL_ONLY","buildId":"2b5453d2-fbbc-4810-97fa-669288623bee","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/187698730207/locations/europe-west1/builds/2b5453d2-fbbc-4810-97fa-669288623bee","dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{}}]}
+[debug] [2024-09-17T20:14:06.605Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/developers-fashionunited-com/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2024-09-17T20:14:07.643Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/developers-fashionunited-com/locations/-/functions 200
+[debug] [2024-09-17T20:14:07.643Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/developers-fashionunited-com/locations/-/functions {"functions":[{"name":"projects/developers-fashionunited-com/locations/europe-west1/functions/ssrdevelopersfashionuni","buildConfig":{"build":"projects/187698730207/locations/europe-west1/builds/bf76a2ce-e1de-4d34-8e13-cb953095e3a8","runtime":"nodejs20","entryPoint":"ssrdevelopersfashionuni","source":{"storageSource":{"bucket":"gcf-v2-sources-187698730207-europe-west1","object":"ssrdevelopersfashionuni/function-source.zip","generation":"1725650528906877"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/developers-fashionunited-com/locations/europe-west1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-187698730207-europe-west1","object":"ssrdevelopersfashionuni/function-source.zip","generation":"1725650528906877"}},"dockerRegistry":"ARTIFACT_REGISTRY","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/developers-fashionunited-com/locations/europe-west1/services/ssrdevelopersfashionuni","timeoutSeconds":60,"environmentVariables":{"__FIREBASE_FRAMEWORKS_ENTRY__":"astro","FIREBASE_CONFIG":"{\"projectId\":\"developers-fashionunited-com\",\"databaseURL\":\"https://developers-fashionunited-com.firebaseio.com\",\"storageBucket\":\"developers-fashionunited-com.appspot.com\",\"locationId\":\"europe-west3\"}","GCLOUD_PROJECT":"developers-fashionunited-com","EVENTARC_CLOUD_EVENT_SOURCE":"projects/developers-fashionunited-com/locations/europe-west1/services/ssrdevelopersfashionuni","FUNCTION_TARGET":"ssrdevelopersfashionuni","LOG_EXECUTION_ID":"true"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","uri":"https://ssrdevelopersfashionuni-at22arfjoq-ew.a.run.app","serviceAccountEmail":"187698730207-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"ssrdevelopersfashionuni-00003-tet","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2024-09-06T19:24:02.758145243Z","labels":{"firebase-functions-hash":"c91eaff72cdce8f9c0bac32e485e19507d374429","deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-developers-fashionunited-com"},"environment":"GEN_2","url":"https://europe-west1-developers-fashionunited-com.cloudfunctions.net/ssrdevelopersfashionuni","createTime":"2024-09-06T19:14:32.951697913Z"}]}
+[info] i  hosting: The following function(s) are pinned to site developers-fashionunited-com and will be deployed as well: ssrdevelopersfashionuni 
+[info] 
+[info] === Deploying to 'developers-fashionunited-com'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2024-09-17T20:14:07.644Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/developers-fashionunited-com [none]
+[debug] [2024-09-17T20:14:07.912Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/developers-fashionunited-com 200
+[debug] [2024-09-17T20:14:07.912Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/developers-fashionunited-com {"projectId":"developers-fashionunited-com","projectNumber":"187698730207","displayName":"developers-fashionunited-com","name":"projects/developers-fashionunited-com","resources":{"hostingSite":"developers-fashionunited-com","realtimeDatabaseInstance":"developers-fashionunited-com","storageBucket":"developers-fashionunited-com.appspot.com","locationId":"europe-west3"},"state":"ACTIVE","etag":"1_7bd105f2-7417-4ea3-a4ca-ce7c18276542"}
+[info] i  functions: preparing codebase firebase-frameworks-developers-fashionunited-com for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-09-17T20:14:07.915Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/developers-fashionunited-com/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-09-17T20:14:07.915Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/developers-fashionunited-com/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/developers-fashionunited-com
+[debug] [2024-09-17T20:14:07.916Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/developers-fashionunited-com/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-09-17T20:14:07.916Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/developers-fashionunited-com/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/developers-fashionunited-com
+[debug] [2024-09-17T20:14:07.917Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/developers-fashionunited-com/services/cloudbuild.googleapis.com [none]
+[debug] [2024-09-17T20:14:07.917Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/developers-fashionunited-com/services/cloudbuild.googleapis.com x-goog-quota-user=projects/developers-fashionunited-com
+[debug] [2024-09-17T20:14:07.918Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/developers-fashionunited-com/services/artifactregistry.googleapis.com [none]
+[debug] [2024-09-17T20:14:07.918Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/developers-fashionunited-com/services/artifactregistry.googleapis.com x-goog-quota-user=projects/developers-fashionunited-com
+[debug] [2024-09-17T20:14:08.771Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/developers-fashionunited-com/services/cloudfunctions.googleapis.com 200
+[debug] [2024-09-17T20:14:08.772Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/developers-fashionunited-com/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-09-17T20:14:08.773Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/developers-fashionunited-com/services/cloudbuild.googleapis.com 200
+[debug] [2024-09-17T20:14:08.773Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/developers-fashionunited-com/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-09-17T20:14:08.797Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/developers-fashionunited-com/services/runtimeconfig.googleapis.com 200
+[debug] [2024-09-17T20:14:08.797Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/developers-fashionunited-com/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-09-17T20:14:08.814Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/developers-fashionunited-com/services/artifactregistry.googleapis.com 200
+[debug] [2024-09-17T20:14:08.814Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/developers-fashionunited-com/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-09-17T20:14:08.815Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/developers-fashionunited-com/adminSdkConfig [none]
+[debug] [2024-09-17T20:14:09.286Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/developers-fashionunited-com/adminSdkConfig 200
+[debug] [2024-09-17T20:14:09.286Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/developers-fashionunited-com/adminSdkConfig {"projectId":"developers-fashionunited-com","databaseURL":"https://developers-fashionunited-com.firebaseio.com","storageBucket":"developers-fashionunited-com.appspot.com","locationId":"europe-west3"}
+[debug] [2024-09-17T20:14:09.287Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/developers-fashionunited-com/configs [none]
+[debug] [2024-09-17T20:14:09.535Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/developers-fashionunited-com/configs 200
+[debug] [2024-09-17T20:14:09.535Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/developers-fashionunited-com/configs {}
+[debug] [2024-09-17T20:14:09.536Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2024-09-17T20:14:09.870Z] > [functions] package.json contents: {
+  "name": "developer-fashionunited-com",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "npm@10.8.2+sha512.c7f0088c520a46596b85c6f8f1da943400199748a0f7ea8cb8df75469668dc26f6fb3ba26df87e2884a5ebe91557292d0f3db7d0929cdb4f14910c3032ac81fb",
+  "dependencies": {
+    "@astrojs/check": "^0.5.10",
+    "@astrojs/node": "^8.3.3",
+    "@astrojs/partytown": "^2.1.1",
+    "@astrojs/starlight": "^0.17.4",
+    "@astrojs/starlight-tailwind": "^2.0.3",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/inter": "^5.0.19",
+    "@fontsource-variable/lora": "^5.0.18",
+    "@fontsource/ibm-plex-mono": "^5.0.13",
+    "astro": "^4.12.2",
+    "astro-vtbot": "^1.8.2",
+    "firebase": "^10.13.1",
+    "firebase-admin": "^12.5.0",
+    "firebase-tools": "^13.17.0",
+    "sharp": "^0.32.6",
+    "tailwindcss": "^3.4.6",
+    "typescript": "^5.5.3",
+    "firebase-frameworks": "^0.11.0",
+    "firebase-functions": "^4.5.0"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "20"
+  }
+}
+[debug] [2024-09-17T20:14:09.870Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase firebase-frameworks-developers-fashionunited-com to determine what to deploy 
+[debug] [2024-09-17T20:14:09.870Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-09-17T20:14:09.873Z] Found firebase-functions binary at '/Users/joost/git/developer.fashionunited.com/.firebase/developers-fashionunited-com/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8332
+
+[debug] [2024-09-17T20:14:10.171Z] Got response from /__/functions.yaml {"endpoints":{"ssrdevelopersfashionuni":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["europe-west1"],"labels":{},"httpsTrigger":{},"entryPoint":"ssrdevelopersfashionuni"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2024-09-17T20:14:15.185Z] Failed to validate key FIREBASE_PRIVATE_KEY_ID: Error: Key FIREBASE_PRIVATE_KEY_ID starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[debug] [2024-09-17T20:14:15.185Z] Failed to validate key FIREBASE_PRIVATE_KEY: Error: Key FIREBASE_PRIVATE_KEY starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[debug] [2024-09-17T20:14:15.186Z] Failed to validate key FIREBASE_PROJECT_ID: Error: Key FIREBASE_PROJECT_ID starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[debug] [2024-09-17T20:14:15.186Z] Failed to validate key FIREBASE_CLIENT_EMAIL: Error: Key FIREBASE_CLIENT_EMAIL starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[debug] [2024-09-17T20:14:15.186Z] Failed to validate key FIREBASE_CLIENT_ID: Error: Key FIREBASE_CLIENT_ID starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[debug] [2024-09-17T20:14:15.186Z] Failed to validate key FIREBASE_AUTH_URI: Error: Key FIREBASE_AUTH_URI starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[debug] [2024-09-17T20:14:15.186Z] Failed to validate key FIREBASE_TOKEN_URI: Error: Key FIREBASE_TOKEN_URI starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[debug] [2024-09-17T20:14:15.186Z] Failed to validate key FIREBASE_AUTH_CERT_URL: Error: Key FIREBASE_AUTH_CERT_URL starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[debug] [2024-09-17T20:14:15.186Z] Failed to validate key FIREBASE_CLIENT_CERT_URL: Error: Key FIREBASE_CLIENT_CERT_URL starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[error] Error: Failed to load environment variables from .env.:
+[error] - Error Key FIREBASE_PRIVATE_KEY_ID starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[error] - Error Key FIREBASE_PRIVATE_KEY starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[error] - Error Key FIREBASE_PROJECT_ID starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[error] - Error Key FIREBASE_CLIENT_EMAIL starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[error] - Error Key FIREBASE_CLIENT_ID starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[error] - Error Key FIREBASE_AUTH_URI starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[error] - Error Key FIREBASE_TOKEN_URI starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[error] - Error Key FIREBASE_AUTH_CERT_URL starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)
+[error] - Error Key FIREBASE_CLIENT_CERT_URL starts with a reserved prefix (X_GOOGLE_ FIREBASE_ EXT_)

@@ -9,8 +9,11 @@ const auth = getAuth(app);
 if (!Astro.cookies.has("__session")) {
   return Astro.redirect("/signin");
 }
-const sessionCookie = Astro.cookies.get("__session").value;
-const decodedCookie = await auth.verifySessionCookie(sessionCookie);
+const sessionCookie = Astro.cookies.get("__session");
+if (!sessionCookie) {
+  return Astro.redirect("/signin");
+}
+const decodedCookie = await auth.verifySessionCookie(sessionCookie.value);
 const user = await auth.getUser(decodedCookie.uid);
 
 if (!user) {

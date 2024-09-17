@@ -6,10 +6,12 @@ import Layout from "../layouts/Layout.astro";
 /* Check if the user is authenticated */
 const auth = getAuth(app);
 if (Astro.cookies.has("__session")) {
-  const sessionCookie = Astro.cookies.get("__session").value;
-  const decodedCookie = await auth.verifySessionCookie(sessionCookie);
-  if (decodedCookie) {
-    return Astro.redirect("/dashboard");
+  const sessionCookie = Astro.cookies.get("__session")?.value;
+  if (sessionCookie) {
+    const decodedCookie = await auth.verifySessionCookie(sessionCookie);
+    if (decodedCookie) {
+      return Astro.redirect("/dashboard");
+    }
   }
 }
 
