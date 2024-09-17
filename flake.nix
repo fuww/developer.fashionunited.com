@@ -30,7 +30,6 @@
           packages = with pkgs; [
               nodejs_20
               corepack_20
-              firebase-tools
               nixpkgs-fmt
           ];
         };
