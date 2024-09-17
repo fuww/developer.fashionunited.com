@@ -7,13 +7,15 @@ FashionUnited Developer Portal, built with [Astro](https://astro.build/) and the
 ## Run
 
 ```bash
+nix develop
+npm install
 npm run dev
 ```
 
 ## Run devenv
 
 ```bash
-devenv shell
+nix develop
 npm run dev # works without installing node, npm, pnpm globally. Nix packaga manager is used.
 ```
 
