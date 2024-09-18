@@ -2,6 +2,7 @@
 import { app } from "../firebase/server";
 import { getAuth } from "firebase-admin/auth";
 import Layout from "../layouts/Layout.astro";
+import { Button } from "@/components/ui/button";
 
 const auth = getAuth(app);
 
@@ -27,6 +28,6 @@ export const prerender = false;
   <h1>Welcome {user.displayName}</h1>
   <p>We are happy to see you here</p>
   <form action="/api/auth/signout">
-    <button type="submit">Sign out</button>
+    <Button type="submit">Sign out</Button>
   </form>
 </Layout>

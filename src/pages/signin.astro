@@ -1,7 +1,11 @@
 ---
 import { app } from "../firebase/server";
 import { getAuth } from "firebase-admin/auth";
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+
 
 /* Check if the user is authenticated */
 const auth = getAuth(app);
@@ -22,11 +26,11 @@ export const prerender = false;
   <h1>Sign in</h1>
   <p>New here? <a href="/register">Create an account</a></p>
   <form action="/api/auth/signin" method="post">
-    <label for="email" for="email">Email</label>
-    <input type="email" name="email" id="email" />
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" />
-    <button type="submit">Login</button>
+    <Label htmlFor="email">Email</Label>
+    <Input type="email" name="email" id="email" />
+    <Label htmlFor="password">Password</Label>
+    <Input type="password" name="password" id="password" />
+    <Button type="submit">Login</Button>
   </form>
 </Layout>
 <script>
