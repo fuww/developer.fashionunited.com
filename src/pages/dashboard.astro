@@ -2,31 +2,60 @@
 import { app } from "../firebase/server";
 import { getAuth } from "firebase-admin/auth";
 import Layout from "../layouts/Layout.astro";
+import { Button } from "@/components/ui/button";
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
 
 const auth = getAuth(app);
 
 /* Check current session */
 if (!Astro.cookies.has("__session")) {
-  return Astro.redirect("/signin");
+    return Astro.redirect("/signin");
 }
 const sessionCookie = Astro.cookies.get("__session");
 if (!sessionCookie) {
-  return Astro.redirect("/signin");
+    return Astro.redirect("/signin");
 }
 const decodedCookie = await auth.verifySessionCookie(sessionCookie.value);
 const user = await auth.getUser(decodedCookie.uid);
 
 if (!user) {
-  return Astro.redirect("/signin");
+    return Astro.redirect("/signin");
 }
 
 export const prerender = false;
 ---
 
 <Layout title="dashboard">
-  <h1>Welcome {user.displayName}</h1>
-  <p>We are happy to see you here</p>
-  <form action="/api/auth/signout">
-    <button type="submit">Sign out</button>
-  </form>
+    <div class="min-h-screen flex items-center justify-center bg-gray-100">
+        <Card className="w-full max-w-7xl bg-white">
+            <CardHeader>
+                <CardTitle
+                    className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-center"
+                >
+                    Welcome, {user.displayName}!
+                </CardTitle>
+                <CardDescription className="text-center">
+                    We're happy to see you here
+                </CardDescription>
+            </CardHeader>
+            <CardContent>
+                <p class="text-center mb-4">
+                    This is your personal dashboard. Here you can manage your
+                    account and access your data.
+                </p>
+            </CardContent>
+            <CardFooter className="flex justify-center">
+                <form action="/api/auth/signout">
+                    <Button type="submit">Sign out</Button>
+                </form>
+            </CardFooter>
+        </Card>
+    </div>
 </Layout>

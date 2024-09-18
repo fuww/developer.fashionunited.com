@@ -3,8 +3,9 @@ import starlight from '@astrojs/starlight';
 import tailwind from "@astrojs/tailwind";
 import partytown from "@astrojs/partytown";
 import vtbot from "astro-vtbot";
-
 import node from "@astrojs/node";
+
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
@@ -88,7 +89,7 @@ export default defineConfig({
   }), tailwind({
     // Disable the default base styles:
     applyBaseStyles: false
-  }), partytown(), vtbot()],
+  }), partytown(), vtbot(), react()],
   output: "hybrid",
   adapter: node({
     mode: "middleware"
