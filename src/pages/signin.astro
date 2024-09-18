@@ -29,9 +29,9 @@ if (Astro.cookies.has("__session")) {
 export const prerender = false;
 ---
 
-<Layout title="Sign in">
-    <div class="min-h-screen flex items-center justify-center bg-gray-100">
-        <Card className="w-full max-w-md bg-white">
+<Layout className="bg-gray-100" title="Sign in">
+    <div class="min-h-screen bg-gray-100">
+        <Card className="mx-auto max-w-sm">
             <CardHeader>
                 <CardTitle
                     className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-center"
@@ -42,77 +42,117 @@ export const prerender = false;
                 >
             </CardHeader>
             <CardContent>
-                <!-- <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-    Sign in</h1>
-  <p>New here? <a href="/register">Create an account</a></p> -->
                 <form action="/api/auth/signin" method="post" class="space-y-4">
-                    <div class="space-y-2">
-                        <Label htmlFor="email">Email</Label>
-                        <Input type="email" name="email" id="email" />
+                    <div class="grid gap-4">
+                        <div class="grid gap-2">
+                            <Label htmlFor="email">Email</Label>
+                            <Input
+                                className="w-full"
+                                type="email"
+                                name="email"
+                                id="email"
+                            />
+                        </div>
+                        <div class="grid gap-2">
+                            <div class="flex items-center">
+                                <Label htmlFor="password">Password</Label>
+                                <a
+                                    href="/forgot-password"
+                                    class="ml-auto inline-block text-sm underline"
+                                >
+                                    Forgot your password?
+                                </a>
+                            </div>
+                            <Input
+                                type="password"
+                                name="password"
+                                id="password"
+                                required
+                            />
+                        </div>
+                        <Button type="submit" className="w-full">Login</Button>
                     </div>
-                    <div class="space-y-2">
-                        <Label htmlFor="password">Password</Label>
-                        <Input type="password" name="password" id="password" />
-                    </div>
-                    <Button type="submit" className="w-full">Login</Button>
+                    <Button
+                        variant="outline"
+                        id="google"
+                        className="w-full flex items-center justify-center space-x-2 bg-blue-500 text-white hover:bg-blue-600"
+                        ><svg
+                            class="w-4 h-4 mr-2"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z"
+                            ></path>
+                        </svg> Sign in with Google</Button
+                    >
                 </form>
+                <div class="mt-4 text-center text-sm">
+                    Don&apos;t have an account?{" "}
+                    <a href="/register" class="underline"> Sign up </a>
+                </div>
             </CardContent>
-            <CardFooter className="flex justify-center">
-                <p class="text-sm">
-                    New here? <a
-                        class="text-sm text-blue-600 hover:underline"
-                        href="/register">Create an account</a
-                    >
-                </p>
-                <p>
-                    <a
-                        href="/forgot-password"
-                        class="text-sm text-blue-600 hover:underline"
-                    >
-                        Forgot password?
-                    </a>
-                </p>
-            </CardFooter>
         </Card>
-    </div>
-    <script>
-        import {
-            getAuth,
-            inMemoryPersistence,
-            signInWithEmailAndPassword,
-        } from "firebase/auth";
-        import { app } from "../firebase/client";
+        <script>
+            import {
+                getAuth,
+                inMemoryPersistence,
+                signInWithEmailAndPassword,
+                GoogleAuthProvider,
+                signInWithPopup,
+            } from "firebase/auth";
+            import { app } from "../firebase/client";
 
-        const auth = getAuth(app);
-        // This will prevent the browser from storing session data
-        auth.setPersistence(inMemoryPersistence);
+            const auth = getAuth(app);
+            // This will prevent the browser from storing session data
+            auth.setPersistence(inMemoryPersistence);
 
-        const form = document.querySelector("form") as HTMLFormElement;
-        form.addEventListener("submit", async (e) => {
-            e.preventDefault();
-            const formData = new FormData(form);
-            const email = formData.get("email")?.toString();
-            const password = formData.get("password")?.toString();
+            const form = document.querySelector("form") as HTMLFormElement;
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+                const formData = new FormData(form);
+                const email = formData.get("email")?.toString();
+                const password = formData.get("password")?.toString();
 
-            if (!email || !password) {
-                return;
-            }
-            const userCredential = await signInWithEmailAndPassword(
-                auth,
-                email,
-                password,
-            );
-            const idToken = await userCredential.user.getIdToken();
-            const response = await fetch("/api/auth/signin", {
-                method: "GET",
-                headers: {
-                    Authorization: `Bearer ${idToken}`,
-                },
+                if (!email || !password) {
+                    return;
+                }
+                const userCredential = await signInWithEmailAndPassword(
+                    auth,
+                    email,
+                    password,
+                );
+                const idToken = await userCredential.user.getIdToken();
+                const response = await fetch("/api/auth/signin", {
+                    method: "GET",
+                    headers: {
+                        Authorization: `Bearer ${idToken}`,
+                    },
+                });
+
+                if (response.redirected) {
+                    window.location.assign(response.url);
+                }
             });
 
-            if (response.redirected) {
-                window.location.assign(response.url);
-            }
-        });
-    </script>
+            const googleSignin = document.querySelector(
+                "#google",
+            ) as HTMLButtonElement;
+            googleSignin.addEventListener("click", async () => {
+                const provider = new GoogleAuthProvider();
+                const userCredential = await signInWithPopup(auth, provider);
+                const idToken = await userCredential.user.getIdToken();
+                const res = await fetch("/api/auth/signin", {
+                    headers: {
+                        Authorization: `Bearer ${idToken}`,
+                    },
+                });
+
+                if (res.redirected) {
+                    window.location.assign(res.url);
+                }
+            });
+        </script>
+    </div>
 </Layout>
