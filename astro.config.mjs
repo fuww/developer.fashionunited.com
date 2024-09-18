@@ -91,6 +91,6 @@ export default defineConfig({
   }), partytown(), vtbot()],
   output: "hybrid",
   adapter: node({
-    mode: "standalone"
+    mode: "middleware"
   })
 });

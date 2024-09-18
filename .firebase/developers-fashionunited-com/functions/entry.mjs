@@ -2843,7 +2843,7 @@ const _manifest = Object.assign(manifest, {
     middleware: onRequest
 });
 const _args = {
-    "mode": "standalone",
+    "mode": "middleware",
     "client": "file:///Users/joost/git/developer.fashionunited.com/dist/client/",
     "server": "file:///Users/joost/git/developer.fashionunited.com/dist/server/",
     "host": false,
