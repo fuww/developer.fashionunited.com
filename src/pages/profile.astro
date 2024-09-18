@@ -54,7 +54,7 @@ export const prerender = false;
                             type="text"
                             name="displayName"
                             id="displayName"
-                            value={user.displayName || ""}
+                            defaultValue={user.displayName || ""}
                             required
                         />
                     </div>
@@ -64,7 +64,7 @@ export const prerender = false;
                             type="email"
                             name="email"
                             id="email"
-                            value={user.email || ""}
+                            defaultValue={user.email || ""}
                             required
                         />
                     </div>
@@ -92,64 +92,70 @@ export const prerender = false;
         sendEmailVerification,
     } from "firebase/auth";
     import { app } from "../firebase/client";
-    
+
     const auth = getAuth(app);
-    
+
     document.addEventListener("DOMContentLoaded", async () => {
         const user = auth.currentUser;
 
-        // if (!user) {
-        //     console.error("No authenticated user found.");
-        //     alert("You must be logged in to update your profile.");
-        //     return;
-        // }
-    
+        if (!user) {
+            console.error("No authenticated user found.");
+            alert("You must be logged in to update your profile.");
+            return;
+        }
+
         const form = document.getElementById("profile-update-form");
-        form.addEventListener("submit", async (e) => {
-            e.preventDefault();
-            const formData = new FormData(form);
-            const newDisplayName = formData.get("displayName")?.toString();
-            const newEmail = formData.get("email")?.toString();
-    
-            try {
-                if (newDisplayName && newDisplayName !== user.displayName) {
-                    await updateProfile(user, { displayName: newDisplayName });
-                }
-    
-                if (newEmail && newEmail !== user.email) {
-                    await updateEmail(user, newEmail);
-                    await sendEmailVerification(user);
+        if (form) {
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+                const formData = new FormData(form as HTMLFormElement);
+                const newDisplayName = formData.get("displayName")?.toString();
+                const newEmail = formData.get("email")?.toString();
+
+                try {
+                    if (newDisplayName && newDisplayName !== user.displayName) {
+                        await updateProfile(user, {
+                            displayName: newDisplayName,
+                        });
+                    }
+
+                    if (newEmail && newEmail !== user.email) {
+                        await updateEmail(user, newEmail);
+                        await sendEmailVerification(user);
+                        alert(
+                            "Email updated. Please check your inbox to verify your new email address.",
+                        );
+                    }
+
+                    // Send updated profile data to the server
+                    const idToken = await user.getIdToken();
+                    const response = await fetch("/api/auth/update-profile", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            Authorization: `Bearer ${idToken}`,
+                        },
+                        body: JSON.stringify({
+                            displayName: newDisplayName,
+                            email: newEmail,
+                        }),
+                    });
+
+                    if (response.ok) {
+                        alert("Profile updated successfully!");
+                    } else {
+                        throw new Error(
+                            "Failed to update profile on the server.",
+                        );
+                    }
+                } catch (error) {
+                    console.error("Error updating profile:", error);
                     alert(
-                        "Email updated. Please check your inbox to verify your new email address."
+                        error.message ||
+                            "An error occurred while updating your profile.",
                     );
                 }
-    
-                // Send updated profile data to the server
-                const idToken = await user.getIdToken();
-                const response = await fetch("/api/auth/update-profile", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        Authorization: `Bearer ${idToken}`,
-                    },
-                    body: JSON.stringify({
-                        displayName: newDisplayName,
-                        email: newEmail,
-                    }),
-                });
-    
-                if (response.ok) {
-                    alert("Profile updated successfully!");
-                } else {
-                    throw new Error("Failed to update profile on the server.");
-                }
-            } catch (error) {
-                console.error("Error updating profile:", error);
-                alert(
-                    error.message ||
-                        "An error occurred while updating your profile."
-                );
-            }
-        });
+            });
+        }
     });
-    </script>
+</script>
