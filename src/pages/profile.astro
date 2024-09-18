@@ -1,0 +1,155 @@
+---
+import { app } from "../firebase/server";
+import { getAuth } from "firebase-admin/auth";
+import Layout from "@/layouts/Layout.astro";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
+
+const auth = getAuth(app);
+
+// Check current session
+if (!Astro.cookies.has("__session")) {
+    return Astro.redirect("/signin");
+}
+const sessionCookie = Astro.cookies.get("__session");
+if (!sessionCookie) {
+    return Astro.redirect("/signin");
+}
+const decodedCookie = await auth.verifySessionCookie(sessionCookie.value);
+const user = await auth.getUser(decodedCookie.uid);
+
+if (!user) {
+    return Astro.redirect("/signin");
+}
+
+export const prerender = false;
+---
+
+<Layout title="Update Profile">
+    <div class="min-h-screen flex items-center justify-center bg-gray-100">
+        <Card className="w-full max-w-md bg-white">
+            <CardHeader>
+                <CardTitle
+                    className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-center"
+                    >Update Profile of {user.displayName}</CardTitle
+                >
+                <CardDescription className="text-center"
+                    >Modify your account information</CardDescription
+                >
+            </CardHeader>
+            <CardContent>
+                <form id="profile-update-form" class="space-y-4">
+                    <div class="space-y-2">
+                        <Label htmlFor="displayName">Display Name</Label>
+                        <Input
+                            type="text"
+                            name="displayName"
+                            id="displayName"
+                            value={user.displayName || ""}
+                            required
+                        />
+                    </div>
+                    <div class="space-y-2">
+                        <Label htmlFor="email">Email</Label>
+                        <Input
+                            type="email"
+                            name="email"
+                            id="email"
+                            value={user.email || ""}
+                            required
+                        />
+                    </div>
+                    <Button type="submit" className="w-full"
+                        >Update Profile</Button
+                    >
+                </form>
+            </CardContent>
+            <CardFooter className="flex justify-center">
+                <a
+                    href="/dashboard"
+                    class="text-sm text-blue-600 hover:underline"
+                    >Back to Dashboard</a
+                >
+            </CardFooter>
+        </Card>
+    </div>
+</Layout>
+
+<script>
+    import {
+        getAuth,
+        updateProfile,
+        updateEmail,
+        sendEmailVerification,
+    } from "firebase/auth";
+    import { app } from "../firebase/client";
+    
+    const auth = getAuth(app);
+    
+    document.addEventListener("DOMContentLoaded", async () => {
+        const user = auth.currentUser;
+
+        // if (!user) {
+        //     console.error("No authenticated user found.");
+        //     alert("You must be logged in to update your profile.");
+        //     return;
+        // }
+    
+        const form = document.getElementById("profile-update-form");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const newDisplayName = formData.get("displayName")?.toString();
+            const newEmail = formData.get("email")?.toString();
+    
+            try {
+                if (newDisplayName && newDisplayName !== user.displayName) {
+                    await updateProfile(user, { displayName: newDisplayName });
+                }
+    
+                if (newEmail && newEmail !== user.email) {
+                    await updateEmail(user, newEmail);
+                    await sendEmailVerification(user);
+                    alert(
+                        "Email updated. Please check your inbox to verify your new email address."
+                    );
+                }
+    
+                // Send updated profile data to the server
+                const idToken = await user.getIdToken();
+                const response = await fetch("/api/auth/update-profile", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${idToken}`,
+                    },
+                    body: JSON.stringify({
+                        displayName: newDisplayName,
+                        email: newEmail,
+                    }),
+                });
+    
+                if (response.ok) {
+                    alert("Profile updated successfully!");
+                } else {
+                    throw new Error("Failed to update profile on the server.");
+                }
+            } catch (error) {
+                console.error("Error updating profile:", error);
+                alert(
+                    error.message ||
+                        "An error occurred while updating your profile."
+                );
+            }
+        });
+    });
+    </script>
