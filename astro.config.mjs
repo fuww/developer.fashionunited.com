@@ -89,7 +89,9 @@ export default defineConfig({
   }), tailwind({
     // Disable the default base styles:
     applyBaseStyles: false
-  }), partytown(), vtbot(), react()],
+  }), 
+  // partytown(), vtbot(), 
+  react()],
   output: "hybrid",
   adapter: node({
     mode: "middleware"

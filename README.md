@@ -19,6 +19,26 @@ nix develop
 npm run dev # works without installing node, npm, pnpm globally. Nix packaga manager is used.
 ```
 
+## Deploy
+
+```bash
+nix develop
+npx firebase deploy --only hosting
+```
+
+The first time you deploy, you need to install the firebase-tools package and login.
+
+```bash
+nix develop
+npm install firebase-tools
+npx firebase login
+npx firebase experiments:enable webframeworks
+npx firebase init hosting
+npx firebase deploy --only hosting
+```
+
+[https://docs.astro.build/en/guides/deploy/google-firebase/](https://docs.astro.build/en/guides/deploy/google-firebase/)
+
 ## Install Nix package manager on MacOS
 
 Install Nix with the Nix installer from Determinate Systems:
