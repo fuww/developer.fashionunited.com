@@ -39,6 +39,14 @@ npx firebase deploy --only hosting
 
 [https://docs.astro.build/en/guides/deploy/google-firebase/](https://docs.astro.build/en/guides/deploy/google-firebase/)
 
+## Docker
+
+```bash
+npm run build
+docker build -t developer.fashionunited.com .
+docker run -p 4321:4321 developer.fashionunited.com
+```
+
 ## Install Nix package manager on MacOS
 
 Install Nix with the Nix installer from Determinate Systems:
