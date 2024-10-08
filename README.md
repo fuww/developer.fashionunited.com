@@ -27,12 +27,28 @@ Install Nix with the Nix installer from Determinate Systems:
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 ```
 
-## Docker image
+## Create Artifact registry repo
+
+```bash
+gcloud artifacts repositories create developers-fashionunited-com --repository-format=docker \
+--location=europe-west1 --description="Docker repository"
+# verify
+gcloud artifacts repositories list
+```
+
+## Docker image (Cloud Build)
+
+```bash
+gcloud builds submit --region=europe-west1 --config cloudbuild.yaml .
+# When we use cloud logging and v2 builds:
+gcloud beta builds submit --region=europe-west1 --config cloudbuild.yaml .
+```
+
+## Docker image (manual)
 
 ```bash
 gcloud auth configure-docker europe-west1-docker.pkg.dev
 
-Terminal window
 # build your container
 docker build -t developers-fashionunited-com .
 

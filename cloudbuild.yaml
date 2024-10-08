@@ -1,0 +1,12 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    script: |
+      docker build -t europe-west1-docker.pkg.dev/$PROJECT_ID/developersite/ssrastrofrontend:$COMMIT_SHA .
+      docker tag europe-west1-docker.pkg.dev/$PROJECT_ID/developersite/ssrastrofrontend:$COMMIT_SHA europe-west1-docker.pkg.dev/$PROJECT_ID/developersite/ssrastrofrontend:latest
+    automapSubstitutions: true
+
+images:
+  - "europe-west1-docker.pkg.dev/$PROJECT_ID/developersite/ssrastrofrontend:$COMMIT_SHA"
+  - "europe-west1-docker.pkg.dev/$PROJECT_ID/developersite/ssrastrofrontend:latest"
+
+timeout: "1800s"
