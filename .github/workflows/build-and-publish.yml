@@ -25,13 +25,8 @@ jobs:
          id: date
          run: echo "DATE_STAMP=$(date +%s)" > "$GITHUB_ENV"
 
-
-
        - name: Build Containers with Nixpacks and
          uses: iloveitaly/github-action-nixpacks@v1.0
          with:
-          platforms: "linux/amd64,linux/arm64"
+          # platforms: "linux/amd64,linux/arm64"
           push: true
-          tags: |
-            ${{ env.IMAGE_NAME }}:custom-${{ env.DATE_STAMP }}
-            ${{ env.IMAGE_NAME }}:awesome-latest
