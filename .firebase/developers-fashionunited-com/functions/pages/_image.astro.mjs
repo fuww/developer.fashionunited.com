@@ -1,10 +1,10 @@
+import { readFile } from 'node:fs/promises';
 import os from 'node:os';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { g as getConfiguredImageService, i as imageConfig, a as assetsDir } from '../chunks/_astro_assets_ByaoZKF9.mjs';
+import { g as getConfiguredImageService, i as imageConfig, a as assetsDir } from '../chunks/_astro_assets_47HINnll.mjs';
 import { isRemotePath, removeQueryString } from '@astrojs/internal-helpers/path';
-import { readFile } from 'fs/promises';
 import * as mime from 'mrmime';
-import { i as isRemoteAllowed } from '../chunks/astro/assets-service_krrTVTB5.mjs';
+import { i as isRemoteAllowed } from '../chunks/astro/assets-service_U1oJRL2G.mjs';
 export { renderers } from '../renderers.mjs';
 
 const fnv1a52 = (str) => {
@@ -44,7 +44,7 @@ async function loadLocalImage(src, url) {
   let buffer = void 0;
   try {
     buffer = await readFile(fileUrl);
-  } catch (e) {
+  } catch {
     try {
       const sourceUrl = new URL(src, url.origin);
       buffer = await loadRemoteImage(sourceUrl);
@@ -62,7 +62,7 @@ async function loadRemoteImage(src) {
       return void 0;
     }
     return Buffer.from(await res.arrayBuffer());
-  } catch (err) {
+  } catch {
     return void 0;
   }
 }

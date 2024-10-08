@@ -1,5 +1,5 @@
 import { getAuth } from 'firebase-admin/auth';
-import { a as app } from '../../../chunks/server_C1_Usyrl.mjs';
+import { a as app } from '../../../chunks/server_DavSpe8V.mjs';
 export { renderers } from '../../../renderers.mjs';
 
 const prerender = false;
