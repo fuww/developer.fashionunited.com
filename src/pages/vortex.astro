@@ -1,13 +1,13 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { Vortex } from "@/components/ui/vortex";
+import { Vortex as VortexComponent } from "@/components/ui/vortex";
 
 // https://flaviocopes.com/adding-react-framer-motion-animations-to-an-astro-site/
 ---
 
 <Layout title="Vortex">
  <div class="w-[calc(100%-4rem)] mx-auto rounded-md  h-screen overflow-hidden">
-    <Vortex
+    <VortexComponent
       backgroundColor="black"
       rangeY={800}
       particleCount={500}
@@ -21,6 +21,6 @@ import { Vortex } from "@/components/ui/vortex";
       <p class="text-white text-sm md:text-2xl max-w-xl mt-6 text-center">
         This is Vortex from Aceternity.
       </p>
-    </Vortex>
+    </VortexComponent>
   </div>
 </Layout>

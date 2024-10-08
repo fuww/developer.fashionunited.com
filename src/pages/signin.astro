@@ -9,7 +9,6 @@ import {
     Card,
     CardContent,
     CardDescription,
-    CardFooter,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
@@ -29,8 +28,8 @@ if (Astro.cookies.has("__session")) {
 export const prerender = false;
 ---
 
-<Layout className="bg-gray-100" title="Sign in">
-    <div class="min-h-screen bg-gray-100">
+<div class="fixed inset-0 bg-gray-100">
+<Layout title="Sign in">
         <Card className="mx-auto max-w-sm">
             <CardHeader>
                 <CardTitle
@@ -154,5 +153,5 @@ export const prerender = false;
                 }
             });
         </script>
-    </div>
 </Layout>
+</div>
