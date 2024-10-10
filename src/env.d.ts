@@ -14,3 +14,7 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
+
+interface Window {
+  FIREBASE_APPCHECK_DEBUG_TOKEN?: boolean;
+}
