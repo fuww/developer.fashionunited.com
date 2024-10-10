@@ -7,7 +7,10 @@
       "**/node_modules/**"
     ],
     "frameworksBackend": {
-      "region": "europe-west1"
+      // https://github.com/FirebaseExtended/firebase-framework-tools
+      "region": "europe-west1",
+      "minInstances": 1,
+      "maxInstances": 1
     }
   },
   "emulators": {
