@@ -1,41 +1,354 @@
-<!DOCTYPE html><html lang="en" dir="ltr" data-has-toc data-has-sidebar data-theme="dark" class="astro-bguv2lll"> <head><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"> <meta name="vtbot-linter" content="collapsed"> <meta name="vtbot-loading-indicator" content=";;;;">  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Big header image please! | FashionUnited Docs</title><link rel="canonical" href="https://developer.fashionunited.com/posts/2018-11-22-big-header-image-please/"/><link rel="sitemap" href="/sitemap-index.xml"/><script type="text/partytown" src="https://plausible.io/js/script.js" data-domain="developer.fashionunited.com" defer></script><link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v4.15.12"/><meta name="generator" content="Starlight v0.28.3"/><meta property="og:title" content="Big header image please!"/><meta property="og:type" content="article"/><meta property="og:url" content="https://developer.fashionunited.com/posts/2018-11-22-big-header-image-please/"/><meta property="og:locale" content="en"/><meta property="og:description" content="Better looking job templates in the jobboard."/><meta property="og:site_name" content="FashionUnited Docs"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="Better looking job templates in the jobboard."/>  <meta name="vtbot-replace-swap" content="data-theme"> <meta name="vtbot-main-transition-scope" content="astro-kokuwcuc-1">     <meta name="vtbot-loading-indicator" content="80px;;;16px;/favicon.svg"> <script>
-	window.StarlightThemeProvider = (() => {
-		const storedTheme =
-			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
-		const theme =
-			storedTheme ||
-			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
-		return {
-			updatePickers(theme = storedTheme || 'auto') {
-				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
-					const select = picker.querySelector('select');
-					if (select) select.value = theme;
-					/** @type {HTMLTemplateElement | null} */
-					const tmpl = document.querySelector(`#theme-icons`);
-					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
-					if (newIcon) {
-						const oldIcon = picker.querySelector('svg.label-icon');
-						if (oldIcon) {
-							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-has-toc data-has-sidebar data-theme="dark" class="astro-bguv2lll">
+
+<head>
+	<meta name="astro-view-transitions-enabled" content="true">
+	<meta name="astro-view-transitions-fallback" content="animate">
+	<meta name="vtbot-linter" content="collapsed">
+	<meta name="vtbot-loading-indicator" content=";;;;">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Big header image please! | FashionUnited Docs</title>
+	<link rel="canonical" href="https://developer.fashionunited.com/posts/2018-11-22-big-header-image-please/" />
+	<link rel="sitemap" href="/sitemap-index.xml" />
+	<script type="text/partytown" src="https://plausible.io/js/script.js" data-domain="developer.fashionunited.com"
+		defer></script>
+	<link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+	<meta name="generator" content="Astro v4.15.12" />
+	<meta name="generator" content="Starlight v0.28.3" />
+	<meta property="og:title" content="Big header image please!" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="https://developer.fashionunited.com/posts/2018-11-22-big-header-image-please/" />
+	<meta property="og:locale" content="en" />
+	<meta property="og:description" content="Better looking job templates in the jobboard." />
+	<meta property="og:site_name" content="FashionUnited Docs" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="description" content="Better looking job templates in the jobboard." />
+	<meta name="vtbot-replace-swap" content="data-theme">
+	<meta name="vtbot-main-transition-scope" content="astro-kokuwcuc-1">
+	<meta name="vtbot-loading-indicator" content="80px;;;16px;/favicon.svg">
+	<script>
+		window.StarlightThemeProvider = (() => {
+			const storedTheme =
+				typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+			const theme =
+				storedTheme ||
+				(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+			document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+			return {
+				updatePickers(theme = storedTheme || 'auto') {
+					document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+						const select = picker.querySelector('select');
+						if (select) select.value = theme;
+						/** @type {HTMLTemplateElement | null} */
+						const tmpl = document.querySelector(`#theme-icons`);
+						const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+						if (newIcon) {
+							const oldIcon = picker.querySelector('svg.label-icon');
+							if (oldIcon) {
+								oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+							}
 						}
-					}
-				});
-			},
-		};
-	})();
-</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg> <svg aria-hidden="true" class="dark astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg> <svg aria-hidden="true" class="auto astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg> </template><link rel="stylesheet" href="/_astro/index.D3OGWziw.css">
-<link rel="stylesheet" href="/_astro/index.s_5yTaPb.css">
-<style>:root{--sl-badge-default-border: var(--sl-color-accent);--sl-badge-default-bg: var(--sl-color-accent-low);--sl-badge-default-text: #fff;--sl-badge-note-border: var(--sl-color-blue);--sl-badge-note-bg: var(--sl-color-blue-low);--sl-badge-note-text: #fff;--sl-badge-danger-border: var(--sl-color-red);--sl-badge-danger-bg: var(--sl-color-red-low);--sl-badge-danger-text: #fff;--sl-badge-success-border: var(--sl-color-green);--sl-badge-success-bg: var(--sl-color-green-low);--sl-badge-success-text: #fff;--sl-badge-caution-border: var(--sl-color-orange);--sl-badge-caution-bg: var(--sl-color-orange-low);--sl-badge-caution-text: #fff;--sl-badge-tip-border: var(--sl-color-purple);--sl-badge-tip-bg: var(--sl-color-purple-low);--sl-badge-tip-text: #fff}[data-theme=light]:root{--sl-badge-default-bg: var(--sl-color-accent-high);--sl-badge-note-bg: var(--sl-color-blue-high);--sl-badge-danger-bg: var(--sl-color-red-high);--sl-badge-success-bg: var(--sl-color-green-high);--sl-badge-caution-bg: var(--sl-color-orange-high);--sl-badge-tip-bg: var(--sl-color-purple-high)}.sl-badge:where(.astro-avdet4wd){display:inline-block;border:1px solid var(--sl-color-border-badge);border-radius:.25rem;font-family:var(--sl-font-system-mono);line-height:normal;color:var(--sl-color-text-badge);background-color:var(--sl-color-bg-badge);overflow-wrap:anywhere}.sidebar-content .sl-badge:where(.astro-avdet4wd){line-height:1;font-size:var(--sl-text-xs);padding:.125rem .375rem}.sidebar-content a[aria-current=page]>.sl-badge:where(.astro-avdet4wd){--sl-color-bg-badge: transparent;--sl-color-border-badge: currentColor;color:inherit}.default:where(.astro-avdet4wd){--sl-color-bg-badge: var(--sl-badge-default-bg);--sl-color-border-badge: var(--sl-badge-default-border);--sl-color-text-badge: var(--sl-badge-default-text)}.note:where(.astro-avdet4wd){--sl-color-bg-badge: var(--sl-badge-note-bg);--sl-color-border-badge: var(--sl-badge-note-border);--sl-color-text-badge: var(--sl-badge-note-text)}.danger:where(.astro-avdet4wd){--sl-color-bg-badge: var(--sl-badge-danger-bg);--sl-color-border-badge: var(--sl-badge-danger-border);--sl-color-text-badge: var(--sl-badge-danger-text)}.success:where(.astro-avdet4wd){--sl-color-bg-badge: var(--sl-badge-success-bg);--sl-color-border-badge: var(--sl-badge-success-border);--sl-color-text-badge: var(--sl-badge-success-text)}.tip:where(.astro-avdet4wd){--sl-color-bg-badge: var(--sl-badge-tip-bg);--sl-color-border-badge: var(--sl-badge-tip-border);--sl-color-text-badge: var(--sl-badge-tip-text)}.caution:where(.astro-avdet4wd){--sl-color-bg-badge: var(--sl-badge-caution-bg);--sl-color-border-badge: var(--sl-badge-caution-border);--sl-color-text-badge: var(--sl-badge-caution-text)}.small:where(.astro-avdet4wd){font-size:var(--sl-text-xs);padding:.125rem .25rem}.medium:where(.astro-avdet4wd){font-size:var(--sl-text-sm);padding:.175rem .35rem}.large:where(.astro-avdet4wd){font-size:var(--sl-text-base);padding:.225rem .45rem}.sl-markdown-content :is(h1,h2,h3,h4,h5,h6) .sl-badge:where(.astro-avdet4wd){vertical-align:middle}
-svg:where(.astro-c6vsoqas){color:var(--sl-icon-color);font-size:var(--sl-icon-size, 1em);width:1em;height:1em}
-starlight-tabs:where(.astro-esqgolmp){display:block}.tablist-wrapper:where(.astro-esqgolmp){overflow-x:auto}:where(.astro-esqgolmp)[role=tablist]{display:flex;list-style:none;border-bottom:2px solid var(--sl-color-gray-5);padding:0}.tab:where(.astro-esqgolmp){margin-bottom:-2px}.tab:where(.astro-esqgolmp)>:where(.astro-esqgolmp)[role=tab]{display:flex;align-items:center;gap:.5rem;padding:0 1.25rem;text-decoration:none;border-bottom:2px solid var(--sl-color-gray-5);color:var(--sl-color-gray-3);outline-offset:var(--sl-outline-offset-inside);overflow-wrap:initial}.tab:where(.astro-esqgolmp) :where(.astro-esqgolmp)[role=tab][aria-selected=true]{color:var(--sl-color-white);border-color:var(--sl-color-text-accent);font-weight:600}.tablist-wrapper:where(.astro-esqgolmp)~[role=tabpanel]{margin-top:1rem}
-.sl-steps{--bullet-size: calc(var(--sl-line-height) * 1rem);--bullet-margin: .375rem;list-style:none;counter-reset:steps-counter var(--sl-steps-start, 0);padding-inline-start:0}.sl-steps>li{counter-increment:steps-counter;position:relative;padding-inline-start:calc(var(--bullet-size) + 1rem);padding-bottom:1px;min-height:calc(var(--bullet-size) + var(--bullet-margin))}.sl-steps>li+li{margin-top:0}.sl-steps>li:before{content:counter(steps-counter);position:absolute;top:0;inset-inline-start:0;width:var(--bullet-size);height:var(--bullet-size);line-height:var(--bullet-size);font-size:var(--sl-text-xs);font-weight:600;text-align:center;color:var(--sl-color-white);background-color:var(--sl-color-gray-6);border-radius:99rem;box-shadow:inset 0 0 0 1px var(--sl-color-gray-5)}.sl-steps>li:after{--guide-width: 1px;content:"";position:absolute;top:calc(var(--bullet-size) + var(--bullet-margin));bottom:var(--bullet-margin);inset-inline-start:calc((var(--bullet-size) - var(--guide-width)) / 2);width:var(--guide-width);background-color:var(--sl-color-hairline-light)}.sl-steps>li>:first-child{--lh: calc(1em * var(--sl-line-height));--shift-y: calc(.5 * (var(--bullet-size) - var(--lh)));transform:translateY(var(--shift-y));margin-bottom:var(--shift-y)}.sl-steps>li>:first-child:where(h1,h2,h3,h4,h5,h6){--lh: calc(1em * var(--sl-line-height-headings))}@supports (--prop: 1lh){.sl-steps>li>:first-child{--lh: 1lh}}
-.sl-link-button:where(.astro-xwgiixxa){align-items:center;border:1px solid transparent;border-radius:999rem;display:inline-flex;font-size:var(--sl-text-sm);gap:.5em;line-height:1.1875;outline-offset:.25rem;padding:.4375rem 1.125rem;text-decoration:none}.sl-link-button:where(.astro-xwgiixxa).primary{background:var(--sl-color-text-accent);border-color:var(--sl-color-text-accent);color:var(--sl-color-black)}.sl-link-button:where(.astro-xwgiixxa).primary:hover{color:var(--sl-color-black)}.sl-link-button:where(.astro-xwgiixxa).secondary{border-color:inherit;color:var(--sl-color-white)}.sl-link-button:where(.astro-xwgiixxa).minimal{color:var(--sl-color-white);padding-inline:0}.sl-link-button:where(.astro-xwgiixxa) svg{flex-shrink:0}@media (min-width: 50rem){.sl-link-button:where(.astro-xwgiixxa){font-size:var(--sl-text-base);padding:.9375rem 1.25rem}}.sl-markdown-content .sl-link-button:where(.astro-xwgiixxa){margin-inline-end:1rem}.sl-markdown-content .sl-link-button:where(.astro-xwgiixxa):not(:where(p *)){margin-block:1rem}
-</style><script type="module" src="/_astro/hoisted.mYbt922g.js"></script>
-<script type="module" src="/_astro/page.BJO9Of30.js"></script>
-<script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.10.2 - MIT builder.io */
-const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=t]=e;return[n,{...t,...r}]},n=Object.freeze((t=>{const e=new Set;let n=[];do{Object.getOwnPropertyNames(n).forEach((t=>{"function"==typeof n[t]&&e.add(t)}))}while((n=Object.getPrototypeOf(n))!==Object.prototype);return Array.from(e)})());!function(t,r,o,i,a,s,c,d,l,p,u=t,f){function h(){f||(f=1,"/"==(c=(s.lib||"/~partytown/")+(s.debug?"debug/":""))[0]&&(l=r.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(v,1e4),r.addEventListener("pt0",w),a?y(1):o.serviceWorker?o.serviceWorker.register(c+(s.swPath||"partytown-sw.js"),{scope:c}).then((function(t){t.active?y():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&y()}))}),console.error):v())))}function y(e){p=r.createElement(e?"script":"iframe"),t._pttab=Date.now(),e||(p.style.display="block",p.style.width="0",p.style.height="0",p.style.border="0",p.style.visibility="hidden",p.setAttribute("aria-hidden",!0)),p.src=c+"partytown-"+(e?"atomics.js?v=0.10.2":"sandbox-sw.html?"+t._pttab),r.querySelector(s.sandboxParent||"body").appendChild(p)}function v(n,o){for(w(),i==t&&(s.forward||[]).map((function(n){const[r]=e(n);delete t[r.split(".")[0]]})),n=0;n<l.length;n++)(o=r.createElement("script")).innerHTML=l[n].innerHTML,o.nonce=s.nonce,r.head.appendChild(o);p&&p.parentNode.removeChild(p)}function w(){clearTimeout(d)}s=t.partytown||{},i==t&&(s.forward||[]).map((function(r){const[o,{preserveBehavior:i}]=e(r);u=t,o.split(".").map((function(e,r,o){var a;u=u[o[r]]=r+1<o.length?u[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let e=null;if(i){const{methodOrProperty:n,thisObject:r}=((t,e)=>{let n=t;for(let t=0;t<e.length-1;t+=1)n=n[e[t]];return{thisObject:n,methodOrProperty:e.length>0?n[e[e.length-1]]:void 0}})(t,o);"function"==typeof n&&(e=(...t)=>n.apply(r,...t))}return function(){let n;return e&&(n=e(arguments)),(t._ptf=t._ptf||[]).push(o,arguments),n}})()}))})),"complete"==r.readyState?h():(t.addEventListener("DOMContentLoaded",h),t.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated);;(e=>{e.addEventListener("astro:before-swap",e=>{let r=document.body.querySelector("iframe[src*='/~partytown/']");if(r)e.newDocument.body.append(r)})})(document);</script>
-<script>if (sessionStorage.getItem('vtbot-inspection-chamber') === 'true') {"use strict";(()=>{var X=`<head>
+					});
+				},
+			};
+		})();
+	</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-c6vsoqas" width="16" height="16"
+			viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;">
+			<path
+				d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z" />
+		</svg> <svg aria-hidden="true" class="dark astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24"
+			fill="currentColor" style="--sl-icon-size: 1em;">
+			<path
+				d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z" />
+		</svg> <svg aria-hidden="true" class="auto astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24"
+			fill="currentColor" style="--sl-icon-size: 1em;">
+			<path
+				d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z" />
+		</svg> </template>
+	<link rel="stylesheet" href="/_astro/index.D3OGWziw.css">
+	<link rel="stylesheet" href="/_astro/index.s_5yTaPb.css">
+	<style>
+		:root {
+			--sl-badge-default-border: var(--sl-color-accent);
+			--sl-badge-default-bg: var(--sl-color-accent-low);
+			--sl-badge-default-text: #fff;
+			--sl-badge-note-border: var(--sl-color-blue);
+			--sl-badge-note-bg: var(--sl-color-blue-low);
+			--sl-badge-note-text: #fff;
+			--sl-badge-danger-border: var(--sl-color-red);
+			--sl-badge-danger-bg: var(--sl-color-red-low);
+			--sl-badge-danger-text: #fff;
+			--sl-badge-success-border: var(--sl-color-green);
+			--sl-badge-success-bg: var(--sl-color-green-low);
+			--sl-badge-success-text: #fff;
+			--sl-badge-caution-border: var(--sl-color-orange);
+			--sl-badge-caution-bg: var(--sl-color-orange-low);
+			--sl-badge-caution-text: #fff;
+			--sl-badge-tip-border: var(--sl-color-purple);
+			--sl-badge-tip-bg: var(--sl-color-purple-low);
+			--sl-badge-tip-text: #fff
+		}
+
+		[data-theme=light]:root {
+			--sl-badge-default-bg: var(--sl-color-accent-high);
+			--sl-badge-note-bg: var(--sl-color-blue-high);
+			--sl-badge-danger-bg: var(--sl-color-red-high);
+			--sl-badge-success-bg: var(--sl-color-green-high);
+			--sl-badge-caution-bg: var(--sl-color-orange-high);
+			--sl-badge-tip-bg: var(--sl-color-purple-high)
+		}
+
+		.sl-badge:where(.astro-avdet4wd) {
+			display: inline-block;
+			border: 1px solid var(--sl-color-border-badge);
+			border-radius: .25rem;
+			font-family: var(--sl-font-system-mono);
+			line-height: normal;
+			color: var(--sl-color-text-badge);
+			background-color: var(--sl-color-bg-badge);
+			overflow-wrap: anywhere
+		}
+
+		.sidebar-content .sl-badge:where(.astro-avdet4wd) {
+			line-height: 1;
+			font-size: var(--sl-text-xs);
+			padding: .125rem .375rem
+		}
+
+		.sidebar-content a[aria-current=page]>.sl-badge:where(.astro-avdet4wd) {
+			--sl-color-bg-badge: transparent;
+			--sl-color-border-badge: currentColor;
+			color: inherit
+		}
+
+		.default:where(.astro-avdet4wd) {
+			--sl-color-bg-badge: var(--sl-badge-default-bg);
+			--sl-color-border-badge: var(--sl-badge-default-border);
+			--sl-color-text-badge: var(--sl-badge-default-text)
+		}
+
+		.note:where(.astro-avdet4wd) {
+			--sl-color-bg-badge: var(--sl-badge-note-bg);
+			--sl-color-border-badge: var(--sl-badge-note-border);
+			--sl-color-text-badge: var(--sl-badge-note-text)
+		}
+
+		.danger:where(.astro-avdet4wd) {
+			--sl-color-bg-badge: var(--sl-badge-danger-bg);
+			--sl-color-border-badge: var(--sl-badge-danger-border);
+			--sl-color-text-badge: var(--sl-badge-danger-text)
+		}
+
+		.success:where(.astro-avdet4wd) {
+			--sl-color-bg-badge: var(--sl-badge-success-bg);
+			--sl-color-border-badge: var(--sl-badge-success-border);
+			--sl-color-text-badge: var(--sl-badge-success-text)
+		}
+
+		.tip:where(.astro-avdet4wd) {
+			--sl-color-bg-badge: var(--sl-badge-tip-bg);
+			--sl-color-border-badge: var(--sl-badge-tip-border);
+			--sl-color-text-badge: var(--sl-badge-tip-text)
+		}
+
+		.caution:where(.astro-avdet4wd) {
+			--sl-color-bg-badge: var(--sl-badge-caution-bg);
+			--sl-color-border-badge: var(--sl-badge-caution-border);
+			--sl-color-text-badge: var(--sl-badge-caution-text)
+		}
+
+		.small:where(.astro-avdet4wd) {
+			font-size: var(--sl-text-xs);
+			padding: .125rem .25rem
+		}
+
+		.medium:where(.astro-avdet4wd) {
+			font-size: var(--sl-text-sm);
+			padding: .175rem .35rem
+		}
+
+		.large:where(.astro-avdet4wd) {
+			font-size: var(--sl-text-base);
+			padding: .225rem .45rem
+		}
+
+		.sl-markdown-content :is(h1, h2, h3, h4, h5, h6) .sl-badge:where(.astro-avdet4wd) {
+			vertical-align: middle
+		}
+
+		svg:where(.astro-c6vsoqas) {
+			color: var(--sl-icon-color);
+			font-size: var(--sl-icon-size, 1em);
+			width: 1em;
+			height: 1em
+		}
+
+		starlight-tabs:where(.astro-esqgolmp) {
+			display: block
+		}
+
+		.tablist-wrapper:where(.astro-esqgolmp) {
+			overflow-x: auto
+		}
+
+		:where(.astro-esqgolmp)[role=tablist] {
+			display: flex;
+			list-style: none;
+			border-bottom: 2px solid var(--sl-color-gray-5);
+			padding: 0
+		}
+
+		.tab:where(.astro-esqgolmp) {
+			margin-bottom: -2px
+		}
+
+		.tab:where(.astro-esqgolmp)>:where(.astro-esqgolmp)[role=tab] {
+			display: flex;
+			align-items: center;
+			gap: .5rem;
+			padding: 0 1.25rem;
+			text-decoration: none;
+			border-bottom: 2px solid var(--sl-color-gray-5);
+			color: var(--sl-color-gray-3);
+			outline-offset: var(--sl-outline-offset-inside);
+			overflow-wrap: initial
+		}
+
+		.tab:where(.astro-esqgolmp) :where(.astro-esqgolmp)[role=tab][aria-selected=true] {
+			color: var(--sl-color-white);
+			border-color: var(--sl-color-text-accent);
+			font-weight: 600
+		}
+
+		.tablist-wrapper:where(.astro-esqgolmp)~[role=tabpanel] {
+			margin-top: 1rem
+		}
+
+		.sl-steps {
+			--bullet-size: calc(var(--sl-line-height) * 1rem);
+			--bullet-margin: .375rem;
+			list-style: none;
+			counter-reset: steps-counter var(--sl-steps-start, 0);
+			padding-inline-start: 0
+		}
+
+		.sl-steps>li {
+			counter-increment: steps-counter;
+			position: relative;
+			padding-inline-start: calc(var(--bullet-size) + 1rem);
+			padding-bottom: 1px;
+			min-height: calc(var(--bullet-size) + var(--bullet-margin))
+		}
+
+		.sl-steps>li+li {
+			margin-top: 0
+		}
+
+		.sl-steps>li:before {
+			content: counter(steps-counter);
+			position: absolute;
+			top: 0;
+			inset-inline-start: 0;
+			width: var(--bullet-size);
+			height: var(--bullet-size);
+			line-height: var(--bullet-size);
+			font-size: var(--sl-text-xs);
+			font-weight: 600;
+			text-align: center;
+			color: var(--sl-color-white);
+			background-color: var(--sl-color-gray-6);
+			border-radius: 99rem;
+			box-shadow: inset 0 0 0 1px var(--sl-color-gray-5)
+		}
+
+		.sl-steps>li:after {
+			--guide-width: 1px;
+			content: "";
+			position: absolute;
+			top: calc(var(--bullet-size) + var(--bullet-margin));
+			bottom: var(--bullet-margin);
+			inset-inline-start: calc((var(--bullet-size) - var(--guide-width)) / 2);
+			width: var(--guide-width);
+			background-color: var(--sl-color-hairline-light)
+		}
+
+		.sl-steps>li>:first-child {
+			--lh: calc(1em * var(--sl-line-height));
+			--shift-y: calc(.5 * (var(--bullet-size) - var(--lh)));
+			transform: translateY(var(--shift-y));
+			margin-bottom: var(--shift-y)
+		}
+
+		.sl-steps>li>:first-child:where(h1, h2, h3, h4, h5, h6) {
+			--lh: calc(1em * var(--sl-line-height-headings))
+		}
+
+		@supports (--prop: 1lh) {
+			.sl-steps>li>:first-child {
+				--lh: 1lh
+			}
+		}
+
+		.sl-link-button:where(.astro-xwgiixxa) {
+			align-items: center;
+			border: 1px solid transparent;
+			border-radius: 999rem;
+			display: inline-flex;
+			font-size: var(--sl-text-sm);
+			gap: .5em;
+			line-height: 1.1875;
+			outline-offset: .25rem;
+			padding: .4375rem 1.125rem;
+			text-decoration: none
+		}
+
+		.sl-link-button:where(.astro-xwgiixxa).primary {
+			background: var(--sl-color-text-accent);
+			border-color: var(--sl-color-text-accent);
+			color: var(--sl-color-black)
+		}
+
+		.sl-link-button:where(.astro-xwgiixxa).primary:hover {
+			color: var(--sl-color-black)
+		}
+
+		.sl-link-button:where(.astro-xwgiixxa).secondary {
+			border-color: inherit;
+			color: var(--sl-color-white)
+		}
+
+		.sl-link-button:where(.astro-xwgiixxa).minimal {
+			color: var(--sl-color-white);
+			padding-inline: 0
+		}
+
+		.sl-link-button:where(.astro-xwgiixxa) svg {
+			flex-shrink: 0
+		}
+
+		@media (min-width: 50rem) {
+			.sl-link-button:where(.astro-xwgiixxa) {
+				font-size: var(--sl-text-base);
+				padding: .9375rem 1.25rem
+			}
+		}
+
+		.sl-markdown-content .sl-link-button:where(.astro-xwgiixxa) {
+			margin-inline-end: 1rem
+		}
+
+		.sl-markdown-content .sl-link-button:where(.astro-xwgiixxa):not(:where(p *)) {
+			margin-block: 1rem
+		}
+	</style>
+	<script type="module" src="/_astro/hoisted.mYbt922g.js"></script>
+	<script type="module" src="/_astro/page.BJO9Of30.js"></script>
+	<script>!(function (w, p, f, c) { if (!window.crossOriginIsolated && !navigator.serviceWorker) return; c = w[p] = Object.assign(w[p] || {}, { "lib": "/~partytown/", "debug": false }); c[f] = (c[f] || []) })(window, 'partytown', 'forward');/* Partytown 0.10.2 - MIT builder.io */
+		const t = { preserveBehavior: !1 }, e = e => { if ("string" == typeof e) return [e, t]; const [n, r = t] = e; return [n, { ...t, ...r }] }, n = Object.freeze((t => { const e = new Set; let n = []; do { Object.getOwnPropertyNames(n).forEach((t => { "function" == typeof n[t] && e.add(t) })) } while ((n = Object.getPrototypeOf(n)) !== Object.prototype); return Array.from(e) })()); !function (t, r, o, i, a, s, c, d, l, p, u = t, f) { function h() { f || (f = 1, "/" == (c = (s.lib || "/~partytown/") + (s.debug ? "debug/" : ""))[0] && (l = r.querySelectorAll('script[type="text/partytown"]'), i != t ? i.dispatchEvent(new CustomEvent("pt1", { detail: t })) : (d = setTimeout(v, 1e4), r.addEventListener("pt0", w), a ? y(1) : o.serviceWorker ? o.serviceWorker.register(c + (s.swPath || "partytown-sw.js"), { scope: c }).then((function (t) { t.active ? y() : t.installing && t.installing.addEventListener("statechange", (function (t) { "activated" == t.target.state && y() })) }), console.error) : v()))) } function y(e) { p = r.createElement(e ? "script" : "iframe"), t._pttab = Date.now(), e || (p.style.display = "block", p.style.width = "0", p.style.height = "0", p.style.border = "0", p.style.visibility = "hidden", p.setAttribute("aria-hidden", !0)), p.src = c + "partytown-" + (e ? "atomics.js?v=0.10.2" : "sandbox-sw.html?" + t._pttab), r.querySelector(s.sandboxParent || "body").appendChild(p) } function v(n, o) { for (w(), i == t && (s.forward || []).map((function (n) { const [r] = e(n); delete t[r.split(".")[0]] })), n = 0; n < l.length; n++)(o = r.createElement("script")).innerHTML = l[n].innerHTML, o.nonce = s.nonce, r.head.appendChild(o); p && p.parentNode.removeChild(p) } function w() { clearTimeout(d) } s = t.partytown || {}, i == t && (s.forward || []).map((function (r) { const [o, { preserveBehavior: i }] = e(r); u = t, o.split(".").map((function (e, r, o) { var a; u = u[o[r]] = r + 1 < o.length ? u[o[r]] || (a = o[r + 1], n.includes(a) ? [] : {}) : (() => { let e = null; if (i) { const { methodOrProperty: n, thisObject: r } = ((t, e) => { let n = t; for (let t = 0; t < e.length - 1; t += 1)n = n[e[t]]; return { thisObject: n, methodOrProperty: e.length > 0 ? n[e[e.length - 1]] : void 0 } })(t, o); "function" == typeof n && (e = (...t) => n.apply(r, ...t)) } return function () { let n; return e && (n = e(arguments)), (t._ptf = t._ptf || []).push(o, arguments), n } })() })) })), "complete" == r.readyState ? h() : (t.addEventListener("DOMContentLoaded", h), t.addEventListener("load", h)) }(window, document, navigator, top, window.crossOriginIsolated);; (e => { e.addEventListener("astro:before-swap", e => { let r = document.body.querySelector("iframe[src*='/~partytown/']"); if (r) e.newDocument.body.append(r) }) })(document);</script>
+	<script>if (sessionStorage.getItem('vtbot-inspection-chamber') === 'true') {
+			"use strict"; (() => {
+				var X = `<head>
 	<meta name="vtbag-inspection-chamber" content="true" />
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -842,7 +1155,8 @@ const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=
 		}
 	</style>
 </body>
-`;function K(t,e){t.forEach(i=>{try{$([...i.cssRules],e)}catch{}})}function $(t,e){t.forEach(i=>{i.constructor.name==="CSSStyleRule"?e(i):"cssRules"in i?$([...i.cssRules],e):"styleSheet"in i&&K([i.styleSheet],e)})}function P(){let t=new Map,e=top.__vtbag.inspectionChamber.frameDocument;n(e.documentElement,"root"),K([...e.styleSheets],o=>{let a=o.style.getPropertyValue("view-transition-name");a&&e.querySelectorAll(o.selectorText).forEach(g=>n(g,a))}),e.querySelectorAll('[style*="view-transition-name"').forEach(o=>n(o,o.style.viewTransitionName));let i=new Set(t.values());return i.delete("none"),i;function n(o,a){a=="none"?o.removeAttribute("data-vtbag-transition-name"):o.dataset.vtbagTransitionName=a,t.set(o,a)}}var f=null;function w(t,e){let i=top.document.documentElement,n,o,a=(r,I=0)=>(r instanceof TouchEvent?r.touches[0]?.clientX-I:r.clientX-I)??0,g=(r,I=0)=>(r instanceof TouchEvent?r.touches[0]?.clientY-I:r.clientY-I)??0,c=(r,I)=>{f=I,n=a(r)-I.getBoundingClientRect().x,o=g(r)-I.getBoundingClientRect().y,i.classList.add("dragging");let u=i.querySelector("#vtbag-main-frame");u&&(u.style.pointerEvents="none"),r.preventDefault()},l=r=>{i.classList.contains("dragging")&&e(a(r,n),g(r,o))},s=()=>{if(i.classList.contains("dragging")){i.classList.remove("dragging");let r=i.querySelector("#vtbag-main-frame");r&&(r.style.pointerEvents="auto")}f=null};t.addEventListener("mousedown",r=>c(r,t),{passive:!1}),t.addEventListener("touchstart",r=>c(r,t),{passive:!1}),t.ownerDocument.addEventListener("mousemove",r=>f===t&&l(r)),t.ownerDocument.addEventListener("touchmove",r=>f===t&&l(r)),t.ownerDocument.addEventListener("mouseup",r=>f===t&&s()),t.ownerDocument.addEventListener("touchend",r=>f===t&&s())}var _="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAxXpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabVDbDcMgDPz3FB0BP3iNQ5pU6gYdvwc4URLlJA7bZx3GtP2+H3p1CBtZzCXVlAJg1ao0BCVMtMEcbPCAuYT8UqdDEJQUt860JO/f63wYzKshiiej8nZhuQrVX5ByM/KHtE8kCFY3qm6kMgV2gza/FVIt+fyFZQtXlHmok+bhfZjcc8vY3hpRVJFNWQNY1eYA2o+RNgQZzMq9EQ29wuCo4pNgIU972kF/4htZE32iZC4AAAGDaUNDUElDQyBwcm9maWxlAAB4nH2RPUjDQBzFX1OlohUHK4g4ZKhOdtEijqWKRbBQ2gqtOphc+gVNGpIUF0fBteDgx2LVwcVZVwdXQRD8AHF2cFJ0kRL/lxRaxHhw3I939x537wChWWWq2RMDVM0y0om4mMuvioFXBDCAEQBRiZl6MrOYhef4uoePr3cRnuV97s8xqBRMBvhE4hjTDYt4g3h209I57xOHWFlSiM+Jpwy6IPEj12WX3ziXHBZ4ZsjIpueJQ8RiqYvlLmZlQyWOEocVVaN8IeeywnmLs1qts/Y9+QuDBW0lw3Wa40hgCUmkIEJGHRVUYSFCq0aKiTTtxz38Y44/RS6ZXBUwciygBhWS4wf/g9/dmsWZaTcpGAd6X2z7YwII7AKthm1/H9t26wTwPwNXWsdfawJzn6Q3Olr4CBjaBi6uO5q8B1zuAKNPumRIjuSnKRSLwPsZfVMeGL4F+tfc3tr7OH0AstTV8g1wcAhMlih73ePdfd29/Xum3d8PoPlyuXZhFhMAAA5VaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/Pgo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJYTVAgQ29yZSA0LjQuMC1FeGl2MiI+CiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiCiAgICB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIKICAgIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiCiAgICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgICB4bWxuczpHSU1QPSJodHRwOi8vd3d3LmdpbXAub3JnL3htcC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgeG1wTU06RG9jdW1lbnRJRD0iZ2ltcDpkb2NpZDpnaW1wOmMyOWNiMDgzLWMxOTktNDQ0ZC1iMjc4LTZlZDk0OGUwZDIyYSIKICAgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2MDcxY2NkZC1kM2QxLTRmZTktYmVlNS01NWRmMzhmM2JlZmQiCiAgIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpjOTdmMWJlYi00N2E5LTRhMmMtYTcyNS0zOGZjMTZiNjI0YzEiCiAgIGRjOkZvcm1hdD0iaW1hZ2UvcG5nIgogICBHSU1QOkFQST0iMi4wIgogICBHSU1QOlBsYXRmb3JtPSJXaW5kb3dzIgogICBHSU1QOlRpbWVTdGFtcD0iMTcyMDczMTcxNTgzMjY0MiIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjM0IgogICB0aWZmOk9yaWVudGF0aW9uPSIxIgogICB4bXA6Q3JlYXRvclRvb2w9IkdJTVAgMi4xMCIKICAgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyNDowNzoxMVQyMzowMTo1MiswMjowMCIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjQ6MDc6MTFUMjM6MDE6NTIrMDI6MDAiPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDozNTMxMTg4NS00MWU5LTQ5OTktOTJkZC1mZTU0ODBjYmQ3NGUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoV2luZG93cykiCiAgICAgIHN0RXZ0OndoZW49IjIwMjQtMDYtMjlUMTU6NTM6MzQiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiCiAgICAgIHN0RXZ0OmNoYW5nZWQ9Ii8iCiAgICAgIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6OWY2NjUyZmYtZTdmYS00NGMyLTliMDktYmJiNjBlMzlhNTMwIgogICAgICBzdEV2dDpzb2Z0d2FyZUFnZW50PSJHaW1wIDIuMTAgKFdpbmRvd3MpIgogICAgICBzdEV2dDp3aGVuPSIyMDI0LTA3LTExVDIzOjAxOjU1Ii8+CiAgICA8L3JkZjpTZXE+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/PgVo1ZkAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfoBwsVATfoqZ2LAAAdpElEQVRo3mV6WYxkaXbWWf7/bhGZkVtl7Ut3VXVP9TbtHs90z2aPZwZZsmwzssAGbMQggYEXXpB4QcATvCEekEBICBAPYCMe4MGyB2G8DDO0Z+me7umtumvvrKzMyozMyMiIuPf+/3/O4eFGZJXFzRuhyBvLPf9/tu985+C1r3zDMSGCmmkM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";var E="vtbag-ui-standby",tt="vtbag-ui-reopener-position";function et(){top.addEventListener("resize",()=>{});let{reopenerLeft:t,reopenerTop:e}=JSON.parse(top.sessionStorage.getItem(tt)??'{"reopenerLeft": "0px", "reopenerTop": "0px"}');top.document.body.insertAdjacentHTML("beforeend",`<div title="Reactivate the inspection chamber" id="vtbag-ui-reopen" style="position: fixed; z-index:1100; left: ${t}; top: ${e}"><img style="  border-radius: 50%;
+`; function K(t, e) { t.forEach(i => { try { $([...i.cssRules], e) } catch { } }) } function $(t, e) { t.forEach(i => { i.constructor.name === "CSSStyleRule" ? e(i) : "cssRules" in i ? $([...i.cssRules], e) : "styleSheet" in i && K([i.styleSheet], e) }) } function P() { let t = new Map, e = top.__vtbag.inspectionChamber.frameDocument; n(e.documentElement, "root"), K([...e.styleSheets], o => { let a = o.style.getPropertyValue("view-transition-name"); a && e.querySelectorAll(o.selectorText).forEach(g => n(g, a)) }), e.querySelectorAll('[style*="view-transition-name"').forEach(o => n(o, o.style.viewTransitionName)); let i = new Set(t.values()); return i.delete("none"), i; function n(o, a) { a == "none" ? o.removeAttribute("data-vtbag-transition-name") : o.dataset.vtbagTransitionName = a, t.set(o, a) } } var f = null; function w(t, e) { let i = top.document.documentElement, n, o, a = (r, I = 0) => (r instanceof TouchEvent ? r.touches[0]?.clientX - I : r.clientX - I) ?? 0, g = (r, I = 0) => (r instanceof TouchEvent ? r.touches[0]?.clientY - I : r.clientY - I) ?? 0, c = (r, I) => { f = I, n = a(r) - I.getBoundingClientRect().x, o = g(r) - I.getBoundingClientRect().y, i.classList.add("dragging"); let u = i.querySelector("#vtbag-main-frame"); u && (u.style.pointerEvents = "none"), r.preventDefault() }, l = r => { i.classList.contains("dragging") && e(a(r, n), g(r, o)) }, s = () => { if (i.classList.contains("dragging")) { i.classList.remove("dragging"); let r = i.querySelector("#vtbag-main-frame"); r && (r.style.pointerEvents = "auto") } f = null }; t.addEventListener("mousedown", r => c(r, t), { passive: !1 }), t.addEventListener("touchstart", r => c(r, t), { passive: !1 }), t.ownerDocument.addEventListener("mousemove", r => f === t && l(r)), t.ownerDocument.addEventListener("touchmove", r => f === t && l(r)), t.ownerDocument.addEventListener("mouseup", r => f === t && s()), t.ownerDocument.addEventListener("touchend", r => f === t && s()) } var _ = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAxXpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabVDbDcMgDPz3FB0BP3iNQ5pU6gYdvwc4URLlJA7bZx3GtP2+H3p1CBtZzCXVlAJg1ao0BCVMtMEcbPCAuYT8UqdDEJQUt860JO/f63wYzKshiiej8nZhuQrVX5ByM/KHtE8kCFY3qm6kMgV2gza/FVIt+fyFZQtXlHmok+bhfZjcc8vY3hpRVJFNWQNY1eYA2o+RNgQZzMq9EQ29wuCo4pNgIU972kF/4htZE32iZC4AAAGDaUNDUElDQyBwcm9maWxlAAB4nH2RPUjDQBzFX1OlohUHK4g4ZKhOdtEijqWKRbBQ2gqtOphc+gVNGpIUF0fBteDgx2LVwcVZVwdXQRD8AHF2cFJ0kRL/lxRaxHhw3I939x537wChWWWq2RMDVM0y0om4mMuvioFXBDCAEQBRiZl6MrOYhef4uoePr3cRnuV97s8xqBRMBvhE4hjTDYt4g3h209I57xOHWFlSiM+Jpwy6IPEj12WX3ziXHBZ4ZsjIpueJQ8RiqYvlLmZlQyWOEocVVaN8IeeywnmLs1qts/Y9+QuDBW0lw3Wa40hgCUmkIEJGHRVUYSFCq0aKiTTtxz38Y44/RS6ZXBUwciygBhWS4wf/g9/dmsWZaTcpGAd6X2z7YwII7AKthm1/H9t26wTwPwNXWsdfawJzn6Q3Olr4CBjaBi6uO5q8B1zuAKNPumRIjuSnKRSLwPsZfVMeGL4F+tfc3tr7OH0AstTV8g1wcAhMlih73ePdfd29/Xum3d8PoPlyuXZhFhMAAA5VaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/Pgo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJYTVAgQ29yZSA0LjQuMC1FeGl2MiI+CiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiCiAgICB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIKICAgIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiCiAgICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgICB4bWxuczpHSU1QPSJodHRwOi8vd3d3LmdpbXAub3JnL3htcC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgeG1wTU06RG9jdW1lbnRJRD0iZ2ltcDpkb2NpZDpnaW1wOmMyOWNiMDgzLWMxOTktNDQ0ZC1iMjc4LTZlZDk0OGUwZDIyYSIKICAgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2MDcxY2NkZC1kM2QxLTRmZTktYmVlNS01NWRmMzhmM2JlZmQiCiAgIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpjOTdmMWJlYi00N2E5LTRhMmMtYTcyNS0zOGZjMTZiNjI0YzEiCiAgIGRjOkZvcm1hdD0iaW1hZ2UvcG5nIgogICBHSU1QOkFQST0iMi4wIgogICBHSU1QOlBsYXRmb3JtPSJXaW5kb3dzIgogICBHSU1QOlRpbWVTdGFtcD0iMTcyMDczMTcxNTgzMjY0MiIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjM0IgogICB0aWZmOk9yaWVudGF0aW9uPSIxIgogICB4bXA6Q3JlYXRvclRvb2w9IkdJTVAgMi4xMCIKICAgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyNDowNzoxMVQyMzowMTo1MiswMjowMCIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjQ6MDc6MTFUMjM6MDE6NTIrMDI6MDAiPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDozNTMxMTg4NS00MWU5LTQ5OTktOTJkZC1mZTU0ODBjYmQ3NGUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoV2luZG93cykiCiAgICAgIHN0RXZ0OndoZW49IjIwMjQtMDYtMjlUMTU6NTM6MzQiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiCiAgICAgIHN0RXZ0OmNoYW5nZWQ9Ii8iCiAgICAgIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6OWY2NjUyZmYtZTdmYS00NGMyLTliMDktYmJiNjBlMzlhNTMwIgogICAgICBzdEV2dDpzb2Z0d2FyZUFnZW50PSJHaW1wIDIuMTAgKFdpbmRvd3MpIgogICAgICBzdEV2dDp3aGVuPSIyMDI0LTA3LTExVDIzOjAxOjU1Ii8+CiAgICA8L3JkZjpTZXE+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/PgVo1ZkAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfoBwsVATfoqZ2LAAAdpElEQVRo3mV6WYxkaXbWWf7/bhGZkVtl7Ut3VXVP9TbtHs90z2aPZwZZsmwzssAGbMQggYEXXpB4QcATvCEekEBICBAPYCMe4MGyB2G8DDO0Z+me7umtumvvrKzMyozMyMiIuPf+/3/O4eFGZJXFzRuhyBvLPf9/tu985+C1r3zDMSGCmmkM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"; var E = "vtbag-ui-standby", tt = "vtbag-ui-reopener-position"; function et() {
+					top.addEventListener("resize", () => { }); let { reopenerLeft: t, reopenerTop: e } = JSON.parse(top.sessionStorage.getItem(tt) ?? '{"reopenerLeft": "0px", "reopenerTop": "0px"}'); top.document.body.insertAdjacentHTML("beforeend", `<div title="Reactivate the inspection chamber" id="vtbag-ui-reopen" style="position: fixed; z-index:1100; left: ${t}; top: ${e}"><img style="  border-radius: 50%;
   border: 8px dashed #8888;
   mask-image: radial-gradient(ellipse at center, white 35%, transparent 71%);
 " src=${_} alt="Reactivate the inspection chamber" /><div>
@@ -865,14 +1179,16 @@ const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=
 				stroke: #a97
 			}
 			</style>
-			`);let i=top.document.querySelector("#vtbag-ui-reopen"),n=!1;i.addEventListener("click",()=>{setTimeout(()=>n=!1,100),n||(top.sessionStorage.removeItem(E),top.location.reload())}),w(i,(o,a)=>{i.style.left=`${o}px`,i.style.top=`${a}px`,n=!0,Pt(i)})}function Pt(t){top.sessionStorage.setItem(tt,JSON.stringify({reopenerLeft:t.style.left,reopenerTop:t.style.top}))}function h(t,e="",i=top.__vtbag.inspectionChamber.frameDocument,n=!1){let o="vtbag-adopted-sheet"+(e?"-"+e:"");i.getElementById(o)?.remove(),t&&i.head.insertAdjacentHTML(n?"afterbegin":"beforeend",`<style id="${o}">${t}</style>`)}function N(t,e){t?qt(e):Bt()}function Bt(){h("")}function qt(t=!1){h(`
-	${t?`
+			`); let i = top.document.querySelector("#vtbag-ui-reopen"), n = !1; i.addEventListener("click", () => { setTimeout(() => n = !1, 100), n || (top.sessionStorage.removeItem(E), top.location.reload()) }), w(i, (o, a) => { i.style.left = `${o}px`, i.style.top = `${a}px`, n = !0, Pt(i) })
+				} function Pt(t) { top.sessionStorage.setItem(tt, JSON.stringify({ reopenerLeft: t.style.left, reopenerTop: t.style.top })) } function h(t, e = "", i = top.__vtbag.inspectionChamber.frameDocument, n = !1) { let o = "vtbag-adopted-sheet" + (e ? "-" + e : ""); i.getElementById(o)?.remove(), t && i.head.insertAdjacentHTML(n ? "afterbegin" : "beforeend", `<style id="${o}">${t}</style>`) } function N(t, e) { t ? qt(e) : Bt() } function Bt() { h("") } function qt(t = !1) {
+					h(`
+	${t ? `
 * {
 	pointer-events: none;
 }
 [data-vtbag-transition-name] {
 	pointer-events: auto;
-}`:""}
+}`: ""}
 
 ::view-transition-old(*) {
 	outline: 3px dashed darkslateblue;
@@ -896,25 +1212,41 @@ const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=
 	position: absolute;
 	inset: 0;
 }
-`)}var it={bypass:"<h4>How to Bypass</h4><p>Navigation is <b>not intercepted</b>.</p><ol><li>Optional: Examine elements by selecting from the View Transition Name list</li><li>Navigate your page as usual</li></ol>","slow-motion":"<h4>Use Slow Motion</h4><ol><li>Use the slider to set a <b>time stretch factor</b></li><li>Press a link on your page to start a view transition and study the <b>slowed down animations!</li></ol>",control:"<h4>Take Full Control</h4><ol><li>Start a transition</li><li>Optional: Select animations from the list below</li><li>Move freely through the timeline by moving the sliders and concentrate on selected elements and groups.</li></ol>",compare:"<h4>Compare Side-by-side</h4><p>Sometimes you need a clear view of where you're coming from and where you're going!</p><p>Compare the <b>old and new pages side by side</b> and see what morphs where.</p>"};var d=()=>top.document.documentElement.classList.contains("vtbag-vt-active"),nt=()=>top.document.documentElement.classList.add("vtbag-vt-active"),ot=()=>top.document.documentElement.classList.remove("vtbag-vt-active"),z,k;function b(t,e,i=!1){let n=d();i||n||z||!top.document.startViewTransition?(!1,t()):(k=e,z=top.document.startViewTransition(t),z.finished.finally(()=>z=k=void 0))}function S(){top.__vtbag.inspectionChamber.viewTransition?.skipTransition()}function at(){lt(),gt()}function gt(){let t=1/Math.max(1e-6,parseFloat(top.document.querySelector("#vtbag-ui-tsf")?.innerText??"1.0"));top.__vtbag.inspectionChamber.animations?.forEach(e=>{e.playbackRate=t,e.playState==="paused"&&e.play()})}function rt(){let t=top.document.querySelector("#vtbag-ui-slo-mo"),e=top.document.querySelector("#vtbag-ui-tsf");t.addEventListener("input",i=>{if(i.target instanceof HTMLInputElement){let n=(Math.exp(parseInt(i.target.value,10)/100)-100)/100+1-.14;e.innerText=`${n.toFixed(1)}`,gt()}})}function lt(){let t=top.__vtbag.inspectionChamber,e=t.longestAnimation;e&&(top.document.querySelector("#vtbag-ui-slo-mo-progress").innerText=` ${~~(e.currentTime??0)} / ${t.animationEndTime} ms`,d()&&setTimeout(lt,20))}var H,m,Y=null;function st(){H=top.document.querySelector("#vtbag-ui-panel"),m=top.document.querySelector("#vtbag-ui-inner-panel"),t(),top.document.querySelector("#vtbag-ui-light-dark").addEventListener("click",t);function t(){let i=top.document.documentElement.style.colorScheme==="dark";m.style.backgroundColor=i?"#000":"#fff",m.style.color=i?"#fff":"#000"}w(m.children[0],(i,n)=>{m.style.left=`${i}px`,m.style.top=`${n}px`}),w(m.children[2],(i,n)=>{let o=m.getBoundingClientRect();m.style.width=`${Math.max(200,i-o.x+32)}px`,m.style.height=`${Math.max(200,n-o.y+32)}px`});let e=m.querySelector("#vtbag-ui-opacity");m.style.opacity=`${parseInt(e.value,10)/100}`,e.addEventListener("input",i=>{m.style.opacity=`${parseInt(i.target.value,10)/100}`}),H.querySelectorAll(":scope > div").forEach(i=>T(i))}function T(t){t.querySelector(":scope > h4")?.addEventListener("click",e=>{b(()=>{let i=e.target.closest("#vtbag-ui-panel > div");m.children.length>3&&H.insertBefore(m.children[1],Y),Y=null,i?(Y=i.nextElementSibling,m.insertBefore(i,m.children[1]),m.style.display="block"):m.style.display="none"},"inner panel")})}function ct(){let t=m.children[1].id;(t==="vtbag-ui-slow-motion"||t==="vtbag-ui-control")&&(H.insertBefore(m.children[1],Y),m.style.display="none")}function It(t,e,i,n,o){let a=e.createElement("vtbag-pseudo-twin");c(a,t,"","");let g=top.__vtbag.inspectionChamber.twin=a.firstElementChild;i.forEach(l=>{let s=c(g,t,"group",l),r=c(s,t,"image-pair",l);c(r,t,"old",l)&&n.add(l),c(r,t,"new",l)&&o.add(l)}),e.body.insertAdjacentElement("beforeend",g);function c(l,s,r,I){if(!l)return;let u=top.__vtbag.inspectionChamber,C=l.ownerDocument,v=s.defaultView.getComputedStyle(s.documentElement,r?`::view-transition-${r}(${I})`:"::view-transition");if(!v.height.endsWith("px"))return;u?.styleMap?.set(`${r}-${I}`,v);let A=C.createElement("vtbag-pseudo-twin");return A.id=r?`vtbag-twin--view-transition-${r}-${I}`:"vtbag-twin--view-transition",A.dataset.vtbagTransitionName=I,A.dataset.vtbagTransitionPseudo=r,l.insertAdjacentElement("beforeend",A),mt(v,A.style),A.style.visibility="hidden",A}}function ut(){top.document.documentElement.classList.add("vtbag-twin-sync"),setTimeout(()=>{let t=top.__vtbag.inspectionChamber,e=t.frameDocument.documentElement;[...t.twin.children].forEach(async i=>{let n=i.dataset.vtbagTransitionName;U(e,i,n),U(e,i.children[0],n),U(e,i.children[0].children[0],n),U(e,i.children[0].children[1],n),await new Promise(o=>setTimeout(o))}),top.document.documentElement.classList.remove("vtbag-twin-sync")})}function U(t,e,i){if(!e)return;let n=e.dataset.vtbagTransitionPseudo,a=e.ownerDocument.defaultView.getComputedStyle(t,`::view-transition-${n}(${i})`),g=e.style;mt(a,g)}function mt(t,e){e.position=t.position,e.inset=t.inset,e.height=t.height,e.width=t.width,e.transform=t.transform,e.zIndex=t.zIndex,e.transformOrigin=t.transformOrigin,e.perspective=t.perspective}function dt(t){if(d()){let e,i=1/0;top.__vtbag.inspectionChamber.twin.querySelectorAll("vtbag-pseudo-twin > vtbag-pseudo-twin > vtbag-pseudo-twin").forEach(n=>{let{clientX:o,clientY:a}=t,{top:g,bottom:c,left:l,right:s,width:r,height:I}=n.getBoundingClientRect(),u=n.dataset.vtbagTransitionName,C=n.dataset.vtbagTransitionPseudo;if(r*I<i&&g<=a&&a<=c&&l<=o&&o<=s){let M=!0,v;window.top.document.querySelectorAll("#vtbag-ui-names li").forEach(A=>{A.innerText===u&&(v=A,A.classList.contains(`${C}-hidden`)&&(M=!1))}),M&&(i=r*I,e=v)}}),e?.click()}}function At(){h(`
+`)
+				} var it = { bypass: "<h4>How to Bypass</h4><p>Navigation is <b>not intercepted</b>.</p><ol><li>Optional: Examine elements by selecting from the View Transition Name list</li><li>Navigate your page as usual</li></ol>", "slow-motion": "<h4>Use Slow Motion</h4><ol><li>Use the slider to set a <b>time stretch factor</b></li><li>Press a link on your page to start a view transition and study the <b>slowed down animations!</li></ol>", control: "<h4>Take Full Control</h4><ol><li>Start a transition</li><li>Optional: Select animations from the list below</li><li>Move freely through the timeline by moving the sliders and concentrate on selected elements and groups.</li></ol>", compare: "<h4>Compare Side-by-side</h4><p>Sometimes you need a clear view of where you're coming from and where you're going!</p><p>Compare the <b>old and new pages side by side</b> and see what morphs where.</p>" }; var d = () => top.document.documentElement.classList.contains("vtbag-vt-active"), nt = () => top.document.documentElement.classList.add("vtbag-vt-active"), ot = () => top.document.documentElement.classList.remove("vtbag-vt-active"), z, k; function b(t, e, i = !1) { let n = d(); i || n || z || !top.document.startViewTransition ? (!1, t()) : (k = e, z = top.document.startViewTransition(t), z.finished.finally(() => z = k = void 0)) } function S() { top.__vtbag.inspectionChamber.viewTransition?.skipTransition() } function at() { lt(), gt() } function gt() { let t = 1 / Math.max(1e-6, parseFloat(top.document.querySelector("#vtbag-ui-tsf")?.innerText ?? "1.0")); top.__vtbag.inspectionChamber.animations?.forEach(e => { e.playbackRate = t, e.playState === "paused" && e.play() }) } function rt() { let t = top.document.querySelector("#vtbag-ui-slo-mo"), e = top.document.querySelector("#vtbag-ui-tsf"); t.addEventListener("input", i => { if (i.target instanceof HTMLInputElement) { let n = (Math.exp(parseInt(i.target.value, 10) / 100) - 100) / 100 + 1 - .14; e.innerText = `${n.toFixed(1)}`, gt() } }) } function lt() { let t = top.__vtbag.inspectionChamber, e = t.longestAnimation; e && (top.document.querySelector("#vtbag-ui-slo-mo-progress").innerText = ` ${~~(e.currentTime ?? 0)} / ${t.animationEndTime} ms`, d() && setTimeout(lt, 20)) } var H, m, Y = null; function st() { H = top.document.querySelector("#vtbag-ui-panel"), m = top.document.querySelector("#vtbag-ui-inner-panel"), t(), top.document.querySelector("#vtbag-ui-light-dark").addEventListener("click", t); function t() { let i = top.document.documentElement.style.colorScheme === "dark"; m.style.backgroundColor = i ? "#000" : "#fff", m.style.color = i ? "#fff" : "#000" } w(m.children[0], (i, n) => { m.style.left = `${i}px`, m.style.top = `${n}px` }), w(m.children[2], (i, n) => { let o = m.getBoundingClientRect(); m.style.width = `${Math.max(200, i - o.x + 32)}px`, m.style.height = `${Math.max(200, n - o.y + 32)}px` }); let e = m.querySelector("#vtbag-ui-opacity"); m.style.opacity = `${parseInt(e.value, 10) / 100}`, e.addEventListener("input", i => { m.style.opacity = `${parseInt(i.target.value, 10) / 100}` }), H.querySelectorAll(":scope > div").forEach(i => T(i)) } function T(t) { t.querySelector(":scope > h4")?.addEventListener("click", e => { b(() => { let i = e.target.closest("#vtbag-ui-panel > div"); m.children.length > 3 && H.insertBefore(m.children[1], Y), Y = null, i ? (Y = i.nextElementSibling, m.insertBefore(i, m.children[1]), m.style.display = "block") : m.style.display = "none" }, "inner panel") }) } function ct() { let t = m.children[1].id; (t === "vtbag-ui-slow-motion" || t === "vtbag-ui-control") && (H.insertBefore(m.children[1], Y), m.style.display = "none") } function It(t, e, i, n, o) { let a = e.createElement("vtbag-pseudo-twin"); c(a, t, "", ""); let g = top.__vtbag.inspectionChamber.twin = a.firstElementChild; i.forEach(l => { let s = c(g, t, "group", l), r = c(s, t, "image-pair", l); c(r, t, "old", l) && n.add(l), c(r, t, "new", l) && o.add(l) }), e.body.insertAdjacentElement("beforeend", g); function c(l, s, r, I) { if (!l) return; let u = top.__vtbag.inspectionChamber, C = l.ownerDocument, v = s.defaultView.getComputedStyle(s.documentElement, r ? `::view-transition-${r}(${I})` : "::view-transition"); if (!v.height.endsWith("px")) return; u?.styleMap?.set(`${r}-${I}`, v); let A = C.createElement("vtbag-pseudo-twin"); return A.id = r ? `vtbag-twin--view-transition-${r}-${I}` : "vtbag-twin--view-transition", A.dataset.vtbagTransitionName = I, A.dataset.vtbagTransitionPseudo = r, l.insertAdjacentElement("beforeend", A), mt(v, A.style), A.style.visibility = "hidden", A } } function ut() { top.document.documentElement.classList.add("vtbag-twin-sync"), setTimeout(() => { let t = top.__vtbag.inspectionChamber, e = t.frameDocument.documentElement;[...t.twin.children].forEach(async i => { let n = i.dataset.vtbagTransitionName; U(e, i, n), U(e, i.children[0], n), U(e, i.children[0].children[0], n), U(e, i.children[0].children[1], n), await new Promise(o => setTimeout(o)) }), top.document.documentElement.classList.remove("vtbag-twin-sync") }) } function U(t, e, i) { if (!e) return; let n = e.dataset.vtbagTransitionPseudo, a = e.ownerDocument.defaultView.getComputedStyle(t, `::view-transition-${n}(${i})`), g = e.style; mt(a, g) } function mt(t, e) { e.position = t.position, e.inset = t.inset, e.height = t.height, e.width = t.width, e.transform = t.transform, e.zIndex = t.zIndex, e.transformOrigin = t.transformOrigin, e.perspective = t.perspective } function dt(t) { if (d()) { let e, i = 1 / 0; top.__vtbag.inspectionChamber.twin.querySelectorAll("vtbag-pseudo-twin > vtbag-pseudo-twin > vtbag-pseudo-twin").forEach(n => { let { clientX: o, clientY: a } = t, { top: g, bottom: c, left: l, right: s, width: r, height: I } = n.getBoundingClientRect(), u = n.dataset.vtbagTransitionName, C = n.dataset.vtbagTransitionPseudo; if (r * I < i && g <= a && a <= c && l <= o && o <= s) { let M = !0, v; window.top.document.querySelectorAll("#vtbag-ui-names li").forEach(A => { A.innerText === u && (v = A, A.classList.contains(`${C}-hidden`) && (M = !1)) }), M && (i = r * I, e = v) } }), e?.click() } } function At() {
+					h(`
 		@keyframes vtbag-twin-noop {
 			from { opacity: 1; } to { opacity: 1; }
 		}
 		::view-transition-image-pair(*) {
 			animation: vtbag-twin-noop forwards;
 			animation-duration: inherit;
-		}`,"catch",void 0,!0)}async function pt(){let t=top.__vtbag.inspectionChamber,e=t.frameDocument,i=t.animations=[],n=t.animationMap=new Map,o=t.keyframesMap=new Map,a=new Set;t.styleMap=new Map;let g=new WeakSet,c=!0;for(;c;)c=!1,e.getAnimations().forEach(I=>{let u=I;if(!g.has(u)&&u.effect?.pseudoElement?.startsWith("::view-transition")&&u.playState!=="finished"){let C=u.animationName;if(C!=="vtbag-twin-noop"&&C!=="none"){let{viewTransitionName:M}=B(u);a.add(M),i.push(u),n.set(C,u),u.pause(),u.currentTime=0,o.set(C,u.effect?.getKeyframes())}c=!0}g.add(u)}),c&&await new Promise(I=>e.defaultView.setTimeout(I));let l=I=>I.effect?.getComputedTiming().endTime?.valueOf()??0;t.longestAnimation=i.reduce((I,u)=>l(u)>l(I)?u:I,i[0]),t.animationEndTime=~~l(t.longestAnimation);let s=new Set,r=new Set;It(e,e,a,s,r),D(s,r),top.document.querySelector("#canvas").style.zIndex=""}function Ct(){let t=top.__vtbag.inspectionChamber;t.frameDocument.querySelector("#vtbag-adopted-sheet")?.remove(),t.animations?.forEach(e=>{try{e.finish()}catch(i){console.error(i,e,e.effect?.getComputedTiming())}})}function vt(t){let e=(o,a)=>a?`<tr><td style="text-align:right">${o}</td><td>${a}</td><tr>`:"",i=top.document.querySelector("#vtbag-ui-animations");i.innerHTML=d()?`<h4>Animations of ${t}:</h4>`+n("old")+n("new")+n("group")+n("image-pair"):"",T(i);function n(o){let a=top.__vtbag.inspectionChamber,g=a.styleMap?.get(`${o}-${t}`),c=g?.animationName;if(!g||!c||c==="vtbag-twin-noop"||c==="none")return"";let l=c.split(", "),s=g.animationDelay.split(", "),r=g.animationDuration.split(", "),I=g.animationDirection.split(", "),u=g.animationFillMode.split(", "),C=g.animationIterationCount.split(", "),M=g.animationTimingFunction.replace(/\),/g,")@").split("@ "),v="animationTimeline"in g?g.animationTimeline.split(", "):[],A=[];return l.forEach((y,x)=>{A.push(`<details><summary>${o}: ${y}(${s[x%s.length]}, ${r[x%r.length]})</summary>${Wt(x,y)}</details>`)}),A.join("")+"<hr>";function Wt(y,x){return`
+		}`, "catch", void 0, !0)
+				} async function pt() { let t = top.__vtbag.inspectionChamber, e = t.frameDocument, i = t.animations = [], n = t.animationMap = new Map, o = t.keyframesMap = new Map, a = new Set; t.styleMap = new Map; let g = new WeakSet, c = !0; for (; c;)c = !1, e.getAnimations().forEach(I => { let u = I; if (!g.has(u) && u.effect?.pseudoElement?.startsWith("::view-transition") && u.playState !== "finished") { let C = u.animationName; if (C !== "vtbag-twin-noop" && C !== "none") { let { viewTransitionName: M } = B(u); a.add(M), i.push(u), n.set(C, u), u.pause(), u.currentTime = 0, o.set(C, u.effect?.getKeyframes()) } c = !0 } g.add(u) }), c && await new Promise(I => e.defaultView.setTimeout(I)); let l = I => I.effect?.getComputedTiming().endTime?.valueOf() ?? 0; t.longestAnimation = i.reduce((I, u) => l(u) > l(I) ? u : I, i[0]), t.animationEndTime = ~~l(t.longestAnimation); let s = new Set, r = new Set; It(e, e, a, s, r), D(s, r), top.document.querySelector("#canvas").style.zIndex = "" } function Ct() { let t = top.__vtbag.inspectionChamber; t.frameDocument.querySelector("#vtbag-adopted-sheet")?.remove(), t.animations?.forEach(e => { try { e.finish() } catch (i) { console.error(i, e, e.effect?.getComputedTiming()) } }) } function vt(t) {
+					let e = (o, a) => a ? `<tr><td style="text-align:right">${o}</td><td>${a}</td><tr>` : "", i = top.document.querySelector("#vtbag-ui-animations"); i.innerHTML = d() ? `<h4>Animations of ${t}:</h4>` + n("old") + n("new") + n("group") + n("image-pair") : "", T(i); function n(o) {
+						let a = top.__vtbag.inspectionChamber, g = a.styleMap?.get(`${o}-${t}`), c = g?.animationName; if (!g || !c || c === "vtbag-twin-noop" || c === "none") return ""; let l = c.split(", "), s = g.animationDelay.split(", "), r = g.animationDuration.split(", "), I = g.animationDirection.split(", "), u = g.animationFillMode.split(", "), C = g.animationIterationCount.split(", "), M = g.animationTimingFunction.replace(/\),/g, ")@").split("@ "), v = "animationTimeline" in g ? g.animationTimeline.split(", ") : [], A = []; return l.forEach((y, x) => { A.push(`<details><summary>${o}: ${y}(${s[x % s.length]}, ${r[x % r.length]})</summary>${Wt(x, y)}</details>`) }), A.join("") + "<hr>"; function Wt(y, x) {
+							return `
 <table>
-	${e("direction:",I[y%I.length])}
-	${e("fill-mode:",u[y%u.length])}
-	${e("iteration-count:",C[y%C.length])}
-	${e("timing-function:",M[y%M.length])}
-	${e("timeline:",v[y%v.length])}
-	${e("animates:",Ot(x))}
-</table>`;function Ot(Rt){let F=new Set;a.keyframesMap?.get(Rt)?.forEach(G=>Object.keys(G).forEach(Qt=>F.add(Qt)));let Vt=["offset","computedOffset","easing","composite"];return[...F].filter(G=>!Vt.includes(G)).sort().join(", ")}}}}function W(){top.document.querySelector('#vtbag-ui-filter input[type="text"]').value="",top.document.querySelector("#vtbag-ui-filter ul input").click(),j()}function bt(){top.document.querySelectorAll("#vtbag-ui-names li").forEach(t=>t.classList.remove("selected","old-hidden","new-hidden")),L(),O()}function Mt(){top.document.querySelector("#vtbag-ui-filter ul").addEventListener("change",j),top.document.querySelector('#vtbag-ui-filter input[type="text"]').addEventListener("input",j),top.document.querySelector("#vtbag-ui-filter button").addEventListener("click",W)}function D(t,e){let i;return b(()=>{top.document.querySelector("#vtbag-ui-info").innerHTML="",top.document.querySelectorAll("#vtbag-ui-names li").forEach(o=>o.remove()),top.document.querySelector("#vtbag-ui-names h4").innerText=e?"Animation Groups":"Elements w/ View Transition Names",top.document.querySelector("#vtbag-ui-names div").style.display=e?"flex":"none";let n=top.document.querySelector("#vtbag-ui-names > ol");i=[...new Set([...t,...e??[]])].sort(),i.forEach((o,a)=>{let g=top.document.createElement("li");g.innerText=o,e&&t.has(o)&&g.classList.add("old"),e?.has(o)&&g.classList.add("new"),g.style.viewTransitionName=`vtbag-name-${a}`,n.appendChild(g)}),top.document.querySelector("#vtbag-ui-filter ul").style.display=e?"block":"none",j()},"update names"),i}function j(){let t=top.document.querySelectorAll("#vtbag-ui-names li"),e=top.document.querySelector("#vtbag-ui-filter ul input:checked").id.replace("vtbag-c-",""),i=top.document.querySelector('#vtbag-ui-filter input[type="text"]').value;b(()=>{t.forEach(n=>{let o=n.style,a=n.classList,g=n.innerText;o.display=(i===""||g.includes(i))&&(e==="all"||e==="both"&&a.contains("new")&&a.contains("old")||e==="old-only"&&a.contains("old")&&!a.contains("new")||e==="new-only"&&a.contains("new")&&!a.contains("old")||e==="old"&&a.contains("old")||e==="new"&&a.contains("new"))?"list-item":"none"})},"refresh names")}function R(){let t=top.__vtbag.inspectionChamber;if(Tt()){ut(),t.updateNameVisibilityTimeout=void 0;let e=t.twin.ownerDocument,i=top.document,n=top.getComputedStyle(i.documentElement),o=i.documentElement.classList.contains("vtbag-ui-column"),a=o?parseFloat(n.getPropertyValue("--vtbag-panel-width")||"0"):0,g=o?0:parseFloat(n.getPropertyValue("--vtbag-panel-height")||"0");i.querySelectorAll("#vtbag-ui-names li").forEach(c=>{let l=c.innerText,s=c.classList;s[s.contains("old")&&yt(e.querySelector(`#vtbag-twin--view-transition-old-${l}`),a,g)===!1?"add":"remove"]("old-invisible"),s[s.contains("new")&&yt(e.querySelector(`#vtbag-twin--view-transition-new-${l}`),a,g)===!1?"add":"remove"]("new-invisible"),s[(!s.contains("old")||s.contains("old-invisible"))&&(!s.contains("new")||s.contains("new-invisible"))?"add":"remove"]("invisible")}),d()&&(t.updateNameVisibilityTimeout=top.setTimeout(R,1e3))}}function yt(t,e=0,i=0){if(!t)return;let{top:n,right:o,bottom:a,left:g,width:c,height:l}=t.getBoundingClientRect();return c>0&&l>0&&n<window.top.innerHeight-i&&a>0&&g<window.top.innerWidth-e&&o>0}function L(){let t=[];top.document.querySelectorAll("#vtbag-ui-names li").forEach(e=>{let i=e.innerText,n=e.classList;n.contains("old-hidden")&&t.push(`::view-transition-old(${i}) { visibility: hidden; }`),n.contains("new-hidden")&&t.push(`::view-transition-new(${i}) { visibility: hidden; }`)}),h(t.join(`
-`),"image-visibility")}function Jt(t){let e=top.document.documentElement.dataset.vtbagModus==="control"&&top.document.querySelector("#vtbag-ui-names h4").innerText==="Animation Groups",i=top.document.querySelectorAll("#vtbag-ui-names li"),n;i.forEach(o=>{if(o.innerText===t){let a=top.document.querySelector("#vtbag-ui-controller"),g=top.document.querySelector("#vtbag-ui-progress"),c=top.document.querySelector("#vtbag-ui-controller2"),l=top.document.querySelector("#vtbag-ui-progress2");o.classList.contains("selected")?(c.value=a.value,l.innerText=g.innerText):(a.value=c.value,g.innerText=l.innerText),o.classList[e?"toggle":"add"]("selected"),n=o,o.style.display==="none"&&W()}else e||o.classList.remove("selected")}),n&&n.scrollIntoView({behavior:"instant",block:"nearest",inline:"nearest"})}function Ft(t){let e=top.document.querySelector("#vtbag-ui-info");if(t&&!d())navigator.clipboard.writeText(`inspect(top.document.querySelector("#vtbag-main-frame").contentDocument.querySelector("${ht(t)}"))`),e.innerHTML=`<h4>Info</h4>
-						<p>DevTools selector '<b><code>${ht(t)}</code></b>' copied to clipboard. Paste to DevTools console to further inspect the element.</p>`;else{navigator.clipboard.writeText('inspect(top.document.querySelector("#vtbag-main-frame").contentDocument.querySelector(":root"))');let i=t&&t.dataset.vtbagTransitionName;e.innerHTML=`<h4>Info</h4>
-						<p>DevTools selector '<b><code>:root</code></b>' copied to clipboard. Paste to DevTools console, then expand the <code>&lt;html></code> element and its <code>::view-transition</code> pseudo element.</p>${i&&"<p>Look for the <code>::view-transition-group("+i+")</code> pseudo element and its children.</p>"}`}T(e)}function ht(t,e=!0){let i=[];for(;t&&t.nodeType===Node.ELEMENT_NODE;){let n=t.nodeName.toLowerCase();if(e&&t.id){n="#"+t.id,i.unshift(n);break}else{let o=t,a=1;for(;o=o.previousElementSibling;)o.nodeName.toLowerCase()===n&&a++;a!==1&&(n+=":nth-of-type("+a+")")}i.unshift(n),t=t.parentNode}return i.join(" > ")}function wt(){top.document.querySelector("#vtbag-ui-names button").addEventListener("click",()=>bt()),top.document.querySelector("#vtbag-ui-names-old").addEventListener("click",()=>{top.document.querySelectorAll("#vtbag-ui-names li").forEach(t=>{t.classList.contains("old")&&t.classList.toggle("old-hidden")}),L()}),top.document.querySelector("#vtbag-ui-names-new").addEventListener("click",()=>{top.document.querySelectorAll("#vtbag-ui-names li").forEach(t=>{t.classList.contains("new")&&t.classList.toggle("new-hidden")}),L()}),top.document.querySelector("#vtbag-ui-names ol").addEventListener("click",t=>{if(t.target instanceof HTMLElement){let e=t.target.closest("li");if(e&&t instanceof MouseEvent){e.style.display==="none"&&W();let i=top.document.documentElement.dataset.vtbagModus;b(()=>{let{left:n,width:o}=e.getBoundingClientRect(),a=t.clientX-n,g=a>=0&&a<=20,c=a>=o-20&&a<=o,l=e.classList;if(g&&l.contains("old")){l.toggle("old-hidden"),L();return}if(c&&l.contains("new")){l.toggle("new-hidden"),L();return}let s=e.innerText;Xt(s),Jt(s);let r=window.top.__vtbag.inspectionChamber?.frameDocument.querySelector(`[data-vtbag-transition-name="${s}"]`);i&&i!=="bypass"&&Ft(r),vt(s)},"names",!0)}}O()})}var Lt=[{boxShadow:"0 0  0px blue"},{boxShadow:"0 0 50px blue"},{boxShadow:"0 0 100px blue",display:"inline-block",minWidth:"20px",minHeight:"20px",backgroundColor:"darkslateblue",opacity:"0.5"},{boxShadow:"0 0 50px blue"},{boxShadow:"0 0  0px blue"}];function Xt(t){if(d())Kt(t);else{let e=top.__vtbag.inspectionChamber,i=e.frameDocument.querySelector(`[data-vtbag-transition-name="${t}"]`);if(i){i.scrollIntoView({behavior:"instant",block:"nearest",inline:"nearest"});let n=self.getComputedStyle(i).display;Lt[2].display=n.includes("block")?n:"inline-block",e.glow=i.animate(Lt,{duration:500,iterations:1}),setTimeout(()=>e.glow=void 0,500)}}}function Kt(t){h(`
+	${e("direction:", I[y % I.length])}
+	${e("fill-mode:", u[y % u.length])}
+	${e("iteration-count:", C[y % C.length])}
+	${e("timing-function:", M[y % M.length])}
+	${e("timeline:", v[y % v.length])}
+	${e("animates:", Ot(x))}
+</table>`; function Ot(Rt) { let F = new Set; a.keyframesMap?.get(Rt)?.forEach(G => Object.keys(G).forEach(Qt => F.add(Qt))); let Vt = ["offset", "computedOffset", "easing", "composite"]; return [...F].filter(G => !Vt.includes(G)).sort().join(", ") }
+						}
+					}
+				} function W() { top.document.querySelector('#vtbag-ui-filter input[type="text"]').value = "", top.document.querySelector("#vtbag-ui-filter ul input").click(), j() } function bt() { top.document.querySelectorAll("#vtbag-ui-names li").forEach(t => t.classList.remove("selected", "old-hidden", "new-hidden")), L(), O() } function Mt() { top.document.querySelector("#vtbag-ui-filter ul").addEventListener("change", j), top.document.querySelector('#vtbag-ui-filter input[type="text"]').addEventListener("input", j), top.document.querySelector("#vtbag-ui-filter button").addEventListener("click", W) } function D(t, e) { let i; return b(() => { top.document.querySelector("#vtbag-ui-info").innerHTML = "", top.document.querySelectorAll("#vtbag-ui-names li").forEach(o => o.remove()), top.document.querySelector("#vtbag-ui-names h4").innerText = e ? "Animation Groups" : "Elements w/ View Transition Names", top.document.querySelector("#vtbag-ui-names div").style.display = e ? "flex" : "none"; let n = top.document.querySelector("#vtbag-ui-names > ol"); i = [...new Set([...t, ...e ?? []])].sort(), i.forEach((o, a) => { let g = top.document.createElement("li"); g.innerText = o, e && t.has(o) && g.classList.add("old"), e?.has(o) && g.classList.add("new"), g.style.viewTransitionName = `vtbag-name-${a}`, n.appendChild(g) }), top.document.querySelector("#vtbag-ui-filter ul").style.display = e ? "block" : "none", j() }, "update names"), i } function j() { let t = top.document.querySelectorAll("#vtbag-ui-names li"), e = top.document.querySelector("#vtbag-ui-filter ul input:checked").id.replace("vtbag-c-", ""), i = top.document.querySelector('#vtbag-ui-filter input[type="text"]').value; b(() => { t.forEach(n => { let o = n.style, a = n.classList, g = n.innerText; o.display = (i === "" || g.includes(i)) && (e === "all" || e === "both" && a.contains("new") && a.contains("old") || e === "old-only" && a.contains("old") && !a.contains("new") || e === "new-only" && a.contains("new") && !a.contains("old") || e === "old" && a.contains("old") || e === "new" && a.contains("new")) ? "list-item" : "none" }) }, "refresh names") } function R() { let t = top.__vtbag.inspectionChamber; if (Tt()) { ut(), t.updateNameVisibilityTimeout = void 0; let e = t.twin.ownerDocument, i = top.document, n = top.getComputedStyle(i.documentElement), o = i.documentElement.classList.contains("vtbag-ui-column"), a = o ? parseFloat(n.getPropertyValue("--vtbag-panel-width") || "0") : 0, g = o ? 0 : parseFloat(n.getPropertyValue("--vtbag-panel-height") || "0"); i.querySelectorAll("#vtbag-ui-names li").forEach(c => { let l = c.innerText, s = c.classList; s[s.contains("old") && yt(e.querySelector(`#vtbag-twin--view-transition-old-${l}`), a, g) === !1 ? "add" : "remove"]("old-invisible"), s[s.contains("new") && yt(e.querySelector(`#vtbag-twin--view-transition-new-${l}`), a, g) === !1 ? "add" : "remove"]("new-invisible"), s[(!s.contains("old") || s.contains("old-invisible")) && (!s.contains("new") || s.contains("new-invisible")) ? "add" : "remove"]("invisible") }), d() && (t.updateNameVisibilityTimeout = top.setTimeout(R, 1e3)) } } function yt(t, e = 0, i = 0) { if (!t) return; let { top: n, right: o, bottom: a, left: g, width: c, height: l } = t.getBoundingClientRect(); return c > 0 && l > 0 && n < window.top.innerHeight - i && a > 0 && g < window.top.innerWidth - e && o > 0 } function L() {
+					let t = []; top.document.querySelectorAll("#vtbag-ui-names li").forEach(e => { let i = e.innerText, n = e.classList; n.contains("old-hidden") && t.push(`::view-transition-old(${i}) { visibility: hidden; }`), n.contains("new-hidden") && t.push(`::view-transition-new(${i}) { visibility: hidden; }`) }), h(t.join(`
+`), "image-visibility")
+				} function Jt(t) { let e = top.document.documentElement.dataset.vtbagModus === "control" && top.document.querySelector("#vtbag-ui-names h4").innerText === "Animation Groups", i = top.document.querySelectorAll("#vtbag-ui-names li"), n; i.forEach(o => { if (o.innerText === t) { let a = top.document.querySelector("#vtbag-ui-controller"), g = top.document.querySelector("#vtbag-ui-progress"), c = top.document.querySelector("#vtbag-ui-controller2"), l = top.document.querySelector("#vtbag-ui-progress2"); o.classList.contains("selected") ? (c.value = a.value, l.innerText = g.innerText) : (a.value = c.value, g.innerText = l.innerText), o.classList[e ? "toggle" : "add"]("selected"), n = o, o.style.display === "none" && W() } else e || o.classList.remove("selected") }), n && n.scrollIntoView({ behavior: "instant", block: "nearest", inline: "nearest" }) } function Ft(t) {
+					let e = top.document.querySelector("#vtbag-ui-info"); if (t && !d()) navigator.clipboard.writeText(`inspect(top.document.querySelector("#vtbag-main-frame").contentDocument.querySelector("${ht(t)}"))`), e.innerHTML = `<h4>Info</h4>
+						<p>DevTools selector '<b><code>${ht(t)}</code></b>' copied to clipboard. Paste to DevTools console to further inspect the element.</p>`; else {
+						navigator.clipboard.writeText('inspect(top.document.querySelector("#vtbag-main-frame").contentDocument.querySelector(":root"))'); let i = t && t.dataset.vtbagTransitionName; e.innerHTML = `<h4>Info</h4>
+						<p>DevTools selector '<b><code>:root</code></b>' copied to clipboard. Paste to DevTools console, then expand the <code>&lt;html></code> element and its <code>::view-transition</code> pseudo element.</p>${i && "<p>Look for the <code>::view-transition-group(" + i + ")</code> pseudo element and its children.</p>"}`
+					} T(e)
+				} function ht(t, e = !0) { let i = []; for (; t && t.nodeType === Node.ELEMENT_NODE;) { let n = t.nodeName.toLowerCase(); if (e && t.id) { n = "#" + t.id, i.unshift(n); break } else { let o = t, a = 1; for (; o = o.previousElementSibling;)o.nodeName.toLowerCase() === n && a++; a !== 1 && (n += ":nth-of-type(" + a + ")") } i.unshift(n), t = t.parentNode } return i.join(" > ") } function wt() { top.document.querySelector("#vtbag-ui-names button").addEventListener("click", () => bt()), top.document.querySelector("#vtbag-ui-names-old").addEventListener("click", () => { top.document.querySelectorAll("#vtbag-ui-names li").forEach(t => { t.classList.contains("old") && t.classList.toggle("old-hidden") }), L() }), top.document.querySelector("#vtbag-ui-names-new").addEventListener("click", () => { top.document.querySelectorAll("#vtbag-ui-names li").forEach(t => { t.classList.contains("new") && t.classList.toggle("new-hidden") }), L() }), top.document.querySelector("#vtbag-ui-names ol").addEventListener("click", t => { if (t.target instanceof HTMLElement) { let e = t.target.closest("li"); if (e && t instanceof MouseEvent) { e.style.display === "none" && W(); let i = top.document.documentElement.dataset.vtbagModus; b(() => { let { left: n, width: o } = e.getBoundingClientRect(), a = t.clientX - n, g = a >= 0 && a <= 20, c = a >= o - 20 && a <= o, l = e.classList; if (g && l.contains("old")) { l.toggle("old-hidden"), L(); return } if (c && l.contains("new")) { l.toggle("new-hidden"), L(); return } let s = e.innerText; Xt(s), Jt(s); let r = window.top.__vtbag.inspectionChamber?.frameDocument.querySelector(`[data-vtbag-transition-name="${s}"]`); i && i !== "bypass" && Ft(r), vt(s) }, "names", !0) } } O() }) } var Lt = [{ boxShadow: "0 0  0px blue" }, { boxShadow: "0 0 50px blue" }, { boxShadow: "0 0 100px blue", display: "inline-block", minWidth: "20px", minHeight: "20px", backgroundColor: "darkslateblue", opacity: "0.5" }, { boxShadow: "0 0 50px blue" }, { boxShadow: "0 0  0px blue" }]; function Xt(t) { if (d()) Kt(t); else { let e = top.__vtbag.inspectionChamber, i = e.frameDocument.querySelector(`[data-vtbag-transition-name="${t}"]`); if (i) { i.scrollIntoView({ behavior: "instant", block: "nearest", inline: "nearest" }); let n = self.getComputedStyle(i).display; Lt[2].display = n.includes("block") ? n : "inline-block", e.glow = i.animate(Lt, { duration: 500, iterations: 1 }), setTimeout(() => e.glow = void 0, 500) } } } function Kt(t) {
+					h(`
 		::view-transition-old(*),
 		::view-transition-new(*) {
 			opacity: 0;
@@ -930,90 +1262,404 @@ const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=
 			background-color: darkolivegreen;
       opacity: 1;
 			transition: all 0.5s;
-		}`,"glow"),setTimeout(()=>h("","glow"),500)}var V=-2,q=-1;function ft(){q=-1,V=-2;let t=top.__vtbag.inspectionChamber.animationEndTime;top.document.querySelector("#vtbag-ui-controller-max").innerText=t+" ms",top.document.querySelector("#vtbag-ui-progress").innerText="0";let e=top.document.querySelector("#vtbag-ui-controller");e.max=""+t,e.value="0",e.disabled=!1,top.document.querySelector("#vtbag-ui-progress2").innerText="0";let i=top.document.querySelector("#vtbag-ui-controller2");i.max=""+t,i.value="0",i.disabled=!1,R(),Q()}function Tt(){let t=q!==V;return q=V,t}function Q(){let t=top.__vtbag.inspectionChamber,e=t.animations;if(e){let i=parseInt(top.document.querySelector("#vtbag-ui-progress").innerText),n=parseInt(top.document.querySelector("#vtbag-ui-progress2").innerText);V=i+n;let o=new Set;top.document.querySelectorAll("#vtbag-ui-names li.selected").forEach(a=>o.add(a.innerText)),e.forEach(a=>{let{viewTransitionName:g}=B(a);a.currentTime=g&&o.has(g)?i:n})}t.updateNameVisibilityTimeout&&(top.clearTimeout(t.updateNameVisibilityTimeout),t.updateNameVisibilityTimeout=void 0,d()&&(t.updateNameVisibilityTimeout=top.setTimeout(R,1e3)))}function B(t){let e=t.effect?.pseudoElement?.replace(/::view-transition-(new|old|group|image-pair)\((.*)\)/,"$1 $2").split(" ");return{pseudoName:e[0],viewTransitionName:e[1]}}function Nt(){let t=top.document.querySelector("#vtbag-ui-controller"),e=top.document.querySelector("#vtbag-ui-progress");t.addEventListener("input",o=>{o.target instanceof HTMLInputElement&&(e.innerText=""+~~o.target.value,Q())});let i=top.document.querySelector("#vtbag-ui-controller2"),n=top.document.querySelector("#vtbag-ui-progress2");i.addEventListener("input",o=>{o.target instanceof HTMLInputElement&&(n.innerText=""+~~o.target.value,Q())})}function O(){d()&&top.document.documentElement.dataset.vtbagModus==="control"&&Q()}var Dt="vtbag-ui-panel-orientation",jt="vtbag-ui-framed",zt="named_only",kt="\u{1F52C}";top.__vtbag??={};top.__vtbag.inspectionChamber??={initialized:!1};var p=top.__vtbag.inspectionChamber,xt=!0;top===self?top.setTimeout(ee,500):$t();function $t(){let t=p.frameDocument=self.document;self.addEventListener("pageswap",Et,{once:!0}),self.addEventListener("pagereveal",_t,{once:!0}),p.initialized||(p.initialized=!0,e());function e(){let i=t.startViewTransition;t.startViewTransition=n=>(Et(),p.viewTransition=i.call(t,async()=>{await Promise.resolve(),await n(),Zt()}),p.viewTransition)}}function Et(){!1,p.glow?.cancel(),N(!1,!1)}function _t(t){p.viewTransition="viewTransition"in t&&t.viewTransition||void 0,Zt()}function Zt(){!1,p.viewTransition&&(At(),te())}function te(){nt();let t=top.document.documentElement,e=p.viewTransition,i={bypass:()=>{},"slow-motion":at,control:ft,compare:()=>{}},n=t.dataset.vtbagModus;e.updateCallbackDone.catch(()=>{}),e.ready.then(async()=>{if(n&&n!=="bypass"){let o=top.document.querySelector("#canvas");o&&(o.style.zIndex="1000",o.style.cursor="wait"),await pt(),N(!!top.document.querySelector("#vtbag-ui-framed")?.checked,!!top.document.querySelector("#vtbag-ui-named-only")?.checked),p.twin.ownerDocument.addEventListener("click",dt),i[n]()}top.history.replaceState(history.state,"",self.location.href),top.document.title=kt+" "+self.document.title}).finally(()=>{}),e.finished.finally(()=>{ot(),p.viewTransition=void 0;let o=top.__vtbag.inspectionChamber?.frameDocument?.querySelector("#vtbag-twin--view-transition")?.remove();Ct(),p.animations=void 0,p.longestAnimation=void 0,N(!!top.document.querySelector("#vtbag-ui-framed")?.checked,!!top.document.querySelector("#vtbag-ui-named-only")?.checked),D(P()),L(),top.document.querySelector("#vtbag-ui-slo-mo-progress").innerText="",top.document.querySelector("#vtbag-ui-animations").innerText="",!t.dataset.vtbagModus&&top.document.querySelector("#vtbag-ui-modi li input")?.click(),setTimeout(()=>{let a=top.document.querySelector("#vtbag-ui-inner-panel:has( > div:nth-of-type(2):empty)");a&&(a.style.display="none")},100)})}function Yt(){let t=top.document.documentElement;t.style.setProperty("--vtbag-background-accent",t.style.colorScheme==="dark"?"#4E545D":"#c6d1d7")}async function ee(){if(top.document.querySelector("#vtbag-ui-panel"))return;let t=top.document.documentElement;if(top.sessionStorage.getItem(E)==="true"){et();return}let e=top.getComputedStyle(t).colorScheme,i=top.document.title,n=top.document.querySelector('link[rel="icon"]')?.outerHTML??"",o=(await X).replace('<iframe id="vtbag-main-frame" src="/"></iframe>',`<iframe id="vtbag-main-frame" style="opacity: 0;" src="${location.href}"></iframe>`).replace("<title></title>",`<title>${kt} ${i}</title>`).replace('<link rel="icon"/>',n);top.addEventListener("resize",St),t.innerHTML=o,t.style.colorScheme=e,St(),Yt(),t.dataset.vtbagModus="";let a=top.document.querySelector("#vtbag-main-frame");if(await new Promise(l=>a.onload=l),!top.document.startViewTransition){top.document.querySelector("#vtbag-ui-messages").innerHTML=`
+		}`, "glow"), setTimeout(() => h("", "glow"), 500)
+				} var V = -2, q = -1; function ft() { q = -1, V = -2; let t = top.__vtbag.inspectionChamber.animationEndTime; top.document.querySelector("#vtbag-ui-controller-max").innerText = t + " ms", top.document.querySelector("#vtbag-ui-progress").innerText = "0"; let e = top.document.querySelector("#vtbag-ui-controller"); e.max = "" + t, e.value = "0", e.disabled = !1, top.document.querySelector("#vtbag-ui-progress2").innerText = "0"; let i = top.document.querySelector("#vtbag-ui-controller2"); i.max = "" + t, i.value = "0", i.disabled = !1, R(), Q() } function Tt() { let t = q !== V; return q = V, t } function Q() { let t = top.__vtbag.inspectionChamber, e = t.animations; if (e) { let i = parseInt(top.document.querySelector("#vtbag-ui-progress").innerText), n = parseInt(top.document.querySelector("#vtbag-ui-progress2").innerText); V = i + n; let o = new Set; top.document.querySelectorAll("#vtbag-ui-names li.selected").forEach(a => o.add(a.innerText)), e.forEach(a => { let { viewTransitionName: g } = B(a); a.currentTime = g && o.has(g) ? i : n }) } t.updateNameVisibilityTimeout && (top.clearTimeout(t.updateNameVisibilityTimeout), t.updateNameVisibilityTimeout = void 0, d() && (t.updateNameVisibilityTimeout = top.setTimeout(R, 1e3))) } function B(t) { let e = t.effect?.pseudoElement?.replace(/::view-transition-(new|old|group|image-pair)\((.*)\)/, "$1 $2").split(" "); return { pseudoName: e[0], viewTransitionName: e[1] } } function Nt() { let t = top.document.querySelector("#vtbag-ui-controller"), e = top.document.querySelector("#vtbag-ui-progress"); t.addEventListener("input", o => { o.target instanceof HTMLInputElement && (e.innerText = "" + ~~o.target.value, Q()) }); let i = top.document.querySelector("#vtbag-ui-controller2"), n = top.document.querySelector("#vtbag-ui-progress2"); i.addEventListener("input", o => { o.target instanceof HTMLInputElement && (n.innerText = "" + ~~o.target.value, Q()) }) } function O() { d() && top.document.documentElement.dataset.vtbagModus === "control" && Q() } var Dt = "vtbag-ui-panel-orientation", jt = "vtbag-ui-framed", zt = "named_only", kt = "\u{1F52C}"; top.__vtbag ??= {}; top.__vtbag.inspectionChamber ??= { initialized: !1 }; var p = top.__vtbag.inspectionChamber, xt = !0; top === self ? top.setTimeout(ee, 500) : $t(); function $t() { let t = p.frameDocument = self.document; self.addEventListener("pageswap", Et, { once: !0 }), self.addEventListener("pagereveal", _t, { once: !0 }), p.initialized || (p.initialized = !0, e()); function e() { let i = t.startViewTransition; t.startViewTransition = n => (Et(), p.viewTransition = i.call(t, async () => { await Promise.resolve(), await n(), Zt() }), p.viewTransition) } } function Et() { !1, p.glow?.cancel(), N(!1, !1) } function _t(t) { p.viewTransition = "viewTransition" in t && t.viewTransition || void 0, Zt() } function Zt() { !1, p.viewTransition && (At(), te()) } function te() { nt(); let t = top.document.documentElement, e = p.viewTransition, i = { bypass: () => { }, "slow-motion": at, control: ft, compare: () => { } }, n = t.dataset.vtbagModus; e.updateCallbackDone.catch(() => { }), e.ready.then(async () => { if (n && n !== "bypass") { let o = top.document.querySelector("#canvas"); o && (o.style.zIndex = "1000", o.style.cursor = "wait"), await pt(), N(!!top.document.querySelector("#vtbag-ui-framed")?.checked, !!top.document.querySelector("#vtbag-ui-named-only")?.checked), p.twin.ownerDocument.addEventListener("click", dt), i[n]() } top.history.replaceState(history.state, "", self.location.href), top.document.title = kt + " " + self.document.title }).finally(() => { }), e.finished.finally(() => { ot(), p.viewTransition = void 0; let o = top.__vtbag.inspectionChamber?.frameDocument?.querySelector("#vtbag-twin--view-transition")?.remove(); Ct(), p.animations = void 0, p.longestAnimation = void 0, N(!!top.document.querySelector("#vtbag-ui-framed")?.checked, !!top.document.querySelector("#vtbag-ui-named-only")?.checked), D(P()), L(), top.document.querySelector("#vtbag-ui-slo-mo-progress").innerText = "", top.document.querySelector("#vtbag-ui-animations").innerText = "", !t.dataset.vtbagModus && top.document.querySelector("#vtbag-ui-modi li input")?.click(), setTimeout(() => { let a = top.document.querySelector("#vtbag-ui-inner-panel:has( > div:nth-of-type(2):empty)"); a && (a.style.display = "none") }, 100) }) } function Yt() { let t = top.document.documentElement; t.style.setProperty("--vtbag-background-accent", t.style.colorScheme === "dark" ? "#4E545D" : "#c6d1d7") } async function ee() {
+					if (top.document.querySelector("#vtbag-ui-panel")) return; let t = top.document.documentElement; if (top.sessionStorage.getItem(E) === "true") { et(); return } let e = top.getComputedStyle(t).colorScheme, i = top.document.title, n = top.document.querySelector('link[rel="icon"]')?.outerHTML ?? "", o = (await X).replace('<iframe id="vtbag-main-frame" src="/"></iframe>', `<iframe id="vtbag-main-frame" style="opacity: 0;" src="${location.href}"></iframe>`).replace("<title></title>", `<title>${kt} ${i}</title>`).replace('<link rel="icon"/>', n); top.addEventListener("resize", St), t.innerHTML = o, t.style.colorScheme = e, St(), Yt(), t.dataset.vtbagModus = ""; let a = top.document.querySelector("#vtbag-main-frame"); if (await new Promise(l => a.onload = l), !top.document.startViewTransition) {
+						top.document.querySelector("#vtbag-ui-messages").innerHTML = `
 			<p>I'm sorry!</p><p>Native view transitions are required to make the \u{1F52C} Inspection Chamber work, but they are not supported by this browser.</p>
-			<p>Sadly have to give up.</p>`,top.document.querySelectorAll("#vtbag-ui-modi, #vtbag-ui-filter, #vtbag-ui-names, #vtbag-ui-animations, #vtbag-ui-info").forEach(l=>l.remove());return}let g=top.__vtbag.inspectionChamber.frameDocument=a.contentDocument;D(P()),ne();let c=top.document.querySelector("#divider");w(c,(l,s)=>{t.classList.contains("vtbag-ui-column")?t.classList.contains("vtbag-ui-tl")?t.style.setProperty("--vtbag-panel-width",`calc(max(200px, ${Math.min(innerWidth-100,l)}px))`):t.style.setProperty("--vtbag-panel-width",`calc(max(200px, 100vw - ${Math.max(100,l+1)}px))`):t.classList.contains("vtbag-ui-tl")?t.style.setProperty("--vtbag-panel-height",`calc(max(212px, ${Math.min(innerHeight-100,s)}px))`):t.style.setProperty("--vtbag-panel-height",`calc(max(212px, 100vh - ${Math.max(100,s+1)}px))`)}),a.animate([{opacity:0,transform:"translateY(100vh)"},{opacity:1}],{duration:500,fill:"forwards"}),g.addEventListener("click",ie)}function ie(t){if(!d()&&!t.defaultPrevented){let i=t.target.closest("[data-vtbag-transition-name]");if(i){let n=i.dataset.vtbagTransitionName;top.document.querySelectorAll("#vtbag-ui-names li").forEach(o=>{o.innerText===n&&(o.click(),t.ctrlKey&&t.shiftKey&&t.preventDefault())})}}}function St(){let t=top.document.documentElement,e=top.localStorage.getItem(Dt)??"";e?(e.split(" ").forEach(i=>t.classList.add(i)),Ut()):top.matchMedia("(orientation: landscape)").matches!==t.classList.contains("vtbag-ui-column")&&Ht()}function Ht(){b(()=>{let t=top.document.documentElement.classList;S(),t.toggle("vtbag-ui-column"),t.contains("vtbag-ui-column")&&t.toggle("vtbag-ui-tl"),top.localStorage.setItem(Dt,[...t].filter(e=>e.startsWith("vtbag-ui-")).join(" ")),Ut()},"switch orientation")}function Ut(){let t=top.document.querySelector("#vtbag-ui-turn"),e=top.document.documentElement.classList;t.innerText="\u292A\u2928\u2929\u2927"[(e.contains("vtbag-ui-column")?2:0)+(e.contains("vtbag-ui-tl")?1:0)]}function ne(){top.document.querySelector("#vtbag-ui-turn").addEventListener("click",()=>Ht()),top.document.querySelector("#vtbag-ui-light-dark").addEventListener("click",()=>{let o=top.document.documentElement.style;top.document.querySelector("#vtbag-main-frame").contentDocument.documentElement.style.colorScheme=o.colorScheme=o.colorScheme==="dark"?"light":"dark",Yt()}),st(),top.document.querySelector("#vtbag-ui-standby").addEventListener("click",()=>{top.sessionStorage.setItem(E,"true"),top.location.reload()}),top.document.querySelector("#vtbag-ui-modi ul").addEventListener("change",oe),Mt(),wt();let e=top.document.querySelector("#vtbag-ui-framed"),i=top.document.querySelector("#vtbag-ui-named-only");e.addEventListener("change",n),i.addEventListener("change",n);function n(){let o=e.checked,a=i.checked;top.sessionStorage.setItem(jt,o?"X":""),top.sessionStorage.setItem(zt,a?"X":""),N(o,a)}rt(),Nt(),top.document.querySelectorAll("#vtbag-ui-control-exit, #vtbag-ui-control-play").forEach(o=>o.addEventListener("click",S)),top.addEventListener("keyup",function(o){o.key==="Escape"&&(d()?S():(top.sessionStorage.setItem(E,"true"),top.location.reload()))})}function oe(){let t=top.document.documentElement,e=top.document.querySelector("#vtbag-ui-modi ul input:checked");if(e){let i=e.id.replace("vtbag-m-","");i!==t.dataset.vtbagModus&&b(()=>{t.dataset.vtbagModus=i,S(),top.document.querySelector("#vtbag-ui-filter ul input").click(),i==="slow-motion"&&J("#vtbag-ui-slow-motion"),i==="control"&&J("#vtbag-ui-control"),i==="bypass"&&J("#vtbag-ui-modi");let n=top.document.querySelector("#vtbag-ui-messages");n.innerHTML=it[i],T(n);let o=top.document.querySelector("#vtbag-ui-modi");xt&&o.parentElement?.id==="vtbag-ui-panel"&&n.parentElement?.id==="vtbag-ui-panel"&&(xt=!1,top.document.querySelector("#vtbag-ui-panel")?.insertAdjacentElement("afterbegin",top.document.querySelector("#vtbag-ui-modi"))),ct()},"update-modus")}}function J(t){let e=top.document.querySelector("#vtbag-ui-framed"),i=top.document.querySelector("#vtbag-ui-named-only"),n=e.parentElement,o=top.document.querySelector(t);e.checked=!!top.sessionStorage.getItem(jt),i.checked=!!top.sessionStorage.getItem(zt),N(e.checked,i.checked),n&&o&&n.parentElement!==o&&o.insertAdjacentElement("beforeend",n)}})();
-}; document.currentScript.remove()</script><style>[data-astro-transition-scope="astro-kokuwcuc-1"] { view-transition-name: main; }@layer astro { ::view-transition-old(main) { 
-	animation-duration: 150ms, 150ms;
-	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
-	animation-fill-mode: both, both;
-	animation-name: astroFadeOut, astroSlideToLeft; }::view-transition-new(main) { 
-	animation-duration: 150ms, 150ms;
-	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
-	animation-fill-mode: both, both;
-	animation-name: astroFadeIn, astroSlideFromRight; }[data-astro-transition=back]::view-transition-old(main) { 
-	animation-name: astroFadeOut, astroSlideToRight; }[data-astro-transition=back]::view-transition-new(main) { 
-	animation-name: astroFadeIn, astroSlideFromLeft; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-kokuwcuc-1"],
-			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-kokuwcuc-1"] { 
-	animation-duration: 150ms, 150ms;
-	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
-	animation-fill-mode: both, both;
-	animation-name: astroFadeOut, astroSlideToLeft; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-kokuwcuc-1"],
-			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-kokuwcuc-1"] { 
-	animation-duration: 150ms, 150ms;
-	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
-	animation-fill-mode: both, both;
-	animation-name: astroFadeIn, astroSlideFromRight; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-kokuwcuc-1"],
-			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-kokuwcuc-1"] { 
-	animation-name: astroFadeOut, astroSlideToRight; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-kokuwcuc-1"],
-			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-kokuwcuc-1"] { 
-	animation-name: astroFadeIn, astroSlideFromLeft; }</style></head> <body class="astro-bguv2lll"> <a href="#_top" class="astro-7q3lir66">Skip to content</a>  <div class="page sl-flex astro-vrdttmbt"> <header class="header astro-vrdttmbt"><div class="header sl-flex astro-kmkmnagf"> <div class="title-wrapper sl-flex astro-kmkmnagf"> <a href="/" class="site-title sl-flex astro-m46x6ez3">  <span class="astro-m46x6ez3"> FashionUnited Docs </span> </a>  </div> <div class="sl-flex astro-kmkmnagf"> <site-search data-translations="{&#34;placeholder&#34;:&#34;Search&#34;}" class="astro-v37mnknz"> <button data-open-modal disabled aria-label="Search" aria-keyshortcuts="Control+K" class="astro-v37mnknz"> <svg aria-hidden="true" class="astro-v37mnknz astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg>  <span class="sl-hidden md:sl-block astro-v37mnknz" aria-hidden="true">Search</span> <kbd class="sl-hidden md:sl-flex astro-v37mnknz" style="display: none;"> <kbd class="astro-v37mnknz">Ctrl</kbd><kbd class="astro-v37mnknz">K</kbd> </kbd> </button> <dialog style="padding:0" aria-label="Search" class="astro-v37mnknz"> <div class="dialog-frame sl-flex astro-v37mnknz">  <button data-close-modal class="sl-flex md:sl-hidden astro-v37mnknz"> Cancel </button> <div style="margin: auto; text-align: center; white-space: pre-line;" dir="ltr" class="astro-v37mnknz"> <p class="astro-v37mnknz">Search is only available in production builds. 
-Try building and previewing the site to test it out locally.</p> </div> </div> </dialog> </site-search>  <script>
-	(() => {
-		const openBtn = document.querySelector('button[data-open-modal]');
-		const shortcut = openBtn?.querySelector('kbd');
-		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
-		const platformKey = shortcut.querySelector('kbd');
-		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
-			platformKey.textContent = '⌘';
-			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+			<p>Sadly have to give up.</p>`, top.document.querySelectorAll("#vtbag-ui-modi, #vtbag-ui-filter, #vtbag-ui-names, #vtbag-ui-animations, #vtbag-ui-info").forEach(l => l.remove()); return
+					} let g = top.__vtbag.inspectionChamber.frameDocument = a.contentDocument; D(P()), ne(); let c = top.document.querySelector("#divider"); w(c, (l, s) => { t.classList.contains("vtbag-ui-column") ? t.classList.contains("vtbag-ui-tl") ? t.style.setProperty("--vtbag-panel-width", `calc(max(200px, ${Math.min(innerWidth - 100, l)}px))`) : t.style.setProperty("--vtbag-panel-width", `calc(max(200px, 100vw - ${Math.max(100, l + 1)}px))`) : t.classList.contains("vtbag-ui-tl") ? t.style.setProperty("--vtbag-panel-height", `calc(max(212px, ${Math.min(innerHeight - 100, s)}px))`) : t.style.setProperty("--vtbag-panel-height", `calc(max(212px, 100vh - ${Math.max(100, s + 1)}px))`) }), a.animate([{ opacity: 0, transform: "translateY(100vh)" }, { opacity: 1 }], { duration: 500, fill: "forwards" }), g.addEventListener("click", ie)
+				} function ie(t) { if (!d() && !t.defaultPrevented) { let i = t.target.closest("[data-vtbag-transition-name]"); if (i) { let n = i.dataset.vtbagTransitionName; top.document.querySelectorAll("#vtbag-ui-names li").forEach(o => { o.innerText === n && (o.click(), t.ctrlKey && t.shiftKey && t.preventDefault()) }) } } } function St() { let t = top.document.documentElement, e = top.localStorage.getItem(Dt) ?? ""; e ? (e.split(" ").forEach(i => t.classList.add(i)), Ut()) : top.matchMedia("(orientation: landscape)").matches !== t.classList.contains("vtbag-ui-column") && Ht() } function Ht() { b(() => { let t = top.document.documentElement.classList; S(), t.toggle("vtbag-ui-column"), t.contains("vtbag-ui-column") && t.toggle("vtbag-ui-tl"), top.localStorage.setItem(Dt, [...t].filter(e => e.startsWith("vtbag-ui-")).join(" ")), Ut() }, "switch orientation") } function Ut() { let t = top.document.querySelector("#vtbag-ui-turn"), e = top.document.documentElement.classList; t.innerText = "\u292A\u2928\u2929\u2927"[(e.contains("vtbag-ui-column") ? 2 : 0) + (e.contains("vtbag-ui-tl") ? 1 : 0)] } function ne() { top.document.querySelector("#vtbag-ui-turn").addEventListener("click", () => Ht()), top.document.querySelector("#vtbag-ui-light-dark").addEventListener("click", () => { let o = top.document.documentElement.style; top.document.querySelector("#vtbag-main-frame").contentDocument.documentElement.style.colorScheme = o.colorScheme = o.colorScheme === "dark" ? "light" : "dark", Yt() }), st(), top.document.querySelector("#vtbag-ui-standby").addEventListener("click", () => { top.sessionStorage.setItem(E, "true"), top.location.reload() }), top.document.querySelector("#vtbag-ui-modi ul").addEventListener("change", oe), Mt(), wt(); let e = top.document.querySelector("#vtbag-ui-framed"), i = top.document.querySelector("#vtbag-ui-named-only"); e.addEventListener("change", n), i.addEventListener("change", n); function n() { let o = e.checked, a = i.checked; top.sessionStorage.setItem(jt, o ? "X" : ""), top.sessionStorage.setItem(zt, a ? "X" : ""), N(o, a) } rt(), Nt(), top.document.querySelectorAll("#vtbag-ui-control-exit, #vtbag-ui-control-play").forEach(o => o.addEventListener("click", S)), top.addEventListener("keyup", function (o) { o.key === "Escape" && (d() ? S() : (top.sessionStorage.setItem(E, "true"), top.location.reload())) }) } function oe() { let t = top.document.documentElement, e = top.document.querySelector("#vtbag-ui-modi ul input:checked"); if (e) { let i = e.id.replace("vtbag-m-", ""); i !== t.dataset.vtbagModus && b(() => { t.dataset.vtbagModus = i, S(), top.document.querySelector("#vtbag-ui-filter ul input").click(), i === "slow-motion" && J("#vtbag-ui-slow-motion"), i === "control" && J("#vtbag-ui-control"), i === "bypass" && J("#vtbag-ui-modi"); let n = top.document.querySelector("#vtbag-ui-messages"); n.innerHTML = it[i], T(n); let o = top.document.querySelector("#vtbag-ui-modi"); xt && o.parentElement?.id === "vtbag-ui-panel" && n.parentElement?.id === "vtbag-ui-panel" && (xt = !1, top.document.querySelector("#vtbag-ui-panel")?.insertAdjacentElement("afterbegin", top.document.querySelector("#vtbag-ui-modi"))), ct() }, "update-modus") } } function J(t) { let e = top.document.querySelector("#vtbag-ui-framed"), i = top.document.querySelector("#vtbag-ui-named-only"), n = e.parentElement, o = top.document.querySelector(t); e.checked = !!top.sessionStorage.getItem(jt), i.checked = !!top.sessionStorage.getItem(zt), N(e.checked, i.checked), n && o && n.parentElement !== o && o.insertAdjacentElement("beforeend", n) }
+			})();
+		}; document.currentScript.remove()</script>
+	<style>
+		[data-astro-transition-scope="astro-kokuwcuc-1"] {
+			view-transition-name: main;
 		}
-		shortcut.style.display = '';
-	})();
-</script>    </div> <div class="sl-hidden md:sl-flex right-group astro-kmkmnagf"> <div class="sl-flex social-icons astro-kmkmnagf"> <a href="https://github.com/fuww/developer.fashionunited.com" rel="me" class="sl-flex astro-wy4te6ga"><span class="sr-only astro-wy4te6ga">GitHub</span><svg aria-hidden="true" class="astro-wy4te6ga astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg> </a> </div> <starlight-theme-select>  <label style="--sl-select-width: 6.25em" class="astro-4yphtoen"> <span class="sr-only astro-4yphtoen">Select theme</span> <svg aria-hidden="true" class="icon label-icon astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg>  <select value="auto" class="astro-4yphtoen"> <option value="dark" class="astro-4yphtoen">Dark</option><option value="light" class="astro-4yphtoen">Light</option><option value="auto" selected class="astro-4yphtoen">Auto</option> </select> <svg aria-hidden="true" class="icon caret astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </label>  </starlight-theme-select>  <script>
-	StarlightThemeProvider.updatePickers();
-</script>   </div> </div> </header> <nav class="sidebar astro-vrdttmbt" aria-label="Main"> <starlight-menu-button class="astro-jif73yzw"> <button aria-expanded="false" aria-label="Menu" aria-controls="starlight__sidebar" class="sl-flex md:sl-hidden astro-jif73yzw"> <svg aria-hidden="true" class="astro-jif73yzw astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z"/></svg>  </button> </starlight-menu-button>    <div id="starlight__sidebar" class="sidebar-pane astro-vrdttmbt"> <div class="sidebar-content sl-flex astro-vrdttmbt"> <sl-sidebar-state-persist data-hash="1a8acy5" class="astro-kku4brbg"> <script>
-		(() => {
-			try {
-				if (!matchMedia('(min-width: 50em)').matches) return;
-				/** @type {HTMLElement | null} */
-				const target = document.querySelector('sl-sidebar-state-persist');
-				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
-				if (!target || !state || target.dataset.hash !== state.hash) return;
-				window._starlightScrollRestore = state.scroll;
-				customElements.define(
-					'sl-sidebar-restore',
-					class SidebarRestore extends HTMLElement {
-						connectedCallback() {
-							try {
-								const idx = parseInt(this.dataset.index || '');
-								const details = this.closest('details');
-								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
-							} catch {}
-						}
-					}
-				);
-			} catch {}
-		})();
-	</script>  <ul class="top-level astro-3ii7xxms"> <li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="0"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Docs</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/docs/advertising/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Advertising</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/docs/fashionunited-for-websites/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">FashionUnited for Websites - Embedding Jobs and News</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/docs/header/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Header</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/docs/jobs/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Jobs</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/docs/logo/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Logo</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/docs/system-requirements-and-browsers/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">System Requirements and Browsers</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/docs/cloudflare/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Cloudflare</span>  </a> </li> </ul>  </details> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="1"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Marketplace</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/docs/marketplace/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Marketplace</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/docs/marketplace/brand-pages/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Brand Pages</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/docs/marketplace/categories/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Product Categories</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/docs/marketplace/colors/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Product Colors</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/docs/marketplace/getting-started/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Getting Started</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/docs/marketplace/graphql-api/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">GraphQL API</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/docs/marketplace/how-to-register/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">How to register</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/docs/marketplace/platforms/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Platforms</span>  </a> </li> </ul>  </details> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="2"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">Editorial</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/docs/editorial-cheat-sheet/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Editorial Cheat Sheet</span>  </a> </li><li class="astro-3ii7xxms"> <a href="/docs/editorial-style-guide/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Editorial Style Guide</span>  </a> </li> </ul>  </details> </li><li class="astro-3ii7xxms"> <details open class="astro-3ii7xxms"> <sl-sidebar-restore data-index="3"></sl-sidebar-restore> <summary class="astro-3ii7xxms"> <div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">This site</span>  </div> <svg aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </summary> <ul class="astro-3ii7xxms"> <li class="astro-3ii7xxms"> <a href="/docs/style-guide/" class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Style Guide</span>  </a> </li> </ul>  </details> </li> </ul>   <script>
-		(() => {
-			const scroller = document.getElementById('starlight__sidebar');
-			if (!window._starlightScrollRestore || !scroller) return;
-			scroller.scrollTop = window._starlightScrollRestore;
-			delete window._starlightScrollRestore;
-		})();
-	</script> </sl-sidebar-state-persist>  <div class="md:sl-hidden"> <div class="mobile-preferences sl-flex astro-wu23bvmt"> <div class="sl-flex social-icons astro-wu23bvmt"> <a href="https://github.com/fuww/developer.fashionunited.com" rel="me" class="sl-flex astro-wy4te6ga"><span class="sr-only astro-wy4te6ga">GitHub</span><svg aria-hidden="true" class="astro-wy4te6ga astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg> </a> </div> <starlight-theme-select>  <label style="--sl-select-width: 6.25em" class="astro-4yphtoen"> <span class="sr-only astro-4yphtoen">Select theme</span> <svg aria-hidden="true" class="icon label-icon astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg>  <select value="auto" class="astro-4yphtoen"> <option value="dark" class="astro-4yphtoen">Dark</option><option value="light" class="astro-4yphtoen">Light</option><option value="auto" selected class="astro-4yphtoen">Auto</option> </select> <svg aria-hidden="true" class="icon caret astro-4yphtoen astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg>  </label>  </starlight-theme-select>  <script>
-	StarlightThemeProvider.updatePickers();
-</script>   </div>  </div> </div> </div> </nav> <div class="main-frame astro-vrdttmbt">   <div class="lg:sl-flex astro-67yu43on"> <aside class="right-sidebar-container astro-67yu43on"> <div class="right-sidebar astro-67yu43on"> <div class="lg:sl-hidden astro-pb3aqygn"><mobile-starlight-toc data-min-h="2" data-max-h="3" class="astro-doynk5tl"><nav aria-labelledby="starlight__on-this-page--mobile" class="astro-doynk5tl"><details id="starlight__mobile-toc" class="astro-doynk5tl"><summary id="starlight__on-this-page--mobile" class="sl-flex astro-doynk5tl"><div class="toggle sl-flex astro-doynk5tl">On this page<svg aria-hidden="true" class="caret astro-doynk5tl astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg> </div><span class="display-current astro-doynk5tl"></span></summary><div class="dropdown astro-doynk5tl"><ul class="isMobile astro-g2bywc46" style="--depth: 0;"> <li class="astro-g2bywc46" style="--depth: 0;"> <a href="#_top" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">Overview</span> </a>  </li> </ul> </div></details></nav></mobile-starlight-toc></div><div class="right-sidebar-panel sl-hidden lg:sl-block astro-pb3aqygn"><div class="sl-container astro-pb3aqygn"><starlight-toc data-min-h="2" data-max-h="3"><nav aria-labelledby="starlight__on-this-page"><h2 id="starlight__on-this-page">On this page</h2><ul class="astro-g2bywc46" style="--depth: 0;"> <li class="astro-g2bywc46" style="--depth: 0;"> <a href="#_top" class="astro-g2bywc46" style="--depth: 0;"> <span class="astro-g2bywc46" style="--depth: 0;">Overview</span> </a>  </li> </ul> </nav></starlight-toc></div></div> </div> </aside> <div class="main-pane astro-67yu43on">  <main data-pagefind-body lang="en" dir="ltr" class="astro-bguv2lll">    <div class="content-panel astro-7nkwcw3z"> <div class="sl-container astro-7nkwcw3z"> <h1 id="_top" class="astro-j6tvhyss">Big header image please!</h1>  </div> </div>  <div class="content-panel astro-7nkwcw3z"> <div class="sl-container astro-7nkwcw3z"> <div class="sl-markdown-content"> <p>As the year comes to an end, the IT team likes to share both recent and upcoming
-updates to the FashionUnited platform in a small series of bite-sized blogposts.
-We’re kicking off with a visual one.</p>
-<p>We do a lot of customization for our customers, to make their jobs look the best
-on our platform. In that, we’re quite unique actually, not many jobboards can do
-this for them. (USP, sales team ;) As Dilan noticed some small changes could
-improve looks big-time, we implemented them right away. Here’s one of the first
-improvements Dilan has made in her first days at FashionUnited, the examples
-show jobs where you can see the difference best.</p>
-<!-- _**Click the links to see an actual job**_
+
+		@layer astro {
+			::view-transition-old(main) {
+				animation-duration: 150ms, 150ms;
+				animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+				animation-fill-mode: both, both;
+				animation-name: astroFadeOut, astroSlideToLeft;
+			}
+
+			::view-transition-new(main) {
+				animation-duration: 150ms, 150ms;
+				animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+				animation-fill-mode: both, both;
+				animation-name: astroFadeIn, astroSlideFromRight;
+			}
+
+			[data-astro-transition=back]::view-transition-old(main) {
+				animation-name: astroFadeOut, astroSlideToRight;
+			}
+
+			[data-astro-transition=back]::view-transition-new(main) {
+				animation-name: astroFadeIn, astroSlideFromLeft;
+			}
+		}
+
+		[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-kokuwcuc-1"],
+		[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-kokuwcuc-1"] {
+			animation-duration: 150ms, 150ms;
+			animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+			animation-fill-mode: both, both;
+			animation-name: astroFadeOut, astroSlideToLeft;
+		}
+
+		[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-kokuwcuc-1"],
+		[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-kokuwcuc-1"] {
+			animation-duration: 150ms, 150ms;
+			animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1), cubic-bezier(0.76, 0, 0.24, 1);
+			animation-fill-mode: both, both;
+			animation-name: astroFadeIn, astroSlideFromRight;
+		}
+
+		[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-kokuwcuc-1"],
+		[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-kokuwcuc-1"] {
+			animation-name: astroFadeOut, astroSlideToRight;
+		}
+
+		[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-kokuwcuc-1"],
+		[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-kokuwcuc-1"] {
+			animation-name: astroFadeIn, astroSlideFromLeft;
+		}
+	</style>
+</head>
+
+<body class="astro-bguv2lll"> <a href="#_top" class="astro-7q3lir66">Skip to content</a>
+	<div class="page sl-flex astro-vrdttmbt">
+		<header class="header astro-vrdttmbt">
+			<div class="header sl-flex astro-kmkmnagf">
+				<div class="title-wrapper sl-flex astro-kmkmnagf"> <a href="/"
+						class="site-title sl-flex astro-m46x6ez3"> <span class="astro-m46x6ez3"> FashionUnited Docs
+						</span> </a> </div>
+				<div class="sl-flex astro-kmkmnagf"> <site-search
+						data-translations="{&#34;placeholder&#34;:&#34;Search&#34;}" class="astro-v37mnknz"> <button
+							data-open-modal disabled aria-label="Search" aria-keyshortcuts="Control+K"
+							class="astro-v37mnknz"> <svg aria-hidden="true" class="astro-v37mnknz astro-c6vsoqas"
+								width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+								style="--sl-icon-size: 1em;">
+								<path
+									d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z" />
+							</svg> <span class="sl-hidden md:sl-block astro-v37mnknz" aria-hidden="true">Search</span>
+							<kbd class="sl-hidden md:sl-flex astro-v37mnknz" style="display: none;"> <kbd
+									class="astro-v37mnknz">Ctrl</kbd><kbd class="astro-v37mnknz">K</kbd> </kbd>
+						</button>
+						<dialog style="padding:0" aria-label="Search" class="astro-v37mnknz">
+							<div class="dialog-frame sl-flex astro-v37mnknz"> <button data-close-modal
+									class="sl-flex md:sl-hidden astro-v37mnknz"> Cancel </button>
+								<div style="margin: auto; text-align: center; white-space: pre-line;" dir="ltr"
+									class="astro-v37mnknz">
+									<p class="astro-v37mnknz">Search is only available in production builds.
+										Try building and previewing the site to test it out locally.</p>
+								</div>
+							</div>
+						</dialog>
+					</site-search>
+					<script>
+							(() => {
+								const openBtn = document.querySelector('button[data-open-modal]');
+								const shortcut = openBtn?.querySelector('kbd');
+								if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+								const platformKey = shortcut.querySelector('kbd');
+								if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+									platformKey.textContent = '⌘';
+									openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+								}
+								shortcut.style.display = '';
+							})();
+					</script>
+				</div>
+				<div class="sl-hidden md:sl-flex right-group astro-kmkmnagf">
+					<div class="sl-flex social-icons astro-kmkmnagf"> <a
+							href="https://github.com/fuww/developer.fashionunited.com" rel="me"
+							class="sl-flex astro-wy4te6ga"><span class="sr-only astro-wy4te6ga">GitHub</span><svg
+								aria-hidden="true" class="astro-wy4te6ga astro-c6vsoqas" width="16" height="16"
+								viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;">
+								<path
+									d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z" />
+							</svg> </a> </div> <starlight-theme-select> <label style="--sl-select-width: 6.25em"
+							class="astro-4yphtoen"> <span class="sr-only astro-4yphtoen">Select theme</span> <svg
+								aria-hidden="true" class="icon label-icon astro-4yphtoen astro-c6vsoqas" width="16"
+								height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;">
+								<path
+									d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z" />
+							</svg> <select value="auto" class="astro-4yphtoen">
+								<option value="dark" class="astro-4yphtoen">Dark</option>
+								<option value="light" class="astro-4yphtoen">Light</option>
+								<option value="auto" selected class="astro-4yphtoen">Auto</option>
+							</select> <svg aria-hidden="true" class="icon caret astro-4yphtoen astro-c6vsoqas"
+								width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+								style="--sl-icon-size: 1em;">
+								<path
+									d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z" />
+							</svg> </label> </starlight-theme-select>
+					<script>
+						StarlightThemeProvider.updatePickers();
+					</script>
+				</div>
+			</div>
+		</header>
+		<nav class="sidebar astro-vrdttmbt" aria-label="Main"> <starlight-menu-button class="astro-jif73yzw"> <button
+					aria-expanded="false" aria-label="Menu" aria-controls="starlight__sidebar"
+					class="sl-flex md:sl-hidden astro-jif73yzw"> <svg aria-hidden="true"
+						class="astro-jif73yzw astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24"
+						fill="currentColor" style="--sl-icon-size: 1em;">
+						<path
+							d="M3 8h18a1 1 0 1 0 0-2H3a1 1 0 0 0 0 2Zm18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z" />
+					</svg> </button> </starlight-menu-button>
+			<div id="starlight__sidebar" class="sidebar-pane astro-vrdttmbt">
+				<div class="sidebar-content sl-flex astro-vrdttmbt"> <sl-sidebar-state-persist data-hash="1a8acy5"
+						class="astro-kku4brbg">
+						<script>
+							(() => {
+								try {
+									if (!matchMedia('(min-width: 50em)').matches) return;
+									/** @type {HTMLElement | null} */
+									const target = document.querySelector('sl-sidebar-state-persist');
+									const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+									if (!target || !state || target.dataset.hash !== state.hash) return;
+									window._starlightScrollRestore = state.scroll;
+									customElements.define(
+										'sl-sidebar-restore',
+										class SidebarRestore extends HTMLElement {
+											connectedCallback() {
+												try {
+													const idx = parseInt(this.dataset.index || '');
+													const details = this.closest('details');
+													if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+												} catch { }
+											}
+										}
+									);
+								} catch { }
+							})();
+						</script>
+						<ul class="top-level astro-3ii7xxms">
+							<li class="astro-3ii7xxms">
+								<details open class="astro-3ii7xxms"> <sl-sidebar-restore
+										data-index="0"></sl-sidebar-restore>
+									<summary class="astro-3ii7xxms">
+										<div class="group-label astro-3ii7xxms"> <span
+												class="large astro-3ii7xxms">Docs</span> </div> <svg aria-hidden="true"
+											class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16"
+											viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;">
+											<path
+												d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z" />
+										</svg>
+									</summary>
+									<ul class="astro-3ii7xxms">
+										<li class="astro-3ii7xxms"> <a href="/docs/advertising/" class="astro-3ii7xxms">
+												<span class="astro-3ii7xxms">Advertising</span> </a> </li>
+										<li class="astro-3ii7xxms"> <a href="/docs/fashionunited-for-websites/"
+												class="astro-3ii7xxms"> <span class="astro-3ii7xxms">FashionUnited for
+													Websites - Embedding Jobs and News</span> </a> </li>
+										<li class="astro-3ii7xxms"> <a href="/docs/header/" class="astro-3ii7xxms">
+												<span class="astro-3ii7xxms">Header</span> </a> </li>
+										<li class="astro-3ii7xxms"> <a href="/docs/jobs/" class="astro-3ii7xxms"> <span
+													class="astro-3ii7xxms">Jobs</span> </a> </li>
+										<li class="astro-3ii7xxms"> <a href="/docs/logo/" class="astro-3ii7xxms"> <span
+													class="astro-3ii7xxms">Logo</span> </a> </li>
+										<li class="astro-3ii7xxms"> <a href="/docs/system-requirements-and-browsers/"
+												class="astro-3ii7xxms"> <span class="astro-3ii7xxms">System Requirements
+													and Browsers</span> </a> </li>
+										<li class="astro-3ii7xxms"> <a href="/docs/cloudflare/" class="astro-3ii7xxms">
+												<span class="astro-3ii7xxms">Cloudflare</span> </a> </li>
+									</ul>
+								</details>
+							</li>
+							<li class="astro-3ii7xxms">
+								<details open class="astro-3ii7xxms"> <sl-sidebar-restore
+										data-index="1"></sl-sidebar-restore>
+									<summary class="astro-3ii7xxms">
+										<div class="group-label astro-3ii7xxms"> <span
+												class="large astro-3ii7xxms">Marketplace</span> </div> <svg
+											aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16"
+											height="16" viewBox="0 0 24 24" fill="currentColor"
+											style="--sl-icon-size: 1.25rem;">
+											<path
+												d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z" />
+										</svg>
+									</summary>
+									<ul class="astro-3ii7xxms">
+										<li class="astro-3ii7xxms"> <a href="/docs/marketplace/" class="astro-3ii7xxms">
+												<span class="astro-3ii7xxms">Marketplace</span> </a> </li>
+										<li class="astro-3ii7xxms"> <a href="/docs/marketplace/brand-pages/"
+												class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Brand Pages</span>
+											</a> </li>
+										<li class="astro-3ii7xxms"> <a href="/docs/marketplace/categories/"
+												class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Product
+													Categories</span> </a> </li>
+										<li class="astro-3ii7xxms"> <a href="/docs/marketplace/colors/"
+												class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Product
+													Colors</span> </a> </li>
+										<li class="astro-3ii7xxms"> <a href="/docs/marketplace/getting-started/"
+												class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Getting
+													Started</span> </a> </li>
+										<li class="astro-3ii7xxms"> <a href="/docs/marketplace/graphql-api/"
+												class="astro-3ii7xxms"> <span class="astro-3ii7xxms">GraphQL API</span>
+											</a> </li>
+										<li class="astro-3ii7xxms"> <a href="/docs/marketplace/how-to-register/"
+												class="astro-3ii7xxms"> <span class="astro-3ii7xxms">How to
+													register</span> </a> </li>
+										<li class="astro-3ii7xxms"> <a href="/docs/marketplace/platforms/"
+												class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Platforms</span>
+											</a> </li>
+									</ul>
+								</details>
+							</li>
+							<li class="astro-3ii7xxms">
+								<details open class="astro-3ii7xxms"> <sl-sidebar-restore
+										data-index="2"></sl-sidebar-restore>
+									<summary class="astro-3ii7xxms">
+										<div class="group-label astro-3ii7xxms"> <span
+												class="large astro-3ii7xxms">Editorial</span> </div> <svg
+											aria-hidden="true" class="caret astro-3ii7xxms astro-c6vsoqas" width="16"
+											height="16" viewBox="0 0 24 24" fill="currentColor"
+											style="--sl-icon-size: 1.25rem;">
+											<path
+												d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z" />
+										</svg>
+									</summary>
+									<ul class="astro-3ii7xxms">
+										<li class="astro-3ii7xxms"> <a href="/docs/editorial-cheat-sheet/"
+												class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Editorial Cheat
+													Sheet</span> </a> </li>
+										<li class="astro-3ii7xxms"> <a href="/docs/editorial-style-guide/"
+												class="astro-3ii7xxms"> <span class="astro-3ii7xxms">Editorial Style
+													Guide</span> </a> </li>
+									</ul>
+								</details>
+							</li>
+							<li class="astro-3ii7xxms">
+								<details open class="astro-3ii7xxms"> <sl-sidebar-restore
+										data-index="3"></sl-sidebar-restore>
+									<summary class="astro-3ii7xxms">
+										<div class="group-label astro-3ii7xxms"> <span class="large astro-3ii7xxms">This
+												site</span> </div> <svg aria-hidden="true"
+											class="caret astro-3ii7xxms astro-c6vsoqas" width="16" height="16"
+											viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;">
+											<path
+												d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z" />
+										</svg>
+									</summary>
+									<ul class="astro-3ii7xxms">
+										<li class="astro-3ii7xxms"> <a href="/docs/style-guide/" class="astro-3ii7xxms">
+												<span class="astro-3ii7xxms">Style Guide</span> </a> </li>
+									</ul>
+								</details>
+							</li>
+						</ul>
+						<script>
+							(() => {
+								const scroller = document.getElementById('starlight__sidebar');
+								if (!window._starlightScrollRestore || !scroller) return;
+								scroller.scrollTop = window._starlightScrollRestore;
+								delete window._starlightScrollRestore;
+							})();
+						</script>
+					</sl-sidebar-state-persist>
+					<div class="md:sl-hidden">
+						<div class="mobile-preferences sl-flex astro-wu23bvmt">
+							<div class="sl-flex social-icons astro-wu23bvmt"> <a
+									href="https://github.com/fuww/developer.fashionunited.com" rel="me"
+									class="sl-flex astro-wy4te6ga"><span
+										class="sr-only astro-wy4te6ga">GitHub</span><svg aria-hidden="true"
+										class="astro-wy4te6ga astro-c6vsoqas" width="16" height="16" viewBox="0 0 24 24"
+										fill="currentColor" style="--sl-icon-size: 1em;">
+										<path
+											d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z" />
+									</svg> </a> </div> <starlight-theme-select> <label style="--sl-select-width: 6.25em"
+									class="astro-4yphtoen"> <span class="sr-only astro-4yphtoen">Select theme</span>
+									<svg aria-hidden="true" class="icon label-icon astro-4yphtoen astro-c6vsoqas"
+										width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+										style="--sl-icon-size: 1em;">
+										<path
+											d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z" />
+									</svg> <select value="auto" class="astro-4yphtoen">
+										<option value="dark" class="astro-4yphtoen">Dark</option>
+										<option value="light" class="astro-4yphtoen">Light</option>
+										<option value="auto" selected class="astro-4yphtoen">Auto</option>
+									</select> <svg aria-hidden="true" class="icon caret astro-4yphtoen astro-c6vsoqas"
+										width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+										style="--sl-icon-size: 1em;">
+										<path
+											d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z" />
+									</svg> </label> </starlight-theme-select>
+							<script>
+								StarlightThemeProvider.updatePickers();
+							</script>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="main-frame astro-vrdttmbt">
+			<div class="lg:sl-flex astro-67yu43on">
+				<aside class="right-sidebar-container astro-67yu43on">
+					<div class="right-sidebar astro-67yu43on">
+						<div class="lg:sl-hidden astro-pb3aqygn"><mobile-starlight-toc data-min-h="2" data-max-h="3"
+								class="astro-doynk5tl">
+								<nav aria-labelledby="starlight__on-this-page--mobile" class="astro-doynk5tl">
+									<details id="starlight__mobile-toc" class="astro-doynk5tl">
+										<summary id="starlight__on-this-page--mobile" class="sl-flex astro-doynk5tl">
+											<div class="toggle sl-flex astro-doynk5tl">On this page<svg
+													aria-hidden="true" class="caret astro-doynk5tl astro-c6vsoqas"
+													width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+													style="--sl-icon-size: 1rem;">
+													<path
+														d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z" />
+												</svg> </div><span class="display-current astro-doynk5tl"></span>
+										</summary>
+										<div class="dropdown astro-doynk5tl">
+											<ul class="isMobile astro-g2bywc46" style="--depth: 0;">
+												<li class="astro-g2bywc46" style="--depth: 0;"> <a href="#_top"
+														class="astro-g2bywc46" style="--depth: 0;"> <span
+															class="astro-g2bywc46" style="--depth: 0;">Overview</span>
+													</a> </li>
+											</ul>
+										</div>
+									</details>
+								</nav>
+							</mobile-starlight-toc></div>
+						<div class="right-sidebar-panel sl-hidden lg:sl-block astro-pb3aqygn">
+							<div class="sl-container astro-pb3aqygn"><starlight-toc data-min-h="2" data-max-h="3">
+									<nav aria-labelledby="starlight__on-this-page">
+										<h2 id="starlight__on-this-page">On this page</h2>
+										<ul class="astro-g2bywc46" style="--depth: 0;">
+											<li class="astro-g2bywc46" style="--depth: 0;"> <a href="#_top"
+													class="astro-g2bywc46" style="--depth: 0;"> <span
+														class="astro-g2bywc46" style="--depth: 0;">Overview</span> </a>
+											</li>
+										</ul>
+									</nav>
+								</starlight-toc></div>
+						</div>
+					</div>
+				</aside>
+				<div class="main-pane astro-67yu43on">
+					<main data-pagefind-body lang="en" dir="ltr" class="astro-bguv2lll">
+						<div class="content-panel astro-7nkwcw3z">
+							<div class="sl-container astro-7nkwcw3z">
+								<h1 id="_top" class="astro-j6tvhyss">Big header image please!</h1>
+							</div>
+						</div>
+						<div class="content-panel astro-7nkwcw3z">
+							<div class="sl-container astro-7nkwcw3z">
+								<div class="sl-markdown-content">
+									<p>As the year comes to an end, the IT team likes to share both recent and upcoming
+										updates to the FashionUnited platform in a small series of bite-sized blogposts.
+										We’re kicking off with a visual one.</p>
+									<p>We do a lot of customization for our customers, to make their jobs look the best
+										on our platform. In that, we’re quite unique actually, not many jobboards can do
+										this for them. (USP, sales team ;) As Dilan noticed some small changes could
+										improve looks big-time, we implemented them right away. Here’s one of the first
+										improvements Dilan has made in her first days at FashionUnited, the examples
+										show jobs where you can see the difference best.</p>
+									<!-- _**Click the links to see an actual job**_
 
 [Floris van Bommel](https://fashionunited.nl/modevacatures/assistent-storemanager-32-38-uur-batavia-stad-lelystad-1082715)
 ![Floris van Bommel Job][floris]
@@ -1026,7 +1672,28 @@ show jobs where you can see the difference best.</p>
 
 [New Yorker](https://fashionunited.nl/modevacatures/parttime-winkelmedewerker-25-30-uur-apeldoorn-1089662)
 ![New Yorker][new-yorker] -->
-<p><img src="https://imagedelivery.net/7czaBv4WuiSsJFxi583jUw/26094ea1-e395-4442-c929-5c75438e4e00/public" alt="floris" title="Floris van Bommel Job, CC courtesy of Joost van der Laan"></p>
-<p><img src="https://imagedelivery.net/7czaBv4WuiSsJFxi583jUw/d925ffd5-ff23-42f3-5895-962c4d190100/public" alt="we" title="We fashion Job, CC courtesy of Joost van der Laan"></p>
-<p><img src="https://imagedelivery.net/7czaBv4WuiSsJFxi583jUw/89833107-a5cb-45cc-40b3-d4e775fe1e00/public" alt="zeb" title="Zeb Job, CC courtesy of Joost van der Laan"></p>
-<p><img src="https://imagedelivery.net/7czaBv4WuiSsJFxi583jUw/0fbb588a-417c-4193-5f69-2c2417e69900/public" alt="new-yorker" title="New Yorker Job, CC courtesy of Joost van der Laan"></p> </div> <footer class="sl-flex astro-3yyafb3n"> <div class="meta sl-flex astro-3yyafb3n">   </div> <div class="pagination-links astro-u2l5gyhi" dir="ltr">   </div>   </footer>  </div> </div>   </main> </div> </div>  </div> </div>  </body></html>
+									<p><img src="https://imagedelivery.net/7czaBv4WuiSsJFxi583jUw/26094ea1-e395-4442-c929-5c75438e4e00/public"
+											alt="floris"
+											title="Floris van Bommel Job, CC courtesy of Joost van der Laan"></p>
+									<p><img src="https://imagedelivery.net/7czaBv4WuiSsJFxi583jUw/d925ffd5-ff23-42f3-5895-962c4d190100/public"
+											alt="we" title="We fashion Job, CC courtesy of Joost van der Laan"></p>
+									<p><img src="https://imagedelivery.net/7czaBv4WuiSsJFxi583jUw/89833107-a5cb-45cc-40b3-d4e775fe1e00/public"
+											alt="zeb" title="Zeb Job, CC courtesy of Joost van der Laan"></p>
+									<p><img src="https://imagedelivery.net/7czaBv4WuiSsJFxi583jUw/0fbb588a-417c-4193-5f69-2c2417e69900/public"
+											alt="new-yorker" title="New Yorker Job, CC courtesy of Joost van der Laan">
+									</p>
+								</div>
+								<footer class="sl-flex astro-3yyafb3n">
+									<div class="meta sl-flex astro-3yyafb3n"> </div>
+									<div class="pagination-links astro-u2l5gyhi" dir="ltr"> </div>
+								</footer>
+							</div>
+						</div>
+					</main>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
