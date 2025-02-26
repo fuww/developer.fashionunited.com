@@ -21,13 +21,9 @@ npm run dev # works without installing node, npm, pnpm globally. Nix packaga man
 
 ## Install Nix package manager on MacOS
 
-Install Nix with the Nix installer from Determinate Systems:
+Install Nix with the Nix installer from [Determinate Systems](https://docs.determinate.systems/getting-started/organizations).
 
-```bash
-curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
-```
-
-## Docker image
+## Docker image
 
 ```bash
 gcloud auth configure-docker europe-west1-docker.pkg.dev
