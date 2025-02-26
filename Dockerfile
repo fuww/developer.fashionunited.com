@@ -6,10 +6,10 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 
 FROM base AS prod-deps
-RUN npm install --omit=dev
+RUN npm install --omit=dev --legacy-peer-deps
 
 FROM base AS build-deps
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 FROM build-deps AS build
 COPY . .
