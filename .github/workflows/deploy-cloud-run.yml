@@ -1,0 +1,61 @@
+name: Deploy to Cloud Run
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: main
+  workflow_dispatch:
+
+env:
+  PROJECT_ID: 'developers-fashionunited-com'
+  REGION: 'europe-west1'
+  SERVICE_NAME: 'ssrastrofrontend'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: Google Auth
+      id: auth
+      uses: 'google-github-actions/auth@v2'
+      with:
+        project_id: ${{ env.PROJECT_ID }}
+        workload_identity_provider: '${{ secrets.WIF_PROVIDER }}'
+
+    - name: Configure Docker for GCP Artifact Registry
+      run: |
+        gcloud auth configure-docker europe-west1-docker.pkg.dev
+
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        push: true
+        tags: europe-west1-docker.pkg.dev/${{ env.PROJECT_ID }}/developersite/${{ env.SERVICE_NAME }}:latest
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+        build-args: |
+          NODE_ENV=production
+
+    - name: Deploy to Cloud Run
+      id: deploy
+      uses: google-github-actions/deploy-cloudrun@v2
+      with:
+        service: ${{ env.SERVICE_NAME }}
+        region: ${{ env.REGION }}
+        image: europe-west1-docker.pkg.dev/${{ env.PROJECT_ID }}/developersite/${{ env.SERVICE_NAME }}:latest
+        flags: '--port=4321 --allow-unauthenticated'
+
+    - name: Show Output
+      run: echo ${{ steps.deploy.outputs.url }}
