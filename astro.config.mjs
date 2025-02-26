@@ -21,7 +21,7 @@ export default defineConfig({
       Head: "./src/components/starlight/Head.astro"
     },
     title: 'FashionUnited Docs',
-    customCss: ['./src/tailwind.css', './src/styles/custom.css', '@fontsource/ibm-plex-mono/400.css', '@fontsource/ibm-plex-mono/600.css', '@fontsource-variable/inter', '@fontsource-variable/lora'],
+    customCss: ['./src/styles/custom.css', '@fontsource/ibm-plex-mono/400.css', '@fontsource/ibm-plex-mono/600.css', '@fontsource-variable/inter', '@fontsource-variable/lora'],
     social: {
       github: 'https://github.com/fuww/developer.fashionunited.com'
     },
@@ -90,7 +90,7 @@ export default defineConfig({
     // Disable the default base styles:
     applyBaseStyles: false
   }), partytown(), vtbot(), react()],
-  output: "hybrid",
+  output: "static",
   adapter: node({
     mode: "middleware"
   })
