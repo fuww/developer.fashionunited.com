@@ -1,0 +1,57 @@
++++
+author = 'Bram Strijbos'
+comments = false
+date = '2020-04-27'
+description = 'An overview of the main product categories.'
+images = ['jan-antonin-kolar-lRoX0shwjUQ-unsplash-2560x526.jpg']
+lastmod = '2020-06-08'
+publishdate = '2020-06-04'
+title = 'Product Categories'
+weight = 50
+toc = true
+
+[menu]
+  [menu.developers]
+    parent = 'Marketplace'
+    weight = 20
++++
+
+## FashionUnited Product Categories
+
+### Overview
+
+You can use the main categories that FashionUnited uses when setting up your
+feed. This is **not mandatory** of course -- we can map any category to ours as
+long as it's used consistently.
+
+- Accessories
+- Babywear
+- Bags
+- Beachwear
+- Blazers
+- Blouses
+- Cardigans
+- Casualwear
+- Clothing Accessories
+- Coats
+- Dresses
+- Footwear
+- Home & Garden
+- Hosiery
+- Jumpsuits
+- Nightwear
+- Outdoor Jackets
+- Pants
+- Rainwear
+- Shirts
+- Skirts
+- Suits
+- Sweaters
+- Swimwear
+- T-Shirts
+- Ties
+- Tops
+
+These are the main product categories we started out with. This will be expanded
+in the future. Please also check our
+[color overview](https://developer.fashionunited.com/docs/marketplace/colors/).

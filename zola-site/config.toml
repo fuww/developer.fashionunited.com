@@ -1,0 +1,20 @@
+base_url = "https://developer.fashionunited.com"
+title = "FashionUnited Developer Portal"
+compile_sass = true
+build_search_index = true
+theme = "easydocs"
+
+[markdown]
+highlight_code = true
+highlight_theme = "base16-ocean-light"
+
+[extra]
+logo = "/logo.webp"
+favicon = "/favicon.ico"
+easydocs_logo_always_clickable = true
+easydocs_uglyurls = false
+easydocs_heading_threshold = 3
+
+# Analytics
+plausible_domain = "developer.fashionunited.com"
+plausible_script = "https://plausible.io/js/script.js"
