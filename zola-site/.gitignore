@@ -1,0 +1,5 @@
+node_modules/
+public/
+.sass-cache/
+static/css/tailwind.css
+package-lock.json

@@ -28,13 +28,31 @@ This is the Zola-based static site version of the FashionUnited Developer Portal
 
 ## Development
 
-Run the development server:
+Install dependencies and run the development server:
 
 ```bash
-zola serve
+# Install npm dependencies (first time only)
+npm install
+
+# Start development server (Tailwind CSS + Zola)
+npm start
+
+# Or if you need to rebuild CSS first
+npm run start:build
 ```
 
 The site will be available at `http://127.0.0.1:1111`
+
+### Alternative methods:
+
+```bash
+# Using the dev script
+./dev.sh
+
+# Or run services separately
+# Terminal 1: npm run watch:css
+# Terminal 2: zola serve
+```
 
 ## Building
 

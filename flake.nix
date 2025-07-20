@@ -31,6 +31,7 @@
               nodejs_20
               corepack_20
               nixpkgs-fmt
+              zola
           ];
         };
       });

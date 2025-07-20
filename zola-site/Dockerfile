@@ -1,8 +1,19 @@
+# Node stage for building Tailwind CSS
+FROM node:18-alpine as node-builder
+
+WORKDIR /app
+COPY package.json package-lock.json* ./
+RUN npm ci || npm install
+
+COPY . .
+RUN npm run build:css
+
 # Build stage
 FROM ghcr.io/getzola/zola:v0.18.0 as builder
 
 WORKDIR /app
 COPY . .
+COPY --from=node-builder /app/static/css/tailwind.css ./static/css/
 
 # Build the site
 RUN zola build
