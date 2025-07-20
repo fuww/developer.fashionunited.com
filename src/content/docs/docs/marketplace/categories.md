@@ -1,19 +1,19 @@
----
-title: "Product Categories"
-author: Bram Strijbos
-description: "An overview of the main product categories."
-comments: false
-date: 2020-04-27
-publishdate: 2020-06-04
-lastmod: 2020-06-08
-toc: true
-menu:
-  developers:
-    parent: 'Marketplace'
-    weight: 20
-images:
-  - "jan-antonin-kolar-lRoX0shwjUQ-unsplash-2560x526.jpg"
----
++++
+author = 'Bram Strijbos'
+comments = false
+date = '2020-04-27'
+description = 'An overview of the main product categories.'
+images = ['jan-antonin-kolar-lRoX0shwjUQ-unsplash-2560x526.jpg']
+lastmod = '2020-06-08'
+publishdate = '2020-06-04'
+title = 'Product Categories'
+toc = true
+
+[menu]
+  [menu.developers]
+    parent = 'Marketplace'
+    weight = 20
++++
 
 ## FashionUnited Product Categories
 

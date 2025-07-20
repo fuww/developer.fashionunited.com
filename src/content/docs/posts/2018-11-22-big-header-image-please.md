@@ -1,20 +1,14 @@
----
-title: "Big header image please!"
-description: "Better looking job templates in the jobboard."
-summary: "Better looking job templates in the jobboard."
-author: "Joost van der Laan"
-date: 2018-11-22 13:07:01+00:00
-published_at: 2018-11-22
-categories:
-  - "IT Update"
-  - "Product development"
-tags:
-  - "IT update"
-  - "hugo"
-  - "blog"
-images:
-  - "floris.png"
----
++++
+author = 'Joost van der Laan'
+categories = ['IT Update', 'Product development']
+date = '2018-11-22 13:07:01+00:00'
+description = 'Better looking job templates in the jobboard.'
+images = ['floris.png']
+published_at = '2018-11-22'
+summary = 'Better looking job templates in the jobboard.'
+tags = ['IT update', 'hugo', 'blog']
+title = 'Big header image please!'
++++
 
 As the year comes to an end, the IT team likes to share both recent and upcoming
 updates to the FashionUnited platform in a small series of bite-sized blogposts.

@@ -1,19 +1,14 @@
----
-title: "Improved job scheduling!"
-description: "Getting jobs online faster, while not looking like a 'BrandX-only' jobboard"
-summary: "Getting jobs online faster, while not looking like a 'BrandX-only' jobboard"
-author: "Joost van der Laan"
-date: 2018-11-22 13:07:01+00:00
-published_at: 2018-11-22
-categories:
-  - "IT Update"
-  - "Product development"
-tags:
-  - "IT update"
-  - "blog"
-images:
-  - "job-list-nike.png"
----
++++
+author = 'Joost van der Laan'
+categories = ['IT Update', 'Product development']
+date = '2018-11-22 13:07:01+00:00'
+description = "Getting jobs online faster, while not looking like a 'BrandX-only' jobboard"
+images = ['job-list-nike.png']
+published_at = '2018-11-22'
+summary = "Getting jobs online faster, while not looking like a 'BrandX-only' jobboard"
+tags = ['IT update', 'blog']
+title = 'Improved job scheduling!'
++++
 
 Big clients with a lot of jobs. We've got a few, but weren't always happy with
 how the jobboard looked. One Francesca's having a lot of jobs in a feed can make

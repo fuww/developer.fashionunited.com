@@ -1,18 +1,18 @@
----
-title: "Platforms"
-author: Joost van der Laan
-comments: false
-date: 2020-07-17
-publishdate: 2020-07-17
-lastmod: 2021-06-15
-toc: true
-menu:
-  developers:
-    parent: 'Marketplace'
-    weight: 20
-images:
-  - "caroline-attwood-2lYhQry-Jxc-unsplash-header.jpg"
----
++++
+author = 'Joost van der Laan'
+comments = false
+date = '2020-07-17'
+images = ['caroline-attwood-2lYhQry-Jxc-unsplash-header.jpg']
+lastmod = '2021-06-15'
+publishdate = '2020-07-17'
+title = 'Platforms'
+toc = true
+
+[menu]
+  [menu.developers]
+    parent = 'Marketplace'
+    weight = 20
++++
 
 ## Platform support
 

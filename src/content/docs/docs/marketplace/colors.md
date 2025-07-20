@@ -1,19 +1,19 @@
----
-title: "Product Colors"
-author: Bram Strijbos
-description: "An overview of the main product colors."
-comments: false
-date: 2020-11-16
-publishdate: 2020-11-16
-lastmod: 2020-11-26
-toc: true
-menu:
-  developers:
-    parent: 'Marketplace'
-    weight: 20
-images:
-  - "robert-katzki-jbtfM0XBeRc-unsplash-2560x526-header.jpg"
----
++++
+author = 'Bram Strijbos'
+comments = false
+date = '2020-11-16'
+description = 'An overview of the main product colors.'
+images = ['robert-katzki-jbtfM0XBeRc-unsplash-2560x526-header.jpg']
+lastmod = '2020-11-26'
+publishdate = '2020-11-16'
+title = 'Product Colors'
+toc = true
+
+[menu]
+  [menu.developers]
+    parent = 'Marketplace'
+    weight = 20
++++
 
 ## FashionUnited Product Colors
 

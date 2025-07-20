@@ -1,21 +1,15 @@
----
-title: "Small steps big changes"
-description: "Taking small steps is key when implementing changes, like a new design."
-summary: "Taking small steps is key when implementing changes, like a new design."
-author: "Joost van der Laan"
-authors:
-  - "Joost van der Laan"
-date: 2019-05-22 10:07:01+00:00
-published_at: 2019-05-22
-categories:
-  - "IT Update"
-  - "Product development"
-tags:
-  - "IT update"
-  - "blog"
-images:
-  - gitlab_workflow_example_11_9.png
----
++++
+author = 'Joost van der Laan'
+authors = ['Joost van der Laan']
+categories = ['IT Update', 'Product development']
+date = '2019-05-22 10:07:01+00:00'
+description = 'Taking small steps is key when implementing changes, like a new design.'
+images = ['gitlab_workflow_example_11_9.png']
+published_at = '2019-05-22'
+summary = 'Taking small steps is key when implementing changes, like a new design.'
+tags = ['IT update', 'blog']
+title = 'Small steps big changes'
++++
 
 The internet is constantly moving, and to keep up, you need to change things.
 Not once, not twice, but constantly. As the saying goes, "The only constant is

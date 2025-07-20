@@ -1,20 +1,21 @@
----
-title: Marketplace
-author: Joost van der Laan
-comments: false
-date: 2020-04-27
-publishdate: 2020-06-04
-lastmod: 2020-06-04
-toc: true
-menu:
-  developers:
-    weight: 20
-images:
-  - "lisheng-chang-M2524ncJQ40-unsplash-2560x526.jpg"
-resources:
-  - src: documents/example_en.csv
-    title: Example CSV
----
++++
+author = 'Joost van der Laan'
+comments = false
+date = '2020-04-27'
+images = ['lisheng-chang-M2524ncJQ40-unsplash-2560x526.jpg']
+lastmod = '2020-06-04'
+publishdate = '2020-06-04'
+title = 'Marketplace'
+toc = true
+
+[menu]
+  [menu.developers]
+    weight = 20
+
+[[resources]]
+  src = 'documents/example_en.csv'
+  title = 'Example CSV'
++++
 
 ## Introducing Marketplace
 

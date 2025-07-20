@@ -1,9 +1,9 @@
----
-title: "Editorial cheat sheet"
-author: Joost van der Laan
-comments: false
-date: 2019-10-25 07:07:01+00:00
----
++++
+author = 'Joost van der Laan'
+comments = false
+date = '2019-10-25 07:07:01+00:00'
+title = 'Editorial cheat sheet'
++++
 
 ## How to use the news upload form &ndash; Video
 

@@ -1,22 +1,16 @@
----
-title: "We have rebuilt our site, and you didn't even notice"
-description: "In preparation of the design upgrade, a lot has already changed."
-summary: "In preparation of the design upgrade, a lot has already changed."
-author: "Joost van der Laan"
-authors:
-  - "Joost van der Laan"
-headerimage: true
-date: 2018-11-22 13:07:01+00:00
-published_at: 2018-11-22
-categories:
-  - "IT Update"
-  - "Product development"
-tags:
-  - "IT update"
-  - "blog"
-images:
-  - "react-compared.jpg"
----
++++
+author = 'Joost van der Laan'
+authors = ['Joost van der Laan']
+categories = ['IT Update', 'Product development']
+date = '2018-11-22 13:07:01+00:00'
+description = 'In preparation of the design upgrade, a lot has already changed.'
+headerimage = true
+images = ['react-compared.jpg']
+published_at = '2018-11-22'
+summary = 'In preparation of the design upgrade, a lot has already changed.'
+tags = ['IT update', 'blog']
+title = "We have rebuilt our site, and you didn't even notice"
++++
 
 In preparation of the design upgrade we're working on, a lot has already
 changed. Remember the blog post about experiments with GraphQL and React, back

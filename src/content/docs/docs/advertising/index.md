@@ -1,8 +1,8 @@
----
-title: Advertising
-author: Joost van der Laan
-description: "Advertising | Developer documentation"
----
++++
+author = 'Joost van der Laan'
+description = 'Advertising | Developer documentation'
+title = 'Advertising'
++++
 
 ## Branding Page
 

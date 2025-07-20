@@ -1,7 +1,7 @@
----
-title: "FashionUnited for Websites"
-author: Joost van der Laan
----
++++
+author = 'Joost van der Laan'
+title = 'FashionUnited for Websites'
++++
 
 Fashionunited for Websites is a suite of embeddable widgets, buttons, and
 client-side scripting tools to integrate Fashionunited and display jobs on your

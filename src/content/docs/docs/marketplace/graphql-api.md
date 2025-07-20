@@ -1,14 +1,14 @@
----
-title: "GraphQL API"
-comments: false
-toc: true
-images:
-  - "florian-krumm-yLDabpoCL3s-unsplash-5120x1051.jpg"
-menu:
-  developers:
-    parent: 'Marketplace'
-    weight: 99
----
++++
+comments = false
+images = ['florian-krumm-yLDabpoCL3s-unsplash-5120x1051.jpg']
+title = 'GraphQL API'
+toc = true
+
+[menu]
+  [menu.developers]
+    parent = 'Marketplace'
+    weight = 99
++++
 
 ## About GraphQL
 

@@ -1,7 +1,7 @@
----
-title: Header
-author: Joost van der Laan
----
++++
+author = 'Joost van der Laan'
+title = 'Header'
++++
 
 ## Quality Assurance
 

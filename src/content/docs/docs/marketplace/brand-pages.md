@@ -1,14 +1,14 @@
----
-title: Brand Pages
-images:
-  - "alexandru-tugui--inuQpBGbgI-unsplash-2560x526.jpg"
-background_position: "50% 10%"
-menu:
-  developers:
-    parent: 'Marketplace'
-    weight: 20
-toc: true
----
++++
+background_position = '50% 10%'
+images = ['alexandru-tugui--inuQpBGbgI-unsplash-2560x526.jpg']
+title = 'Brand Pages'
+toc = true
+
+[menu]
+  [menu.developers]
+    parent = 'Marketplace'
+    weight = 20
++++
 
 To help you get your brand page up & running as quickly and smoothly as
 possible, we need the following from you:
@@ -64,13 +64,6 @@ Please provide a logo in a vector oriented format such as .svg, .eps or .ai.
 Preferably send us an .svg file. But we can also create one from the other
 mentioned formats. For more information see our
 [Logo Requirements](https://developer.fashionunited.com/docs/logo/).
-
-### Example
-
-See an example here.
-
-{{< amp-image src="example-fish-fred.jpg" width="893" height="2879"
-layout="responsive" >}}
 
 Please also have a look at some
 [Employer Branding Page examples](https://fashionunited.com/company/recruitment-solutions/employer-branding/).

@@ -1,13 +1,13 @@
----
-title: "System requirements and browsers"
-images: 
-  - "hero-create.jpg"
-background_position: "50% 10%"
-menu:
-  developers:
-    weight: 20
-toc: true
----
++++
+background_position = '50% 10%'
+images = ['hero-create.jpg']
+title = 'System requirements and browsers'
+toc = true
+
+[menu]
+  [menu.developers]
+    weight = 20
++++
 
 The latest version of FashionUnited platform is compatible with the following
 operating systems and browsers.

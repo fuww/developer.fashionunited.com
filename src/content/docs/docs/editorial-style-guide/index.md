@@ -1,9 +1,9 @@
----
-title: "Editorial style guide"
-author: Joost van der Laan
-comments: false
-date: 2019-10-25 07:07:01+00:00
----
++++
+author = 'Joost van der Laan'
+comments = false
+date = '2019-10-25 07:07:01+00:00'
+title = 'Editorial style guide'
++++
 
 ### Article structure
 

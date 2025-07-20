@@ -1,18 +1,18 @@
----
-title: "Getting Started"
-author: Joost van der Laan
-comments: false
-date: 2020-04-27
-publishdate: 2020-06-04
-lastmod: 2020-06-08
-toc: true
-menu:
-  developers:
-    parent: 'Marketplace'
-    weight: 20
-images:
-  - "jezael-melgoza-HYQvV8wWX18-unsplash-2560x526.jpg"
----
++++
+author = 'Joost van der Laan'
+comments = false
+date = '2020-04-27'
+images = ['jezael-melgoza-HYQvV8wWX18-unsplash-2560x526.jpg']
+lastmod = '2020-06-08'
+publishdate = '2020-06-04'
+title = 'Getting Started'
+toc = true
+
+[menu]
+  [menu.developers]
+    parent = 'Marketplace'
+    weight = 20
++++
 
 ## Getting started with Marketplace
 

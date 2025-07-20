@@ -1,7 +1,7 @@
----
-title: "Posting jobs, feed integration via JSON or XML"
-author: Joost van der Laan
----
++++
+author = 'Joost van der Laan'
+title = 'Posting jobs, feed integration via JSON or XML'
++++
 
 # Introduction
 

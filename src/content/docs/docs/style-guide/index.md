@@ -1,8 +1,8 @@
----
-title: "Styleguide"
-author: Joost van der Laan
-date: 2020-08-04 13:23:01+00:00
----
++++
+author = 'Joost van der Laan'
+date = '2020-08-04 13:23:01+00:00'
+title = 'Styleguide'
++++
 
 ## Styleguide
 

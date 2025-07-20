@@ -1,14 +1,14 @@
----
-title: "How to register"
-comments: false
-toc: true
-menu:
-  developers:
-    parent: 'Marketplace'
-    weight: 20
-images:
-  - "newsletter-bg.jpg"
----
++++
+comments = false
+images = ['newsletter-bg.jpg']
+title = 'How to register'
+toc = true
+
+[menu]
+  [menu.developers]
+    parent = 'Marketplace'
+    weight = 20
++++
 
 ## How to register your brand for the FashionUnited B2B Marketplace?
 

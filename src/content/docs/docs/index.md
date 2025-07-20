@@ -1,6 +1,6 @@
----
-title: Introduction
-author: Joost van der Laan
----
++++
+author = 'Joost van der Laan'
+title = 'Introduction'
++++
 
 ## Introduction

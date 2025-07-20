@@ -1,7 +1,7 @@
----
-title: Logo
-author: Joost van der Laan
----
++++
+author = 'Joost van der Laan'
+title = 'Logo'
++++
 
 ## Quality Assurance
 
