@@ -2,7 +2,7 @@ base_url = "https://developer.fashionunited.com"
 title = "FashionUnited Developer Portal"
 compile_sass = true
 build_search_index = true
-theme = "easydocs"
+theme = "tailwind-docs"
 
 [markdown]
 highlight_code = true
