@@ -9,7 +9,7 @@ This page demonstrates the typographic rhythm and scale implemented in our docum
 
 ## Heading Hierarchy
 
-The heading hierarchy uses the Lora serif font for distinction and follows a consistent scale:
+The heading hierarchy uses the Inter sans-serif font with varying weights and follows a consistent scale:
 
 ### Third-Level Heading
 

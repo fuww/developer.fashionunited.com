@@ -215,6 +215,7 @@ module.exports = {
               lineHeight: theme('fontSize.4xl')[1].lineHeight,
               marginTop: theme('spacing.12'),
               marginBottom: theme('spacing.6'),
+              fontFamily: theme('fontFamily.sans').join(', '),
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
             },
@@ -223,6 +224,7 @@ module.exports = {
               lineHeight: theme('fontSize.3xl')[1].lineHeight,
               marginTop: theme('spacing.12'),
               marginBottom: theme('spacing.6'),
+              fontFamily: theme('fontFamily.sans').join(', '),
               fontWeight: '600',
               letterSpacing: theme('letterSpacing.tight'),
             },
@@ -231,6 +233,7 @@ module.exports = {
               lineHeight: theme('fontSize.2xl')[1].lineHeight,
               marginTop: theme('spacing.8'),
               marginBottom: theme('spacing.4'),
+              fontFamily: theme('fontFamily.sans').join(', '),
               fontWeight: '600',
             },
             h4: {
@@ -238,6 +241,7 @@ module.exports = {
               lineHeight: theme('fontSize.xl')[1].lineHeight,
               marginTop: theme('spacing.6'),
               marginBottom: theme('spacing.4'),
+              fontFamily: theme('fontFamily.sans').join(', '),
               fontWeight: '600',
             },
             

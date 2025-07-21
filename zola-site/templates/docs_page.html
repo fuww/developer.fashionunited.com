@@ -1,0 +1,426 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<!-- Override Tabi's content wrapper -->
+<style>
+/* Critical: Override Tabi's default content styles */
+body > .content {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Ensure proper layout structure */
+.docs-wrapper {
+    display: flex !important;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 0;
+    align-items: stretch;
+    min-height: calc(100vh - 8rem);
+}
+
+/* Fixed sidebar */
+.docs-sidebar {
+    flex: 0 0 280px;
+    width: 280px;
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 4rem);
+    overflow-y: auto;
+    background-color: var(--bg-1, #f9fafb);
+    border-right: 1px solid var(--divider, #e5e7eb);
+    padding: 2rem 0;
+}
+
+/* Main content area */
+.docs-main {
+    flex: 1;
+    min-width: 0; /* Prevent flex item from overflowing */
+    padding: 2rem 3rem;
+    overflow-x: hidden;
+    max-width: 900px;
+}
+
+.docs-nav-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.docs-nav-title a {
+    color: #c80044;
+    text-decoration: none;
+}
+
+.docs-nav-title a:hover {
+    text-decoration: underline;
+}
+
+.docs-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.docs-nav-item {
+    margin: 0;
+    list-style: none;
+}
+
+.docs-nav-link {
+    display: block;
+    padding: 0.5rem 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.docs-nav-link:hover {
+    background-color: var(--bg-2, #f3f4f6);
+    color: #c80044;
+}
+
+.docs-nav-link.active {
+    background-color: var(--bg-2, #f3f4f6);
+    border-left-color: #c80044;
+    color: #c80044;
+    font-weight: 500;
+}
+
+.docs-nav-section {
+    margin-top: 1.5rem;
+    list-style: none;
+}
+
+.docs-nav-section-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #6b7280;
+}
+
+.docs-nav-sublist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.docs-nav-sublist .docs-nav-link {
+    padding-left: 2.5rem;
+    font-size: 0.95rem;
+}
+
+/* Content styles */
+.docs-article h1 {
+    margin-bottom: 1rem;
+}
+
+.docs-description {
+    font-size: 1.25rem;
+    color: #6b7280;
+    margin: 0 0 2rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--divider, #e5e7eb);
+}
+
+/* Table of Contents */
+.docs-toc {
+    background-color: var(--bg-1, #f9fafb);
+    border: 1px solid var(--divider, #e5e7eb);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.docs-toc-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 1rem 0;
+    color: #6b7280;
+}
+
+.docs-toc ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.docs-toc ul ul {
+    padding-left: 1.5rem;
+    margin-top: 0.25rem;
+}
+
+.docs-toc li {
+    margin-bottom: 0.5rem;
+}
+
+.docs-toc a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.docs-toc a:hover {
+    color: #c80044;
+}
+
+/* Page content typography */
+.docs-page-content {
+    margin: 2rem 0;
+}
+
+.docs-page-content h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--divider, #e5e7eb);
+}
+
+.docs-page-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.docs-page-content p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.docs-page-content ul,
+.docs-page-content ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+.docs-page-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+}
+
+.docs-page-content pre {
+    margin: 1.5rem 0;
+}
+
+.docs-page-content blockquote {
+    border-left: 4px solid #c80044;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: #6b7280;
+}
+
+/* Previous/Next Navigation */
+.docs-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--divider, #e5e7eb);
+}
+
+.docs-prev,
+.docs-next {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.docs-prev:hover,
+.docs-next:hover {
+    background-color: var(--bg-1, #f9fafb);
+    color: #c80044;
+}
+
+.docs-pagination-arrow {
+    font-size: 1.5rem;
+}
+
+.docs-pagination-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+}
+
+.docs-pagination-title {
+    font-weight: 500;
+}
+
+.docs-next {
+    text-align: right;
+}
+
+/* Dark mode */
+[data-theme="dark"] .docs-sidebar {
+    background-color: #1f2937;
+}
+
+[data-theme="dark"] .docs-toc {
+    background-color: #1f2937;
+}
+
+[data-theme="dark"] .docs-nav-section-title,
+[data-theme="dark"] .docs-description,
+[data-theme="dark"] .docs-toc-title,
+[data-theme="dark"] .docs-pagination-label,
+[data-theme="dark"] .docs-page-content blockquote {
+    color: #9ca3af;
+}
+
+[data-theme="dark"] .docs-prev:hover,
+[data-theme="dark"] .docs-next:hover {
+    background-color: #1f2937;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .docs-wrapper {
+        flex-direction: column;
+    }
+    
+    .docs-sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+        max-height: 300px;
+        border-right: none;
+        border-bottom: 1px solid var(--divider, #e5e7eb);
+    }
+    
+    .docs-main {
+        padding: 1.5rem;
+    }
+    
+    .docs-pagination {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+</style>
+
+<!-- Documentation Layout -->
+<div class="docs-wrapper">
+    <!-- Sidebar Navigation -->
+    <aside class="docs-sidebar">
+        <nav class="docs-nav">
+            {% set section = get_section(path=page.ancestors[1] | default(value=page.ancestors[0])) %}
+            <h3 class="docs-nav-title">
+                <a href="{{ section.permalink | safe }}">{{ section.title }}</a>
+            </h3>
+            
+            <!-- List all pages in this section -->
+            <ul class="docs-nav-list">
+                {% for sibling_page in section.pages %}
+                <li class="docs-nav-item">
+                    <a href="{{ sibling_page.permalink | safe }}" 
+                       class="docs-nav-link {% if current_url == sibling_page.permalink %}active{% endif %}">
+                        {{ sibling_page.title }}
+                    </a>
+                </li>
+                {% endfor %}
+                
+                <!-- Check for subsections -->
+                {% for subsection_path in section.subsections | sort %}
+                    {% set subsection = get_section(path=subsection_path) %}
+                    <li class="docs-nav-section">
+                        <div class="docs-nav-section-title">{{ subsection.title }}</div>
+                        <ul class="docs-nav-sublist">
+                            {% for sibling_page in subsection.pages %}
+                            <li class="docs-nav-item">
+                                <a href="{{ sibling_page.permalink | safe }}" 
+                                   class="docs-nav-link {% if current_url == sibling_page.permalink %}active{% endif %}">
+                                    {{ sibling_page.title }}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="docs-main">
+        <article class="docs-article">
+            {{ macros_page_header::page_header(
+                title=page.title, 
+                is_draft=page.draft, 
+                show_reading_time=false, 
+                show_date=false, 
+                show_update_date=false, 
+                show_author=false
+            ) }}
+
+            {% if page.description %}
+            <p class="docs-description">{{ page.description }}</p>
+            {% endif %}
+
+            <!-- Table of Contents -->
+            {% if page.toc and page.toc | length > 0 %}
+                <div class="docs-toc">
+                    <h4 class="docs-toc-title">On this page</h4>
+                    <ul>
+                    {% for header in page.toc %}
+                        <li>
+                            <a href="#{{ header.id }}">{{ header.title }}</a>
+                            {% if header.children %}
+                                <ul>
+                                {% for child in header.children %}
+                                    <li><a href="#{{ child.id }}">{{ child.title }}</a></li>
+                                {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+            <!-- Page Content -->
+            <div class="docs-page-content">
+                {{ page.content | safe }}
+            </div>
+
+            <!-- Previous/Next Navigation -->
+            <nav class="docs-pagination">
+                {% if page.lighter %}
+                <a href="{{ page.lighter.permalink | safe }}" class="docs-prev">
+                    <span class="docs-pagination-arrow">←</span>
+                    <div>
+                        <div class="docs-pagination-label">Previous</div>
+                        <div class="docs-pagination-title">{{ page.lighter.title }}</div>
+                    </div>
+                </a>
+                {% else %}
+                <div></div>
+                {% endif %}
+                
+                {% if page.heavier %}
+                <a href="{{ page.heavier.permalink | safe }}" class="docs-next">
+                    <div>
+                        <div class="docs-pagination-label">Next</div>
+                        <div class="docs-pagination-title">{{ page.heavier.title }}</div>
+                    </div>
+                    <span class="docs-pagination-arrow">→</span>
+                </a>
+                {% else %}
+                <div></div>
+                {% endif %}
+            </nav>
+        </article>
+    </main>
+</div>
+{% endblock main_content %}

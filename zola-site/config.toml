@@ -1,20 +1,112 @@
 base_url = "https://developer.fashionunited.com"
 title = "FashionUnited Developer Portal"
+description = "Technical documentation, API references, and developer resources for FashionUnited."
+author = "FashionUnited"
 compile_sass = true
 build_search_index = true
-theme = "tailwind-docs"
+theme = "tabi"
+generate_feeds = true
+
+taxonomies = [
+    {name = "tags", feed = true},
+]
+
+[search]
+include_title = true
+include_description = true
+include_path = true
+include_content = true
+index_format = "elasticlunr_json"
 
 [markdown]
 highlight_code = true
-highlight_theme = "base16-ocean-light"
+highlight_theme = "css"
+bottom_footnotes = true
+smart_punctuation = true
+external_links_class = "external"
 
 [extra]
-logo = "/logo.webp"
-favicon = "/favicon.ico"
-easydocs_logo_always_clickable = true
-easydocs_uglyurls = false
-easydocs_heading_threshold = 3
+# Use sans-serif everywhere (matching original site)
+override_serif_with_sans = true
+
+# Enable JavaScript theme toggler
+theme_switcher = true
+default_theme = ""
+
+# FashionUnited branding color
+browser_theme_color = "#c80044"
+
+# Choose the colourscheme (skin) for the theme
+skin = "red"
+
+# Remote repository
+remote_repository_url = "https://github.com/fashionunited"
+remote_repository_git_platform = "github"
+remote_repository_branch = "main"
+show_remote_changes = false
+show_remote_source = false
+
+# Content settings
+copy_button = true
+code_block_name_links = false
+show_author = false
+show_reading_time = false
+show_date = true
+toc = false
+
+# Site structure
+menu = [
+    { name = "docs", url = "docs", trailing_slash = true },
+    { name = "marketplace", url = "marketplace", trailing_slash = true },
+    { name = "editorial", url = "editorial", trailing_slash = true },
+    { name = "blog", url = "blog", trailing_slash = true },
+    { name = "archive", url = "archive", trailing_slash = true },
+    { name = "tags", url = "tags", trailing_slash = true },
+]
+
+# RSS feed
+feed_icon = true
+full_content_in_feed = false
+
+# Footer
+email = "support@fashionunited.com"
+encode_plaintext_email = true
+
+socials = [
+    { name = "github", url = "https://github.com/fashionunited", icon = "github" },
+]
+
+footer_menu = [
+    {url = "privacy", name = "Privacy", trailing_slash = true},
+    {url = "terms", name = "Terms", trailing_slash = true},
+    {url = "https://fashionunited.com", name = "FashionUnited", trailing_slash = false},
+]
+
+copyright = "$TITLE © $CURRENT_YEAR $AUTHOR"
+
+# Hide the "Powered by" footer credit
+footer_credit = false
+
+# Security
+enable_csp = true
+allowed_domains = [
+    { directive = "font-src", domains = ["'self'", "data:"] },
+    { directive = "img-src", domains = ["'self'", "https://*", "data:"] },
+    { directive = "media-src", domains = ["'self'"] },
+    { directive = "script-src", domains = ["'self'", "https://plausible.io"] },
+    { directive = "style-src", domains = ["'self'"] },
+    { directive = "frame-src", domains = ["player.vimeo.com", "https://www.youtube-nocookie.com"] },
+]
 
 # Analytics
-plausible_domain = "developer.fashionunited.com"
-plausible_script = "https://plausible.io/js/script.js"
+[extra.analytics]
+service = "plausible"
+id = "developer.fashionunited.com"
+
+# Logo and favicon
+favicon = "/favicon.ico"
+# social_media_card = "/logo.webp"
+
+# Performance
+enable_subset = true
+custom_subset = false

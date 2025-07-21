@@ -3,12 +3,9 @@
   "version": "1.0.0",
   "description": "FashionUnited Developer Portal - Zola Site",
   "scripts": {
-    "build:css": "tailwindcss -i ./styles/input.css -o ./static/css/tailwind.css",
-    "watch:css": "tailwindcss -i ./styles/input.css -o ./static/css/tailwind.css --watch",
-    "build": "npm run build:css && echo 'Run zola build separately'",
-    "dev": "concurrently \"npm run watch:css\" \"echo 'Run zola serve in another terminal'\"",
-    "start": "concurrently --names \"CSS,ZOLA\" --prefix-colors \"blue,green\" \"npm run watch:css\" \"zola serve\"",
-    "start:build": "npm run build:css && npm run start"
+    "start": "zola serve",
+    "build": "zola build",
+    "dev": "zola serve"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",

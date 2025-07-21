@@ -1,0 +1,289 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<!-- Override Tabi's content wrapper -->
+<style>
+/* Critical: Override Tabi's default content styles */
+body > .content {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Ensure proper layout structure */
+.docs-wrapper {
+    display: flex !important;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 0;
+    align-items: stretch;
+    min-height: calc(100vh - 8rem);
+}
+
+/* Fixed sidebar */
+.docs-sidebar {
+    flex: 0 0 280px;
+    width: 280px;
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 4rem);
+    overflow-y: auto;
+    background-color: var(--bg-1, #f9fafb);
+    border-right: 1px solid var(--divider, #e5e7eb);
+    padding: 2rem 0;
+}
+
+/* Main content area */
+.docs-main {
+    flex: 1;
+    min-width: 0; /* Prevent flex item from overflowing */
+    padding: 2rem 3rem;
+    overflow-x: hidden;
+}
+
+.docs-nav-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0 1.5rem;
+    margin-bottom: 1rem;
+    color: #c80044;
+}
+
+.docs-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.docs-nav-item {
+    margin: 0;
+    list-style: none;
+}
+
+.docs-nav-link {
+    display: block;
+    padding: 0.5rem 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.docs-nav-link:hover {
+    background-color: var(--bg-2, #f3f4f6);
+    color: #c80044;
+}
+
+.docs-nav-link.active {
+    background-color: var(--bg-2, #f3f4f6);
+    border-left-color: #c80044;
+    color: #c80044;
+    font-weight: 500;
+}
+
+.docs-nav-section {
+    margin-top: 1.5rem;
+    list-style: none;
+}
+
+.docs-nav-section-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #6b7280;
+}
+
+.docs-nav-sublist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.docs-nav-sublist .docs-nav-link {
+    padding-left: 2.5rem;
+    font-size: 0.95rem;
+}
+
+/* Content styles */
+.docs-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--divider, #e5e7eb);
+}
+
+.docs-header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
+}
+
+.docs-description {
+    font-size: 1.25rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.docs-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.docs-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.docs-card {
+    padding: 1.5rem;
+    background-color: var(--bg-1, #f9fafb);
+    border: 1px solid var(--divider, #e5e7eb);
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    height: 100%;
+}
+
+.docs-card:hover {
+    border-color: #c80044;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.docs-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    color: #c80044;
+}
+
+.docs-card p {
+    margin: 0;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* Dark mode */
+[data-theme="dark"] .docs-sidebar {
+    background-color: #1f2937;
+}
+
+[data-theme="dark"] .docs-card {
+    background-color: #1f2937;
+}
+
+[data-theme="dark"] .docs-nav-section-title {
+    color: #9ca3af;
+}
+
+[data-theme="dark"] .docs-description {
+    color: #9ca3af;
+}
+
+[data-theme="dark"] .docs-card p {
+    color: #9ca3af;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .docs-wrapper {
+        flex-direction: column;
+    }
+    
+    .docs-sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+        max-height: 300px;
+        border-right: none;
+        border-bottom: 1px solid var(--divider, #e5e7eb);
+    }
+    
+    .docs-main {
+        padding: 1.5rem;
+    }
+    
+    .docs-cards {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<!-- Documentation Layout -->
+<div class="docs-wrapper">
+    <!-- Sidebar Navigation -->
+    <aside class="docs-sidebar">
+        <nav class="docs-nav">
+            <h3 class="docs-nav-title">{{ section.title }}</h3>
+            
+            <!-- List all pages in this section -->
+            <ul class="docs-nav-list">
+                {% for page in section.pages %}
+                <li class="docs-nav-item">
+                    <a href="{{ page.permalink | safe }}" 
+                       class="docs-nav-link {% if current_url == page.permalink %}active{% endif %}">
+                        {{ page.title }}
+                    </a>
+                </li>
+                {% endfor %}
+                
+                <!-- Check for subsections -->
+                {% for subsection_path in section.subsections | sort %}
+                    {% set subsection = get_section(path=subsection_path) %}
+                    <li class="docs-nav-section">
+                        <div class="docs-nav-section-title">{{ subsection.title }}</div>
+                        <ul class="docs-nav-sublist">
+                            {% for page in subsection.pages %}
+                            <li class="docs-nav-item">
+                                <a href="{{ page.permalink | safe }}" 
+                                   class="docs-nav-link {% if current_url == page.permalink %}active{% endif %}">
+                                    {{ page.title }}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="docs-main">
+        <article>
+            <header class="docs-header">
+                <h1>{{ section.title }}</h1>
+                {% if section.description %}
+                <p class="docs-description">{{ section.description }}</p>
+                {% endif %}
+            </header>
+
+            {% if section.content %}
+            <div class="docs-section-content">
+                {{ section.content | safe }}
+            </div>
+            {% endif %}
+
+            <!-- List pages as cards if there are any -->
+            {% if section.pages %}
+            <div class="docs-cards">
+                {% for page in section.pages %}
+                <a href="{{ page.permalink | safe }}" class="docs-card-link">
+                    <div class="docs-card">
+                        <h3>{{ page.title }}</h3>
+                        {% if page.description %}
+                        <p>{{ page.description }}</p>
+                        {% elif page.summary %}
+                        <p>{{ page.summary | striptags | truncate(length=150) }}</p>
+                        {% endif %}
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </article>
+    </main>
+</div>
+{% endblock main_content %}
