@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    /* Colors */
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;
     
@@ -34,6 +35,10 @@
     --ring: 215 20.2% 65.1%;
     
     --radius: 0.5rem;
+    
+    /* Typography rhythm */
+    --baseline: 1.5rem; /* 24px baseline grid */
+    --type-ratio: 1.333; /* Perfect fourth scale */
   }
   
   .dark {
@@ -68,15 +73,59 @@
     
     --radius: 0.5rem;
   }
-}
-
-@layer base {
-  * {
-    @apply border-border;
+  
+  /* Base typography */
+  html {
+    @apply text-lg leading-loose antialiased;
+    font-size: 18px; /* Base font size */
   }
+  
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Enforce vertical rhythm */
+  * {
+    @apply border-border;
+  }
+  
+  /* Headings with proper rhythm */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+  
+  /* Ensure consistent paragraph spacing */
+  p {
+    @apply mb-6;
+  }
+  
+  /* List rhythm */
+  ul, ol {
+    @apply mb-6;
+  }
+  
+  li {
+    @apply mb-2;
+  }
+  
+  /* Blockquote rhythm */
+  blockquote {
+    @apply my-8 pl-6 border-l-4 border-muted italic;
+  }
+  
+  /* Code block rhythm */
+  pre {
+    @apply my-6 p-6 overflow-x-auto rounded-lg;
+  }
+  
+  /* Inline code */
+  code {
+    @apply px-1 py-0.5 rounded text-sm bg-muted;
+  }
+  
+  pre code {
+    @apply p-0 bg-transparent;
   }
 }
 
