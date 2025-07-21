@@ -1,0 +1,117 @@
+/* Prose overrides for better integration with our theme */
+
+/* Ensure proper spacing and colors for prose elements */
+.prose {
+  --tw-prose-body: theme('colors.gray.700');
+  --tw-prose-headings: theme('colors.gray.900');
+  --tw-prose-links: theme('colors.accent.600');
+  --tw-prose-links-hover: theme('colors.accent.700');
+  --tw-prose-bold: theme('colors.gray.900');
+  --tw-prose-counters: theme('colors.gray.600');
+  --tw-prose-bullets: theme('colors.gray.400');
+  --tw-prose-hr: theme('colors.gray.300');
+  --tw-prose-quotes: theme('colors.gray.900');
+  --tw-prose-quote-borders: theme('colors.gray.300');
+  --tw-prose-captions: theme('colors.gray.700');
+  --tw-prose-code: theme('colors.gray.900');
+  --tw-prose-pre-code: theme('colors.gray.100');
+  --tw-prose-pre-bg: theme('colors.gray.900');
+  --tw-prose-th-borders: theme('colors.gray.300');
+  --tw-prose-td-borders: theme('colors.gray.200');
+}
+
+/* Dark mode overrides */
+.dark .prose {
+  --tw-prose-body: theme('colors.gray.300');
+  --tw-prose-headings: theme('colors.gray.100');
+  --tw-prose-links: theme('colors.accent.200');
+  --tw-prose-links-hover: theme('colors.accent.300');
+  --tw-prose-bold: theme('colors.gray.100');
+  --tw-prose-counters: theme('colors.gray.400');
+  --tw-prose-bullets: theme('colors.gray.600');
+  --tw-prose-hr: theme('colors.gray.700');
+  --tw-prose-quotes: theme('colors.gray.100');
+  --tw-prose-quote-borders: theme('colors.gray.700');
+  --tw-prose-captions: theme('colors.gray.400');
+  --tw-prose-code: theme('colors.gray.100');
+  --tw-prose-pre-code: theme('colors.gray.300');
+  --tw-prose-pre-bg: theme('colors.gray.800');
+  --tw-prose-th-borders: theme('colors.gray.600');
+  --tw-prose-td-borders: theme('colors.gray.700');
+}
+
+/* Ensure links have proper hover states */
+.prose a:hover {
+  color: var(--tw-prose-links-hover);
+  text-decoration-thickness: 2px;
+}
+
+/* Better code block styling */
+.prose pre {
+  border-radius: theme('borderRadius.lg');
+  border: 1px solid theme('colors.gray.200');
+}
+
+.dark .prose pre {
+  border-color: theme('colors.gray.700');
+}
+
+/* Ensure proper heading spacing */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  scroll-margin-top: theme('spacing.20');
+}
+
+/* Better blockquote styling */
+.prose blockquote {
+  font-style: normal;
+  font-weight: 400;
+  border-left-width: 4px;
+  border-left-color: theme('colors.accent.600');
+  background-color: theme('colors.gray.50');
+  padding: theme('spacing.4');
+  border-radius: theme('borderRadius.DEFAULT');
+}
+
+.dark .prose blockquote {
+  border-left-color: theme('colors.accent.200');
+  background-color: theme('colors.gray.900');
+}
+
+/* Consistent list styling */
+.prose ul > li::marker {
+  color: var(--tw-prose-bullets);
+}
+
+.prose ol > li::marker {
+  color: var(--tw-prose-counters);
+}
+
+/* Table improvements */
+.prose table {
+  border-collapse: collapse;
+  overflow-x: auto;
+  display: block;
+}
+
+.prose thead {
+  background-color: theme('colors.gray.50');
+}
+
+.dark .prose thead {
+  background-color: theme('colors.gray.800');
+}
+
+/* Image styling */
+.prose img {
+  border-radius: theme('borderRadius.lg');
+  box-shadow: theme('boxShadow.md');
+}
+
+/* Horizontal rule styling */
+.prose hr {
+  margin-top: theme('spacing.12');
+  margin-bottom: theme('spacing.12');
+}

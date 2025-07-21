@@ -122,6 +122,9 @@ module.exports = {
     },
     
     extend: {
+      gridTemplateRows: {
+        'holy': 'auto 1fr auto', // Holy grail layout
+      },
       fontFamily: {
         sans: [
           "Inter Variable",

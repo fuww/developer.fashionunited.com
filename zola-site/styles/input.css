@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import prose overrides */
+@import './prose-overrides.css';
+
 @layer base {
   :root {
     /* Colors */

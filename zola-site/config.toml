@@ -110,3 +110,6 @@ favicon = "/favicon.ico"
 # Performance
 enable_subset = true
 custom_subset = false
+
+# Additional stylesheets
+stylesheets = ["css/tailwind.css"]
