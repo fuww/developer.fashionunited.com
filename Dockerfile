@@ -9,19 +9,29 @@ RUN corepack enable && corepack prepare pnpm@10.13.1 --activate
 
 FROM base AS deps
 COPY package.json pnpm-lock.yaml .npmrc ./
-RUN pnpm install --frozen-lockfile
-RUN cd node_modules/sharp && npm install --ignore-scripts=false --foreground-scripts
+RUN pnpm install --frozen-lockfile && \
+    cd node_modules/sharp && npm install --ignore-scripts=false --foreground-scripts && \
+    cd /app && \
+    rm -rf /root/.npm /root/.cache /tmp/*
 
 FROM base AS prod-deps
 COPY package.json pnpm-lock.yaml .npmrc ./
-RUN pnpm install --prod --frozen-lockfile
-RUN cd node_modules/sharp && npm install --ignore-scripts=false --foreground-scripts
+RUN pnpm install --prod --frozen-lockfile && \
+    cd node_modules/sharp && npm install --ignore-scripts=false --foreground-scripts && \
+    cd /app && \
+    rm -rf /root/.npm /root/.cache /tmp/* && \
+    pnpm store prune
 
 FROM deps AS build
 COPY . .
 RUN pnpm run build
 
-FROM base AS runtime
+FROM node:lts-alpine AS runtime
+WORKDIR /app
+
+# Install only runtime dependencies for Sharp (vips, not vips-dev)
+RUN apk add --no-cache vips
+
 # Copy production dependencies
 COPY --from=prod-deps /app/node_modules ./node_modules
 # Copy built application
