@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightLlmsTxt from 'starlight-llms-txt';
 import tailwind from "@astrojs/tailwind";
 import partytown from "@astrojs/partytown";
 import vtbot from "astro-vtbot";
@@ -25,6 +26,7 @@ export default defineConfig({
     social: {
       github: 'https://github.com/fuww/developer.fashionunited.com'
     },
+    plugins: [starlightLlmsTxt()],
     head: [{
       tag: "script",
       attrs: {
