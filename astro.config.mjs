@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightLlmsTxt from 'starlight-llms-txt';
+import starlightThemeNext from 'starlight-theme-next';
 import tailwind from "@astrojs/tailwind";
 import partytown from "@astrojs/partytown";
 import vtbot from "astro-vtbot";
@@ -30,7 +31,7 @@ export default defineConfig({
         icon: 'github'
       }
     ],
-    plugins: [starlightLlmsTxt()],
+    plugins: [starlightLlmsTxt(), starlightThemeNext()],
     head: [{
       tag: "script",
       attrs: {

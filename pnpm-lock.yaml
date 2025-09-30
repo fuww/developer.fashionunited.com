@@ -89,6 +89,9 @@ importers:
       starlight-llms-txt:
         specifier: ^0.2.0
         version: 0.2.1(@astrojs/starlight@0.36.0(astro@5.14.1(@types/node@20.19.18)(jiti@1.21.7)(rollup@4.52.3)(typescript@5.9.2)(yaml@2.8.1)))(astro@5.14.1(@types/node@20.19.18)(jiti@1.21.7)(rollup@4.52.3)(typescript@5.9.2)(yaml@2.8.1))
+      starlight-theme-next:
+        specifier: ^0.3.2
+        version: 0.3.2(@astrojs/starlight@0.36.0(astro@5.14.1(@types/node@20.19.18)(jiti@1.21.7)(rollup@4.52.3)(typescript@5.9.2)(yaml@2.8.1)))
       tailwind-merge:
         specifier: ^2.5.2
         version: 2.6.0
@@ -2573,6 +2576,12 @@ packages:
     peerDependencies:
       '@astrojs/starlight': '>=0.31'
       astro: ^5.1.6
+
+  starlight-theme-next@0.3.2:
+    resolution: {integrity: sha512-GQGhZ67nZ09pWVQoecl1N+H/1EUkUOvLVpjqOCHlkSotCblwrWrj4guEsdF9aKkNqiyTi6zzwZ5sxQospvdHOg==}
+    engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
+    peerDependencies:
+      '@astrojs/starlight': '>=0.34'
 
   statuses@2.0.1:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
@@ -6242,6 +6251,10 @@ snapshots:
       unist-util-remove: 4.0.0
     transitivePeerDependencies:
       - supports-color
+
+  starlight-theme-next@0.3.2(@astrojs/starlight@0.36.0(astro@5.14.1(@types/node@20.19.18)(jiti@1.21.7)(rollup@4.52.3)(typescript@5.9.2)(yaml@2.8.1))):
+    dependencies:
+      '@astrojs/starlight': 0.36.0(astro@5.14.1(@types/node@20.19.18)(jiti@1.21.7)(rollup@4.52.3)(typescript@5.9.2)(yaml@2.8.1))
 
   statuses@2.0.1: {}
 

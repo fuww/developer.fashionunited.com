@@ -4,15 +4,35 @@ const colors = require('tailwindcss/colors')
 
 // Generated color palettes
 // https://starlight.astro.build/guides/css-and-tailwind/#color-theme-editor
-const accent = { 200: '#f8b4b9', 600: '#c80044', 900: '#60071f', 950: '#420e18' };
-const gray = { 100: '#f5f6f8', 200: '#eceef2', 300: '#c0c2c7', 400: '#888b96', 500: '#545861', 700: '#353841', 800: '#24272f', 900: '#17181c' };
+// Sophisticated blue palette inspired by Solid.js
+const accent = {
+  200: '#93c5fd',
+  600: '#2563eb',
+  900: '#1e3a8a',
+  950: '#172554'
+};
+const gray = {
+  100: '#f5f6f8',
+  200: '#eceef2',
+  300: '#c0c2c7',
+  400: '#888b96',
+  500: '#545861',
+  700: '#353841',
+  800: '#24272f',
+  900: '#17181c'
+};
 
 /** @type {import('tailwindcss').Config} */
 export default {
 	darkMode: ["class"],
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	plugins: [
-		starlightPlugin(),
+		starlightPlugin({
+			colors: {
+				accent,
+				gray,
+			}
+		}),
 		require('@tailwindcss/typography',"tailwindcss-animate"),
 	],
 	theme: {
@@ -25,12 +45,6 @@ export default {
 	  },
 	  letterSpacing: {
 		tight: '-0.015em',
-	  },
-	colors: {
-		accent,
-		gray,
-		white: colors.white,
-		dark: '#111'
 	  },
 	  extend: {
 		fontFamily: {
@@ -74,6 +88,31 @@ export default {
 			DEFAULT: "hsl(var(--card))",
 			foreground: "hsl(var(--card-foreground))",
 		  },
+		  // Sophisticated blue palette
+		  blue: {
+			50: '#eff6ff',
+			100: '#dbeafe',
+			200: '#bfdbfe',
+			300: '#93c5fd',
+			400: '#60a5fa',
+			500: '#3b82f6',
+			600: '#2563eb',
+			700: '#1d4ed8',
+			800: '#1e40af',
+			900: '#1e3a8a',
+			950: '#172554',
+		  },
+		},
+		backgroundImage: {
+		  // Linear gradients inspired by Solid.js
+		  'gradient-blue-light': 'linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%)',
+		  'gradient-blue': 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)',
+		  'gradient-blue-dark': 'linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%)',
+		  'gradient-blue-radial': 'radial-gradient(circle at top right, #3b82f6, #1e40af)',
+		  // Sophisticated multi-stop gradients
+		  'gradient-blue-hero': 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 25%, #bfdbfe 50%, #93c5fd 100%)',
+		  'gradient-blue-accent': 'linear-gradient(to right, #60a5fa, #3b82f6, #2563eb)',
+		  'gradient-blue-soft': 'linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%)',
 		},
 		borderRadius: {
 		  lg: "var(--radius)",
