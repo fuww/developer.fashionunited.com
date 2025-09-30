@@ -62,9 +62,6 @@ export default defineConfig({
       }, {
         label: 'System Requirements and Browsers',
         link: '/docs/system-requirements-and-browsers/'
-      }, {
-        label: 'Cloudflare',
-        link: '/docs/cloudflare/'
       }]
     }, {
       label: 'Marketplace',
