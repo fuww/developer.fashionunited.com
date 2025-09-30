@@ -2,7 +2,7 @@ FROM node:lts-alpine AS base
 WORKDIR /app
 
 # Install build dependencies and runtime libraries for Sharp
-RUN apk add --no-cache python3 make g++ vips-dev vips
+RUN apk add --no-cache python3 py3-setuptools make g++ vips-dev vips
 
 # Install pnpm globally
 RUN corepack enable && corepack prepare pnpm@10.13.1 --activate
