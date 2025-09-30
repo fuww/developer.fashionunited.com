@@ -1,5 +1,12 @@
 {
   "mcpServers": {
+    "cloud-run": {
+      "command": "/bin/sh",
+      "args": [
+        "-c",
+        "PATH=/run/current-system/sw/bin:/etc/profiles/per-user/$USER/bin:$PATH exec npx -y @google-cloud/cloud-run-mcp"
+      ]
+    },
     "sequential-thinking": {
       "command": "/bin/sh",
       "args": [
