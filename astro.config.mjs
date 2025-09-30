@@ -22,9 +22,13 @@ export default defineConfig({
     },
     title: 'FashionUnited Docs',
     customCss: ['./src/styles/custom.css', '@fontsource/ibm-plex-mono/400.css', '@fontsource/ibm-plex-mono/600.css', '@fontsource-variable/inter', '@fontsource-variable/lora'],
-    social: {
-      github: 'https://github.com/fuww/developer.fashionunited.com'
-    },
+    social: [
+      {
+        label: 'GitHub',
+        href: 'https://github.com/fuww/developer.fashionunited.com',
+        icon: 'github'
+      }
+    ],
     head: [{
       tag: "script",
       attrs: {
