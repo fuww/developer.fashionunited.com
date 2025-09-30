@@ -8,12 +8,12 @@ RUN apk add --no-cache python3 make g++ vips-dev
 RUN corepack enable && corepack prepare pnpm@10.13.1 --activate
 
 FROM base AS deps
-COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --frozen-lockfile && pnpm rebuild sharp
+COPY package.json pnpm-lock.yaml .npmrc ./
+RUN pnpm install --frozen-lockfile
 
 FROM base AS prod-deps
-COPY package.json pnpm-lock.yaml ./
-RUN pnpm install --prod --frozen-lockfile && pnpm rebuild sharp
+COPY package.json pnpm-lock.yaml .npmrc ./
+RUN pnpm install --prod --frozen-lockfile
 
 FROM deps AS build
 COPY . .
