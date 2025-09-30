@@ -1,19 +1,21 @@
 FROM node:lts-alpine AS base
 WORKDIR /app
 
-# Install build dependencies for Sharp
-RUN apk add --no-cache python3 make g++ vips-dev
+# Install build dependencies and runtime libraries for Sharp
+RUN apk add --no-cache python3 make g++ vips-dev vips
 
 # Install pnpm globally
 RUN corepack enable && corepack prepare pnpm@10.13.1 --activate
 
 FROM base AS deps
 COPY package.json pnpm-lock.yaml .npmrc ./
-RUN pnpm install --frozen-lockfile && pnpm rebuild sharp
+RUN pnpm install --frozen-lockfile
+RUN cd node_modules/sharp && npm install --ignore-scripts=false --foreground-scripts
 
 FROM base AS prod-deps
 COPY package.json pnpm-lock.yaml .npmrc ./
-RUN pnpm install --prod --frozen-lockfile && pnpm rebuild sharp
+RUN pnpm install --prod --frozen-lockfile
+RUN cd node_modules/sharp && npm install --ignore-scripts=false --foreground-scripts
 
 FROM deps AS build
 COPY . .
