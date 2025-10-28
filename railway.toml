@@ -1,13 +1,7 @@
 [build]
 builder = "RAILPACK"
-buildCommand = "pnpm install && pnpm build"
 
 [deploy]
-startCommand = "HOST=0.0.0.0 PORT=8080 node ./dist/server/entry.mjs"
+startCommand = "node ./dist/server/entry.mjs"
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 10
-
-[env]
-NODE_ENV = "production"
-HOST = "0.0.0.0"
-PORT = "8080"
