@@ -1,7 +1,31 @@
 [build]
 builder = "RAILPACK"
+buildCommand = "pnpm run build"
 
 [deploy]
-startCommand = "node ./dist/server/entry.mjs"
+startCommand = "pnpm start"
 restartPolicyType = "on_failure"
-restartPolicyMaxRetries = 10
+maxRestartRetries = 3
+
+[[services]]
+name = "developer-docs"
+
+[[services.networking]]
+port = 8080
+startCommand = "pnpm start"
+
+[[services.regions]]
+id = "eu-west"
+replicas = 1
+
+[[services.domains]]
+name = "developer.fashionunited.com"
+port = 8080
+
+[[services.resources]]
+cpuLimit = 1
+memoryLimit = 1024
+
+[deploy.environment]
+branch = "main"
+waitForCI = true
