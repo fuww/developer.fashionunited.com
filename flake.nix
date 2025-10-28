@@ -28,8 +28,8 @@
         default = pkgs.mkShell {
           # The Nix packages provided in the environment
           packages = with pkgs; [
-              nodejs_20
-              corepack_20
+              nodejs_22
+              corepack_22
               nixpkgs-fmt
           ];
         };

@@ -1,11 +1,11 @@
-FROM node:lts-alpine AS base
+FROM node:22-alpine AS base
 WORKDIR /app
 
 # Install build dependencies and runtime libraries for Sharp
 RUN apk add --no-cache python3 py3-setuptools make g++ vips-dev vips
 
 # Install pnpm globally
-RUN corepack enable && corepack prepare pnpm@10.13.1 --activate
+RUN corepack enable && corepack prepare pnpm@10.18.1 --activate
 
 FROM base AS deps
 COPY package.json pnpm-lock.yaml .npmrc ./
@@ -26,7 +26,7 @@ FROM deps AS build
 COPY . .
 RUN pnpm run build
 
-FROM node:lts-alpine AS runtime
+FROM node:22-alpine AS runtime
 WORKDIR /app
 
 # Install only runtime dependencies for Sharp (vips, not vips-dev)

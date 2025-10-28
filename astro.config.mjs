@@ -94,8 +94,8 @@ export default defineConfig({
     // Disable the default base styles:
     applyBaseStyles: false
   }), partytown(), vtbot(), react()],
-  output: "static",
+  output: "server",
   adapter: node({
-    mode: "middleware"
+    mode: "standalone"
   })
 });
