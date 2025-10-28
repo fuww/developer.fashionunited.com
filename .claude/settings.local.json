@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm outdated:*)",
+      "Bash(npm install:*)",
+      "Bash(npm view:*)",
+      "WebSearch",
+      "Bash(git reset:*)",
+      "WebFetch(domain:starlight.astro.build)",
+      "Read(//Volumes/data/git/fuww/about.fashionunited.com/**)",
+      "Bash(pnpm update:*)",
+      "Bash(pnpm:*)",
+      "Bash(git -C /Volumes/data/git/fuww/developer.fashionunited.com add .github/workflows/deploy.yml .github/workflows/playwright.yml)",
+      "Bash(git -C /Volumes/data/git/fuww/developer.fashionunited.com commit -m \"$(cat <<''EOF''\nFix pnpm version conflict in GitHub Actions\n\nRemoved explicit version numbers from pnpm/action-setup@v4 to allow\nit to automatically read the version from packageManager field in\npackage.json, avoiding version conflicts.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git -C /Volumes/data/git/fuww/developer.fashionunited.com push)",
+      "Bash(git -C /Volumes/data/git/fuww/about.fashionunited.com add .github/workflows/google-cloud-run-merge.yml .github/workflows/google-cloud-run-pull-request.yml)",
+      "Bash(git -C /Volumes/data/git/fuww/about.fashionunited.com commit -m \"$(cat <<''EOF''\nFix pnpm version conflict in GitHub Actions\n\nRemoved explicit version numbers from pnpm/action-setup@v4 to allow\nit to automatically read the version from packageManager field in\npackage.json (10.15.0), avoiding version conflicts.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git -C /Volumes/data/git/fuww/about.fashionunited.com push)",
+      "Bash(git -C /Volumes/data/git/fuww/about.fashionunited.com add .npmrc Dockerfile)",
+      "Bash(git -C /Volumes/data/git/fuww/about.fashionunited.com commit -m \"$(cat <<''EOF''\nEnable build scripts via .npmrc configuration\n\nAdded .npmrc with enable-pre-post-scripts=true to allow Sharp and\nother dependencies to run their build scripts during installation.\nThis eliminates the need for explicit pnpm rebuild commands and\nresolves the \"Ignored build scripts\" warning.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "sequential-thinking",
+    "playwright",
+    "fetch",
+    "mcp-graphql",
+    "context7"
+  ]
+}
