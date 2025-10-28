@@ -1,93 +1,42 @@
-:root {
-    /* https://starlight.astro.build/guides/css-and-tailwind/#custom-css-styles */
-    /* You can see all the CSS custom properties used by Starlight that you can set to customize your site in the props.css file on GitHub. */
-    /* https://github.com/withastro/starlight/blob/main/packages/starlight/style/props.css */
-}
-
 /* Dark mode background fix */
 :root[data-theme="dark"] {
-    --sl-color-bg: #17181c;
-    --sl-color-bg-nav: #24272f;
-    --sl-color-bg-sidebar: #24272f;
+  --sl-color-bg: #17181c;
+  --sl-color-bg-nav: #24272f;
+  --sl-color-bg-sidebar: #24272f;
 }
 
-/* Homepage header gradient - darker blue gradient for main heading */
+/* Homepage header gradient */
 .hero h1 {
-    background: linear-gradient(135deg, #2563eb 0%, #1e40af 50%, #1e3a8a 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 50%, #1e3a8a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Remove gradient from tagline/paragraph - use normal text */
-.hero .tagline {
-    background: none !important;
-    -webkit-text-fill-color: inherit !important;
-    color: inherit;
+/* Navbar header gradient */
+.site-title {
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Navbar/Site header gradient - vibrant accent gradient on text */
-.site-title,
-.header .site-title a {
-    background: linear-gradient(to right, #60a5fa, #3b82f6, #2563eb) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-    font-weight: 600;
+/* Button gradients */
+.sl-link-button[data-type="primary"] {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border: none;
 }
 
-/* Button gradients - primary blue gradient */
-.sl-link-button,
-button.primary,
-a.primary {
-    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
-    color: white !important;
-    border: none !important;
-    transition: all 0.3s ease;
+.sl-link-button[data-type="primary"]:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
 }
 
-.sl-link-button:hover,
-button.primary:hover,
-a.primary:hover {
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+/* Sidebar active state */
+[aria-current="page"] {
+  background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+  border-radius: 0.25rem;
 }
 
-/* Sidebar active state - soft light gradient */
-.sidebar a[aria-current="page"],
-.sidebar a[data-current-parent="true"] {
-    background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%) !important;
-    color: #1e40af !important;
-    font-weight: 600;
-    border-left: 3px solid #2563eb;
-}
-
-.sidebar a[aria-current="page"]:hover,
-.sidebar a[data-current-parent="true"]:hover {
-    background: linear-gradient(180deg, #dbeafe 0%, #bfdbfe 100%) !important;
-}
-
-/* Dark mode adjustments */
-:root[data-theme="dark"] .hero h1,
-:root[data-theme="dark"] .hero .tagline {
-    background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #60a5fa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-:root[data-theme="dark"] .site-title,
-:root[data-theme="dark"] .header .site-title a {
-    background: linear-gradient(to right, #93c5fd, #60a5fa, #3b82f6) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-}
-
-:root[data-theme="dark"] .sidebar a[aria-current="page"],
-:root[data-theme="dark"] .sidebar a[data-current-parent="true"] {
-    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%) !important;
-    color: #93c5fd !important;
-    border-left-color: #60a5fa;
+:root[data-theme="dark"] [aria-current="page"] {
+  background: linear-gradient(180deg, #1e3a8a 0%, #1e40af 100%);
 }

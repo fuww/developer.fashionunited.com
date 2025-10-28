@@ -33,7 +33,8 @@ export default {
 				gray,
 			}
 		}),
-		require('@tailwindcss/typography',"tailwindcss-animate"),
+		require("@tailwindcss/typography"),
+		require("tailwindcss-animate"),
 	],
 	theme: {
 		container: {
@@ -45,6 +46,12 @@ export default {
 	  },
 	  letterSpacing: {
 		tight: '-0.015em',
+	  },
+	  colors: {
+		accent,
+		gray,
+		white: colors.white,
+		dark: "#111",
 	  },
 	  extend: {
 		fontFamily: {
@@ -104,15 +111,11 @@ export default {
 		  },
 		},
 		backgroundImage: {
-		  // Linear gradients inspired by Solid.js
 		  'gradient-blue-light': 'linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%)',
 		  'gradient-blue': 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)',
-		  'gradient-blue-dark': 'linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%)',
-		  'gradient-blue-radial': 'radial-gradient(circle at top right, #3b82f6, #1e40af)',
-		  // Sophisticated multi-stop gradients
 		  'gradient-blue-hero': 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 25%, #bfdbfe 50%, #93c5fd 100%)',
-		  'gradient-blue-accent': 'linear-gradient(to right, #60a5fa, #3b82f6, #2563eb)',
-		  'gradient-blue-soft': 'linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%)',
+		  'gradient-blue-dark': 'linear-gradient(135deg, #2563eb 0%, #1e40af 50%, #1e3a8a 100%)',
+		  'gradient-blue-sidebar': 'linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%)',
 		},
 		borderRadius: {
 		  lg: "var(--radius)",
@@ -121,12 +124,12 @@ export default {
 		},
 		keyframes: {
 		  "accordion-down": {
-			from: { height: 0 },
+			from: { height: "0" },
 			to: { height: "var(--radix-accordion-content-height)" },
 		  },
 		  "accordion-up": {
 			from: { height: "var(--radix-accordion-content-height)" },
-			to: { height: 0 },
+			to: { height: "0" },
 		  },
 		},
 		animation: {
