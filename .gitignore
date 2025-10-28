@@ -41,3 +41,4 @@ pnpm-debug.log*
 /playwright/.cache/
 
 .playwright-mcp/
+.claude/settings.local.json
