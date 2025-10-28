@@ -1,9 +1,9 @@
 [build]
-builder = "RAILPACK"
+builder = "railpack"
 buildCommand = "pnpm run build"
 
 [deploy]
-startCommand = "pnpm start"
+startCommand = "node ./dist/server/entry.mjs"
 restartPolicyType = "on_failure"
 maxRestartRetries = 3
 
@@ -12,7 +12,7 @@ name = "developer-docs"
 
 [[services.networking]]
 port = 8080
-startCommand = "pnpm start"
+startCommand = "node ./dist/server/entry.mjs"
 
 [[services.regions]]
 id = "eu-west"
